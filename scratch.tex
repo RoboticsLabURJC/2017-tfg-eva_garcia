@@ -6,7 +6,8 @@ El primer apartado hablará de los actuadores. La definición de un actuador es 
 La segunda sección de este capítulo se ocupará de los sensores. Un sensor recoge datos del entorno y los devuelve, en formato numérico, a la placa. Esto requiere de más control y estructuración de las ideas que los actuadores, pues requiere del programador llamar al sensor, guardar la información, tratarla de forma adecuada y, por último, programar la actuación del robot de acuerdo a ella. Por tanto, y contando con la base de los conocimientos y entrenamiento que habrían proporcionado los ejercicios del capítulo anterior, los sensores se escogieron como segundo área de conocimiento.\\
 La tercera y última parte se centrará en la integración de los dos anteriores, es decir, en la integración de sensores y actuadores para la solución de problemas reales (todo lo reales que es posible, dadas las limitaciones del robot). Este tipo de ejercicios los llamamos comportamientos, y se han diseñado de tal forma que acepten escalonamiento en la dificultad. Esto responde a la necesidad de combatir la frustración de los alumnos más jóvenes, pues si se les presenta un problema sin dividir en problemas más pequeños, no sabrán cómo atajarlo. Obviamente, esta división del problema no se les dará a los alumnos directamente, sino que se les guiará para que la hagan ellos con el propósito de introducirlos en la programación \textit{bottom-up}.
 
-\section{Actuadores}
+%%%%%%%%%%%%%
+\section{Actuadores}\label{sec:actuadores}
 Como se ha explicado anteriormente, el propósito de un actuador es ejecutar la orden que recibe de la placa. Es, por tanto, muy visual y conveniente para introducir en la programación de robótica, pues da pie a equivocarse y aprender de los errores de forma mucho más intuitiva que con otros componentes.\\
 En la sección \ref{sec:mbot}, ya se detallaron los actuadores con los que cuenta el Mbot. En el diseño de estas prácticas no se han utilizado todos, pues se contó con la limitación de tener sólo el paquete "básico" del mbot (presumiblemente, sería el que tendrían los centros educativos). Estos componentes sería, pues, los motores, las luces led integradas en la placa, la placa led, el zumbador integrado y el pulsador integrado.\\
 A continuación se explicarán los ejercicios desarrollados, intentando explicar el objetivo del ejercicio, el nivel de dificultad y comentando la experiencia de llevarlo a cabo.
@@ -26,17 +27,37 @@ Otro actuador sencillo de usar es el zumbador integrado en la placa. Es algo má
 \end{figure}
 Una vez entendida la diferencia de notas y comprobado cómo funciona el zumbadores, les proponemos que el robot entone la canción de cumpleaños feliz -por ser una canción que todo el mundo conoce-. No sólo sirve para el actuador, sino que introducimos el concepto de repetición (bucles). La idea principal es dejarles al principio que hagan el ejercicio todo seguido y después les ayudamos a entender que están repitiendo código: hay estrofas que se repiten. Ven la necesidad, pues, de meter esas estrofas dentro de un bucle de repetición de tantas veces como sea necesario.\\
 \subsubsection{Ejercicio extra}
-Como ocurrió antes con las carreras, una vez han terminado la primera canción, es bueno invitarles a que intenten que el robot "cante" otras melodías que conozcan y les apetezca. 
-
+Como ocurrió antes con las carreras, una vez han terminado la primera canción, es bueno invitarles a que intenten que el robot \textit{cante} otras melodías que conozcan y les apetezcan. 
+\subsection{Panel LED}
+El único actuador que queda sin utilizar es el panel LED. Para utilizarlo, necesitamos quitar el sensor de ultrasonidos y poner el panel.\\
+Este ejercicio consiste únicamente en dibujar en el panel. Scrach simplifica mucho el uso del panel, con todo lo difícil que es su programación, como veremos más adelante en el capítulo \ref{cap:real}. Sin embargo, tiene vario métodos para ello, uno para dibujar y otro para escribir. Es entretenido para los jóvenes dibujar y ver directamente el dibujo en el panel. \\
+Como reto de programación no tiene gran dificultad, por lo que, después de aprender jugando el funcionamiento del componente, introducimos el panel como funcionalidad extra en los demás ejercicios, tanto en los que ya hemos visto como en los siguientes. 
 \subsection{S.O.S.}
 El siguiente actuador del pack del Mbot son las luces LED de la placa, que tienen un rango de colores RGB que permite que cada alumno pueda personalizar los colores como más les guste. El propio lenguaje Scratch permite el rango de cada color entre 0 y 255 (aunque en la práctica, no sean notables los cambios pequeños en esa escala).\\
 La finalidad del ejercicio es que, con luces, el robot pida ayuda en lenguaje morse: tres pulsos cortos, tres pulsos largos, y tres pulsos cortos. \\
-Por experiencia, son más proactivos cuando ven una utilidad mínimamente real a lo que se les pide, y en muchas películas han visto hablar del morse y la necesidad de pedir ayuda en un lenguaje universal. \\
-Como concepto de programación, en este ejercicio trabajamos las esperas. Los puntos y rayas del morse los traducimos a esperas de menos y más tiempo, respectivamente.
-bucle de repetición de tantas veces como sea necesario.\\
+Por experiencia, los alumnos son más proactivos cuando ven una utilidad mínimamente real a lo que se les pide, y en muchas películas han visto hablar del morse y la necesidad de pedir ayuda en un lenguaje universal. \\
+Como concepto de programación, en este ejercicio trabajamos las duraciones; el progreso temporal de las órdenes. Los puntos y rayas del morse los traducimos a esperas de menos y más tiempo, respectivamente. En Scratch, tenemos el bloque 'esperar \textit{x} segundos' para ello.
 \subsubsection{Ejercicio extra}
 Como siempre, una vez que han conseguido que el mensaje de socorro sea entendible, cambiamos el ejercicio a escribir en morse cualquier mensaje que se les ocurra (con la tabla de equivalencias del abecedario) y a mandar el mismo mensaje de socorro con luz y sonido a la vez.
 
 \subsection{Camión}
 Como último ejercicio de actuadores, intentaremos juntarlos todos, a la vez que todavía no metemos ningún sensor. Proponemos, pues, emular el comportamiento de un camión, algo a lo que están acostumbrados y que no se les habría ocurrido que era automatizable. Un camión, haga lo que haga, si da marcha atrás, pitará (con los zumbadores) y encenderá las luces naranjas. \\
-Vamos metiendo, poco a poco, acciones simultáneas, para que tengan que preocuparse de más de un componente (de más de un bloque de Scratch). El objetivo es el aprendizaje de que, en robótica, un comportamiento aparentemente trivial es la suma de muchos comportamientos simultáneos y dependiente uno de otro.
+Vamos metiendo, poco a poco, acciones simultáneas, para que tengan que preocuparse de más de un componente (de más de un bloque de Scratch). El objetivo es el aprendizaje de que, en robótica, un comportamiento aparentemente trivial es la suma de muchos comportamientos simultáneos y dependiente uno de otro.\\
+Con este ejercicio, aprendemos el concepto, tan necesario en la programación de robótica, de \textit{ocurrencia}. Cuándo, y sólo cuándo, el camión da marcha atrás, es cuando se encienden las luces y sirenas.
+
+\subsection{Botón de Start}
+Aunque no es un ejercicio en sí mismo, lo introducimos en este punto como continuación del concepto de ocurrencia mencionado en el ejercicio anterior. En este caso, la idea más concreta sería \textit{esperar a la ocurrencia}. Dejamos en espera el programa completo hasta que pulsemos el botón de la placa.\\
+Scratch proporciona el bloque 'Esperar a', por lo que la única dificultad es el entendimiento de la ideal, no la programación. \\
+Durante la puesta en práctica de los otros ejercicios de este apartado, los alumnos expresaban descontento porque el programa arrancara en el robot nada más encenderlo (en realidad, nada más subirlo a la placa, por lo que debían apagarlo y encenderlo para controlar el inicio), por lo que el botón de start responde a una necesidad creada por ellos. \\
+El objetivo es introducir esta nueva funcionalidad en todos los ejercicios, una vez que lo han hecho en el primero, el resto de ellos es inmediato.
+
+%%%%%%%%%%
+\section{Sensores}
+Como se ha comentado en la introducción de este capítulo, los sensores recogen información del ambiente y la devuelven en forma numérica. Es misión del programador, pues, procesar el retorno y la interpretación de esa información de forma correcta, unívoca y cubriendo todos las posibilidades. \\
+Esto requiere unas habilidades más avanzadas, además de los conceptos básicos de programación como bucles, condicionales, ocurrencias, etc, que se han visto en el apartado anterior (\ref{sec:actuadores}) de actuadores. Los alumnos deberán ser capaces de: 
+\begin{enumerate}
+	\item Decidir qué información necesitan del entorno para el problema que se les presenta. Es decir, dividir el problema en pequeños trozos hasta llegar al más pequeño de ellos. Éste será del que tengan que abstraer el tipo de información que necesitan conocer para poder solucionarlo.
+	\item Una vez conocida la información que necesitan, deberán elegir qué sensor es el que mejor les va a dar como respuesta esa información. Al principio, será una cuestión trivial, pues sólo habrá una posibilidad, pero después introduciremos ejercicios que requieran de varias \textit{informaciones} distintas (por lo cual, de varios sensores) o que necesiten de varios sensores para responder a una misma \textit{necesidad}.
+	\item Tras obtener del sensor el valor de retorno numérico, es misión del alumno diseñar la respuesta de vuelta del robot, es decir, cómo deba comportarse dependiendo de esa respuesta. No será lo mismo si queremos acercar el robot a un muro lentamente para aparcar, que si debemos tener cuidado de que no choque o si debe perseguir a otro robot: el sensor es el mismo, y el valor de retorno también, pero el comportamiento no tiene por qué ser el mismo. 	
+	\item Fijándose en la necesidad original, y en las repuestas que se reciben de cada sensor, deberán ser capaces de granular la sensibilidad del sensor o del valor de control para obtener un comportamiento lo más refinado y preciso posible (siempre teniendo en cuenta las limitaciones técnicas del Mbot).
+\end{enumerate}
