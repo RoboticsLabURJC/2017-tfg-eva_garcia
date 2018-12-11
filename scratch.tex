@@ -40,7 +40,7 @@ Como concepto de programación, en este ejercicio trabajamos las duraciones; el 
 \subsubsection{Ejercicio extra}
 Como siempre, una vez que han conseguido que el mensaje de socorro sea entendible, cambiamos el ejercicio a escribir en morse cualquier mensaje que se les ocurra (con la tabla de equivalencias del abecedario) y a mandar el mismo mensaje de socorro con luz y sonido a la vez.
 
-\subsection{Camión}
+\subsection{Camión}\label{camion}
 Como último ejercicio de actuadores, intentaremos juntarlos todos, a la vez que todavía no metemos ningún sensor. Proponemos, pues, emular el comportamiento de un camión, algo a lo que están acostumbrados y que no se les habría ocurrido que era automatizable. Un camión, haga lo que haga, si da marcha atrás, pitará (con los zumbadores) y encenderá las luces naranjas. \\
 Vamos metiendo, poco a poco, acciones simultáneas, para que tengan que preocuparse de más de un componente (de más de un bloque de Scratch). El objetivo es el aprendizaje de que, en robótica, un comportamiento aparentemente trivial es la suma de muchos comportamientos simultáneos y dependiente uno de otro.\\
 Con este ejercicio, aprendemos el concepto, tan necesario en la programación de robótica, de \textit{ocurrencia}. Cuándo, y sólo cuándo, el camión da marcha atrás, es cuando se encienden las luces y sirenas.
@@ -54,10 +54,19 @@ El objetivo es introducir esta nueva funcionalidad en todos los ejercicios, una 
 %%%%%%%%%%
 \section{Sensores}
 Como se ha comentado en la introducción de este capítulo, los sensores recogen información del ambiente y la devuelven en forma numérica. Es misión del programador, pues, procesar el retorno y la interpretación de esa información de forma correcta, unívoca y cubriendo todos las posibilidades. \\
-Esto requiere unas habilidades más avanzadas, además de los conceptos básicos de programación como bucles, condicionales, ocurrencias, etc, que se han visto en el apartado anterior (\ref{sec:actuadores}) de actuadores. Los alumnos deberán ser capaces de: 
+Esto requiere unas habilidades más avanzadas, además de los conceptos básicos de programación como bucles, condicionales, ocurrencias, etc, que se han visto en el apartado anterior (\ref{sec:actuadores}) de actuadores. Los alumnos deberán ser capaces de: \\
 \begin{enumerate}
 	\item Decidir qué información necesitan del entorno para el problema que se les presenta. Es decir, dividir el problema en pequeños trozos hasta llegar al más pequeño de ellos. Éste será del que tengan que abstraer el tipo de información que necesitan conocer para poder solucionarlo.
 	\item Una vez conocida la información que necesitan, deberán elegir qué sensor es el que mejor les va a dar como respuesta esa información. Al principio, será una cuestión trivial, pues sólo habrá una posibilidad, pero después introduciremos ejercicios que requieran de varias \textit{informaciones} distintas (por lo cual, de varios sensores) o que necesiten de varios sensores para responder a una misma \textit{necesidad}.
 	\item Tras obtener del sensor el valor de retorno numérico, es misión del alumno diseñar la respuesta de vuelta del robot, es decir, cómo deba comportarse dependiendo de esa respuesta. No será lo mismo si queremos acercar el robot a un muro lentamente para aparcar, que si debemos tener cuidado de que no choque o si debe perseguir a otro robot: el sensor es el mismo, y el valor de retorno también, pero el comportamiento no tiene por qué ser el mismo. 	
-	\item Fijándose en la necesidad original, y en las repuestas que se reciben de cada sensor, deberán ser capaces de granular la sensibilidad del sensor o del valor de control para obtener un comportamiento lo más refinado y preciso posible (siempre teniendo en cuenta las limitaciones técnicas del Mbot).
+	\item Fijándose en la necesidad original, y en las repuestas que se reciben de cada sensor, deberán ser capaces de granular la sensibilidad del sensor, o del valor de control, para obtener un comportamiento lo más refinado y preciso posible (siempre teniendo en cuenta las limitaciones técnicas del Mbot).
 \end{enumerate}
+Estas habilidades las iremos trabajando poco a poco, diseñando ejercicios que las introduzcan a la vez, pues son necesarias todas, pero con diferentes niveles de dificultad.\\
+Como siempre, en cada ejercicio iremos guiando a los alumnos en la división del problema bottom-up; esta división, la compartición de los problemas, es una de las habilidades más importantes de un programador, y una de las cosas sobre las que más haremos hincapié.\\
+A continuación se detallarán los distintos ejercicios pensados con esta filosofía, poniendo especial foco en los objetivos que se pretenden enseñar y en cómo llevarlos a cabo.
+
+\subsection{No chocar contra un muro}
+Uno de los actuadores más visibles, y por el que los alumnos siempre preguntan, es el sensor de proximidad (sensor de ultrasonidos). El bloque de Scratch para este sensor devuelve un valor numérico, pero no el valor que devolvería el sensor programado en su lenguaje nativo (arduino) sino que incorpora el procesado de la información y devuelve la distancia a la que se encuentra del obstáculo que esté leyendo. Por tanto, para los alumnos es tan cómodo como trabajar con ''distancia x del sensor'', con lo cual pueden olvidarse de la programación más farragosa y centrarse sólo en decidir qué hacer con la información que recogen del sensor. \\
+Este ejercicio se diseñó con el mismo ánimo que el del camión (véase \ref{camion}), siguiendo la idea de que programen cosas que conocen, que utilizan en su día a día, para q	ue vean que la robótica no es algo de ciencia ficción o de grandes laboratorios (el primer día que se les pregunta qué es un robot siempre hablan de la NASA o de robots futuristas con forma 'humana'), sino que está incluida en nuestras vidas y cualquiera puede dedicarse a ello.\\
+El objetivo es, por tanto, programar el sensor de proximidad de los coches, que cuando estás aparcando y te acercas al coche de delante (en este caso, a un muro), primero pita, si te acercas más pita más rápido y, al final, se para. \\
+Como es el primer sensor que utilizan, lo orientamos en etapas. 
