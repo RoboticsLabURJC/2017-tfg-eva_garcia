@@ -128,4 +128,29 @@ El ejercicio básico consistirá en perseguir al robot, poniéndole delante algo
 Con el mismo sensor y la misma filosofía que anteriormente, esta vez diseñaremos un algoritmo para \textbf{atravesar} los obstáculos y poder continuar la carrera, no para evitarlos y huir de ellos. \\
 El propósito es reforzar la autonomía de los alumnos a la hora de buscar una solución, no sólo de implementar un algoritmo (una solución) dado. La diferencia con la carrera de obstáculos del primer apartado de este mismo capítulo, en \ref{carrObst}, es que la disposición de estos obstáculos no será fija, sino que el robot deberá ser capaz de solucionar cualquier circuito.
 \subsection{Coche Tele-dirigido}
-En esta ocasión, utilizaremos el mando a distancia del Mbot. El sensor del 
+En esta ocasión, utilizaremos el mando a distancia del Mbot. A pesar de, a primera visa para los alumnos, parecer un actuador, se trata de un sensor, pues recibe información del \textit{medio}; en este caso, del mando, que emitirá una señal infrarroja distinta dependiendo de qué tecla se pulse. Es, por tanto, un sensor del cual recibiremos información mucho más controlada que de cualquier otro, que no recibe datos continuamente y el cual, en Scratch, tiene todas las posibilidades de los botones predefinidas (no hará falta, como sí la haría tratando con otro lenguaje de programación, averiguar qué valor corresponde con cada botón, o cambiar ente tipos de datos). En Scratch, el bloque correspondiente al mando está nombrado como \textit{IR remote}\\
+Proponemos el ejercicio con la idea de que programen un coche teledirigido como los que se pueden comprar como juguete. Dependiendo de qué boton se pulse, el robot tendrá un movimiento u otro, utilizando las flechas para las direcciones y un botón bandera para parar (el central, por ejemplo, o el cero). \\
+Para desarrollar el ejercicio, utilizaremos bloques condicionales, ya que Scratch no dispone de bloques \textit{Switch-Case}. Cada rama del condicional, tendrá una de las teclas que tenga que leer el sensor, y hará un movimiento diferente; hasta que no pulsemos otra tecla no cambiará el movimiento. Por ejemplo, 'si tecla arriba $\rightarrow$ mover hacia delante'.
+\subsubsection{Ejercicio extra 1}
+Una vez utilizado por primera vez el mando, y comprobado que funciona, podemos hacer más funcional el coche añadiendo implementación para que vaya a distintas velocidades. Proponemos dos soluciones distintas (aunque no serán las únicas) para este desarrollo:
+\begin{itemize}
+	\item Dentro del bloque 'si se pulsa flecha', en el que se habrá definido 'mover con velocidad X', meter otro bloque 'si se pulsa la misma flecha', en el que, si se cumple, se especificará que el robot se moverá con una velocidad mayor. Es decir, si pulsamos una vez la flecha, el robot se moverá hacia delante con una velocidad, y si pulsamos la misma tecla otra vez, se moverá más rápido.
+	\item Definiremos la velocidad dentro de una variable, a la cual daremos un valor u otro dependiendo de un rango de valores numéricos que pulsemos. Por ejemplo, si pulsamos el 1, la \textit{velocidad} tendrá valor 100, si pulsamos el 2, tendrá valor 150, etc. Esta variable de velocidad será la que se utilizará más tarde para los motores en las distintas direcciones, dentro del bloque condicional original.
+\end{itemize}
+\subsubsection{Ejercicio extra 2}
+Otra posible variación de este mismo coche teledirigido consiste en darle la vuelta al cambio de movimiento. En vez de mantener el movimiento de una tecla hasta que se pulse la siguiente, eta vez sólo mantendremos un movimisneot mientras que la tecla que lo produce esté pulsada. Es decir, mientras esté pulsada la tecla que significa movimiento hacia delante, el robot se moverá, pero si la dejamos de pulsar, el robot se parará. Para esto, sólo hará falta una rama en el bloque condicional en el que, si ninguna tecla está pulsada, el robot se pare (se mueva con velocidad cero): el correspondiente al \textit{else} de la programación tradicional.
+
+\section{Comportamientos}
+En las dos secciones previas se ha explicado cómo utilizar los sensores y actuadores propios del mBot con el lenguaje de programación Scratch, y se han propuesto ejercicios para practicar todos ellos. Sin embargo, y aunque siempre se ha intentado hacer estos ejercicios lo más reales posibles, a la hora de ponerlo en práctica podemos ver que los alumnos los superan fácilmente y que, en cuanto tienen resuelto el algoritmo, piden opciones que hacerle o le buscan formas distintas con las que poder jugar con el robot. \\
+Con ese propósito, para la última parte del curso, y ya teniendo en cuenta las herramientas de programación trabajadas hasta ahora, en esta sección propondremos ejercicios más completos y que requerirán de varios sensores y actuadores conjuntos, de comportamientos más complejos y con un propósito más específico. Seguiremos trabajando la programación, por ejemplo el concepto de 'máquina de estados', y pondremos mucho hincapié en el uso de funciones (en Scratch, bloques) con el propósito de no repetir código y de hacerlo más legible. \\
+Otro propósito de esta sección es el aprendizaje y autonomía de los alumnos a la hora de solucionar un problema. Es decir, no ya de dar la solución programada a un algoritmo, sino de diseñar ellos mismos ese algoritmo que compone la solución. A base de intentos, y distintas iteraciones, el refinamiento de la solución será un punto importante. Seguiremos la idea de la metología \textbf{Agile} (Figura \ref{fig:agile}): diseño, desarrollo, prueba, rediseño. A pesar de haber seguido este método durante todo el curso, ahora es cuando mejor se puede poner en práctica debido a la naturaleza más continua de los ejercicios (no durarán sólo un día o una iteración).
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/agile.jpg}
+	\caption{Metodología AGILE de desarrollo de software}
+	\label{fig:agile}
+\end{figure}
+\subsection{Lucha de sumo}
+\subsection{Fútbol}
+\subsection{Laberinto}
+\subsection{Aparcamiento autónomo}
