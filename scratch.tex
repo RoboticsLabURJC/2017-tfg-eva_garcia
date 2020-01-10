@@ -11,28 +11,34 @@ La tercera y última parte se centrará en la integración de los dos anteriores
 Como se ha explicado anteriormente, el propósito de un actuador es ejecutar la orden que recibe de la placa. Es, por tanto, muy visual y conveniente para introducir en la programación de robótica, pues da pie a equivocarse y aprender de los errores de forma mucho más intuitiva que con otros componentes.\\
 En la sección \ref{sec:mbot}, ya se detallaron los actuadores con los que cuenta el Mbot. En el diseño de estas prácticas no se han utilizado todos, pues se contó con la limitación de tener sólo el paquete "básico" del mbot (presumiblemente, sería el que tendrían los centros educativos). Estos componentes sería, pues, los motores, las luces led integradas en la placa, la placa led, el zumbador integrado y el pulsador integrado.\\
 A continuación se explicarán los ejercicios desarrollados, intentando explicar el objetivo del ejercicio, el nivel de dificultad y comentando la experiencia de llevarlo a cabo.
-\subsection{Carreras}
+\subsection{Carreras}\label{ej:carreras}
 Obviamente, lo más visual del robot Mbot son los motores (las ruedas). También es lo más intuitivo y esperable de un robot en general: se mueve por sí mismo. Es uno de los componentes más sencillos de programar, ya que Scratch ofrece un desplegable con los posibles valores que aceptan los motores del Mbot. Además, tiene métodos directamente para avanzar, retroceder y girar, muy cómodos para el primer contacto con el robot y válidos para este ejercicio en concreto. \\
 En vez de simplemente mover el robot, pensamos el ejercicio como una carrera entre los robot de todos los alumnos para despertar su interés y hacerlo más entretenido. Esto se comprobó necesario en la práctica; sin una utilidad práctica, o juego, los alumnos perdían interés rápidamente o, incluso, no lo tenían desde el principio. \\
-\subsubsection{Ejercicio extra}\label{carrObst}
+\subsubsection{Ejercicio extra}\label{ej:carrObst}
 Otra cosa que se pudo comprobar cuando se pusieron en práctica los ejercicios es que es mejor hacer varias versiones de un mismo ejercicio, aunque la dificultad sea la misma, con objetivos distintos. Los alumnos no pierden la atención y aprenden que una misma solución, con pequeñas variaciones, vale para distintas situaciones. Además, así tenemos cubierta la situación de que los alumnos vayan a distintas velocidades y unos terminen el ejercicio base mientras otros no.\\
 Una versión del ejercicio de las carreras es hacerla con obstáculos fijos. Los alumnos tendrán que medir en tiempo la distancia entre obstáculos y jugar, con las velocidades y los giros. Quién mejor combinación entre ello encuentre, mejor tiempo hará en carrera.
 
-\subsection{Cumpleaños feliz}\label{cumple}
-Otro actuador sencillo de usar es el zumbador integrado en la placa. Es algo más complicado, pues las notas musicales no son las más conocidas y, sobre todo en los alumnos más jóvenes, no están acostumbrados a una escala musical. Sin embargo, no puede comprobar que no tardan mucho en entender el sistema de escalas; se les puede ayudar dándoles una tabla de equivalencias entre las notas americanas y europeas. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{img/lorem.jpg}
-	\caption{Equivalencia entre notas}	
-\end{figure}
-Una vez entendida la diferencia de notas y comprobado cómo funciona el zumbadores, les proponemos que el robot entone la canción de cumpleaños feliz -por ser una canción que todo el mundo conoce-. No sólo sirve para el actuador, sino que introducimos el concepto de repetición (bucles). La idea principal es dejarles al principio que hagan el ejercicio todo seguido y después les ayudamos a entender que están repitiendo código: hay estrofas que se repiten. Ven la necesidad, pues, de meter esas estrofas dentro de un bucle de repetición de tantas veces como sea necesario.\\
+\subsection{Cumpleaños feliz}\label{ej:cumple}
+Otro actuador sencillo de usar es el zumbador integrado en la placa. Es algo más complicado, pues las notas musicales no son las más conocidas y, sobre todo en los alumnos más jóvenes, no están acostumbrados a una escala musical. Sin embargo, no puede comprobar que no tardan mucho en entender el sistema de escalas; se les puede ayudar dándoles una tabla de equivalencias entre las notas americanas y europeas.\\
+\begin{table}[H]\centering
+	\begin{tabular}{||ccccccc||}
+		\hline
+		Do & Re & Mi & Fa & Sol & La & Si \\[1.5pt]
+		C & D & E & F & G & A & B \\
+		\hline
+		
+	\end{tabular}
+	\caption{Equivalencia entre notas}
+\end{table}
+
+Una vez entendida la diferencia de notas y comprobado cómo funciona el zumbador, les proponemos que el robot entone la canción de cumpleaños feliz -por ser una canción que todo el mundo conoce-. No sólo sirve para el actuador, sino que introducimos el concepto de repetición (bucles). La idea principal es dejarles al principio que hagan el ejercicio todo seguido y después les ayudamos a entender que están repitiendo código: hay estrofas que se repiten. Ven la necesidad, pues, de meter esas estrofas dentro de un bucle de repetición de tantas veces como sea necesario.\\
 \subsubsection{Ejercicio extra}
 Como ocurrió antes con las carreras, una vez han terminado la primera canción, es bueno invitarles a que intenten que el robot \textit{cante} otras melodías que conozcan y les apetezcan. 
-\subsection{Panel LED}
+\subsection{Panel LED}\label{ej:panelLed}
 El único actuador que queda sin utilizar es el panel LED. Para utilizarlo, necesitamos quitar el sensor de ultrasonidos y poner el panel.\\
 Este ejercicio consiste únicamente en dibujar en el panel. Scrach simplifica mucho el uso del panel, con todo lo difícil que es su programación, como veremos más adelante en el capítulo \ref{cap:real}. Sin embargo, tiene vario métodos para ello, uno para dibujar y otro para escribir. Es entretenido para los jóvenes dibujar y ver directamente el dibujo en el panel. \\
 Como reto de programación no tiene gran dificultad, por lo que, después de aprender jugando el funcionamiento del componente, introducimos el panel como funcionalidad extra en los demás ejercicios, tanto en los que ya hemos visto como en los siguientes. 
-\subsection{S.O.S.}
+\subsection{S.O.S.}\label{ej:sos}
 El siguiente actuador del pack del Mbot son las luces LED de la placa, que tienen un rango de colores RGB que permite que cada alumno pueda personalizar los colores como más les guste. El propio lenguaje Scratch permite el rango de cada color entre 0 y 255 (aunque en la práctica, no sean notables los cambios pequeños en esa escala).\\
 La finalidad del ejercicio es que, con luces, el robot pida ayuda en lenguaje morse: tres pulsos cortos, tres pulsos largos, y tres pulsos cortos. \\
 Por experiencia, los alumnos son más proactivos cuando ven una utilidad mínimamente real a lo que se les pide, y en muchas películas han visto hablar del morse y la necesidad de pedir ayuda en un lenguaje universal. \\
@@ -40,19 +46,19 @@ Como concepto de programación, en este ejercicio trabajamos las duraciones; el 
 \subsubsection{Ejercicio extra}
 Como siempre, una vez que han conseguido que el mensaje de socorro sea entendible, cambiamos el ejercicio a escribir en morse cualquier mensaje que se les ocurra (con la tabla de equivalencias del abecedario) y a mandar el mismo mensaje de socorro con luz y sonido a la vez.
 
-\subsection{Camión}\label{camion}
+\subsection{Camión}\label{ej:camion}
 Como último ejercicio de actuadores, intentaremos juntarlos todos, a la vez que todavía no metemos ningún sensor. Proponemos, pues, emular el comportamiento de un camión, algo a lo que están acostumbrados y que no se les habría ocurrido que era automatizable. Un camión, haga lo que haga, si da marcha atrás, pitará (con los zumbadores) y encenderá las luces naranjas. \\
 Vamos metiendo, poco a poco, acciones simultáneas, para que tengan que preocuparse de más de un componente (de más de un bloque de Scratch). El objetivo es el aprendizaje de que, en robótica, un comportamiento aparentemente trivial es la suma de muchos comportamientos simultáneos y dependiente uno de otro.\\
 Con este ejercicio, aprendemos el concepto, tan necesario en la programación de robótica, de \textit{ocurrencia}. Cuándo, y sólo cuándo, el camión da marcha atrás, es cuando se encienden las luces y sirenas.
 
-\subsection{Botón de Start}
+\subsection{Botón de Start}\label{ej:start}
 Aunque no es un ejercicio en sí mismo, lo introducimos en este punto como continuación del concepto de ocurrencia mencionado en el ejercicio anterior. En este caso, la idea más concreta sería \textit{esperar a la ocurrencia}. Dejamos en espera el programa completo hasta que pulsemos el botón de la placa.\\
 Scratch proporciona el bloque 'Esperar a', por lo que la única dificultad es el entendimiento de la ideal, no la programación. \\
 Durante la puesta en práctica de los otros ejercicios de este apartado, los alumnos expresaban descontento porque el programa arrancara en el robot nada más encenderlo (en realidad, nada más subirlo a la placa, por lo que debían apagarlo y encenderlo para controlar el inicio), por lo que el botón de start responde a una necesidad creada por ellos. \\
 El objetivo es introducir esta nueva funcionalidad en todos los ejercicios, una vez que lo han hecho en el primero, el resto de ellos es inmediato.
 
 %%%%%%%%%%
-\section{Sensores}
+\section{Sensores}\label{sec:sensores}
 Como se ha comentado en la introducción de este capítulo, los sensores recogen información del ambiente y la devuelven en forma numérica. Es misión del programador, pues, procesar el retorno y la interpretación de esa información de forma correcta, unívoca y cubriendo todos las posibilidades. \\
 Esto requiere unas habilidades más avanzadas, además de los conceptos básicos de programación como bucles, condicionales, ocurrencias, etc, que se han visto en el apartado anterior (\ref{sec:actuadores}) de actuadores. Los alumnos deberán ser capaces de: \\
 \begin{enumerate}
@@ -65,20 +71,20 @@ Estas habilidades las iremos trabajando poco a poco, diseñando ejercicios que l
 Como siempre, en cada ejercicio iremos guiando a los alumnos en la división del problema bottom-up; esta división, la compartición de los problemas, es una de las habilidades más importantes de un programador, y una de las cosas sobre las que más haremos hincapié.\\
 A continuación se detallarán los distintos ejercicios pensados con esta filosofía, poniendo especial foco en los objetivos que se pretenden enseñar y en cómo llevarlos a cabo.
 
-\subsection{No chocar contra un muro}\label{muro}
+\subsection{No chocar contra un muro}\label{ej:muro}
 Uno de los actuadores más visibles, y por el que los alumnos siempre preguntan, es el sensor de proximidad (sensor de ultrasonidos). El bloque de Scratch para este sensor devuelve un valor numérico, pero no el valor que devolvería el sensor programado en su lenguaje nativo (arduino) sino que incorpora el procesado de la información y devuelve la distancia a la que se encuentra del obstáculo que esté leyendo. Por tanto, para los alumnos es tan cómodo como trabajar con ''distancia x del sensor'', con lo cual pueden olvidarse de la programación más farragosa y centrarse sólo en decidir qué hacer con la información que recogen del sensor. \\
-Este ejercicio se diseñó con el mismo ánimo que el del camión (véase \ref{camion}), siguiendo la idea de que programen cosas que conocen, que utilizan en su día a día, para q	ue vean que la robótica no es algo de ciencia ficción o de grandes laboratorios (el primer día que se les pregunta qué es un robot siempre hablan de la NASA o de robots futuristas con forma 'humana'), sino que está incluida en nuestras vidas y cualquiera puede dedicarse a ello.\\
+Este ejercicio se diseñó con el mismo ánimo que el del camión (véase \ref{ej:camion}), siguiendo la idea de que programen cosas que conocen, que utilizan en su día a día, para que vean que la robótica no es algo de ciencia ficción o de grandes laboratorios (el primer día que se les pregunta qué es un robot siempre hablan de la NASA o de robots futuristas con forma 'humana'), sino que está incluida en nuestras vidas y cualquiera puede dedicarse a ello.\\
 El objetivo es, por tanto, programar el sensor de proximidad de los coches, que cuando estás aparcando y te acercas al coche de delante (en este caso, a un muro), primero pita, si te acercas más pita más rápido y, al final, se para. \\
 Como es el primer sensor que utilizan, lo orientamos en etapas. \\
 Primero, necesitan aprender como se usan el sensor y el valor de retorno. Es decir, el bloque de Scratch que llama al sensor no sirve de nada sin añadirlo a algún otro bloque que utilice el valor que el sensor lee del entorno (por ejemplo, un bloque condicional). Este primer ejercicio lo haremos utilizando directamente el bloque de lectura del sensor; más adelante introduciremos el concepto de variable.\\
 Después, tendrán que conseguir la parte difícil del ejercicio: que el robot se pare cuando se acerque al muro. Así comprobarán de forma real cómo funciona el sensor, además de ajustar la sensibilidad de ''cuánto de cerca'' debe estar el robot para considerar que está pegado al muro pero para qué dé tiempo a pararlo sin que se choque.\\
-Una vez conseguida esta primera parte, que requiere de bloques condicionales, de ocurrencia o de espera (no hay una sola forma correcta de hacerlo), solucionar el ejercicio completo es -relativamente- inmediato. Como se ha explicado antes, el comportamiento deseado es que, cuando el robot se acerque un poco al muro, pite ligeramente (con el zumbador de la placa, que ya se ha utilizado antes; véase \ref{cumple}); cuando se acerque algo más, pite más intensamente y, cuando esté muy cerca (la distancia que se haya decidido en la primera parte del ejercicio), parará para no chocar.
+Una vez conseguida esta primera parte, que requiere de bloques condicionales, de ocurrencia o de espera (no hay una sola forma correcta de hacerlo), solucionar el ejercicio completo es -relativamente- inmediato. Como se ha explicado antes, el comportamiento deseado es que, cuando el robot se acerque un poco al muro, pite ligeramente (con el zumbador de la placa, que ya se ha utilizado antes; véase \ref{ej:cumple}); cuando se acerque algo más, pite más intensamente y, cuando esté muy cerca (la distancia que se haya decidido en la primera parte del ejercicio), parará para no chocar.
 \subsubsection{Ejercicio extra}
 Siempre podemos refinar algo más el ejercicio para que, además de pitar, el robot vaya disminuyendo la velocidad según se acerque al muro hasta, finalmente, pararse. Esto sería algo necesario para una implementación del aparcamiento autónomo que llevan incorporado algunos de los coches más modernos.\\
 Como ampliación, este ejercicio puede adaptarse para meter la funcionalidad secundaria dentro de \textbf{funciones} (en Scratch, nuevo bloque), con un parámetro de entrada del que dependerá la velocidad o la frecuencia de pitido. Estas funciones serán llamadas más tarde, desde el programa principal, con el parámetro de entrada correspondiente a cuánto de cerca esté el robot de la pared. Obviamente, esta funcionalidad no la podremos introducir nada más empezar con los sensores. La experiencia nos demuestra que es mejor esperar a que sean los propios alumnos los que creen las necesidades, y la necesidad de una \textit{función} no la verán hasta que no tengan programas muy grandes (con muchos bloques) y difíciles de leer; será entonces cuando entiendan las virtudes de paquetizar el código.\\
 Esta ampliación la reservaremos, por tanto, para retormarla cuando hayamos visto otro ejercicio en el que sí se necesiten las funciones. Como los alumnos guardan los escenarios con el código de los ejercicios, será fácil retormarlo para cambiarlo.
 
-\subsection{Escondite inglés}\label{ingles}
+\subsection{Escondite inglés}\label{ej:esconIngles}
 Este ejercicio, muy simple, nos sirve para afianzar lo aprendido con el anterior, a la vez que usamos otro sensor nuevo, el sensor de ruido integrado en la placa.\\
 Como siempre, primero aprenderemos cómo usar el sensor: cómo llamarlo, usando el bloque del sensor juntos con los diferentes bloques de condicionales y de operadores lógicos (mayor, menor que), tal y como se hizo antes con el sensor de proximidad. Para practicar, podemos proponer que, cuando el ruido supere cierto nievel, se enciendan las luces LED de la placa. Esto tiene un doble propósito; además de practicar con el snesor, establecer un valor barrera de nivel de ruido. Al ser un sensor que recoge datos continuamente, y que ese valor dependerá del ruido ambiente (no es siempre el mismo, como en el caso del sensor de proximidad y la distancia a una pared); no hay una solución que sea válida universalmente para ese valor barrera. \\
 Una vez hechas varias pruebas de sonido, y comprobado a qué nivel de ruido el robot reaccionará a una palmada y encenderá las luces, preparamos el juego con el que ponerlo en práctica. \\
@@ -89,15 +95,15 @@ El nivel de ruido ambiente que se usará como nivel umbral se obtiene leyendo el
 Esta ampliación del ejercicio nos sirve para explicar el modo correcto de establecer 'variables de entorno'. Es decir, el entorno tiene unas características, que casi nunca serán fijas o deterministas y que se necesitan como datos para un desarrollo más sólido frente a errores o cambios en el entorno. Además, también servirá para aprender el concepto de \textbf{variable} de programación. Una variable es una ''caja'' donde se guarda un valor que vamos a querer utilizar más tarde. En este caso, el valor de la suma de las lecturas consecutivas del lector.\\
 Este método de establecer el entorno en variables que se vayan a utilizar y, sobre todo, la necesidad de ello, se volverá a trabajar, con el ánimo de consolidar lo aprendido, en el siguiente ejercicio. 
 
-\subsection{Luces automáticas}
+\subsection{Luces automáticas}\label{ej:lucesAuto}
 En este ejercicio, y en el siguiente, utilizaremos el sensor de luz, también integrado en la placa. Siguiendo la filosofía de 'programar comportamientos de la vida diaria', en este caso desarrollaremos el sistema de las luces de un coche. Éstas se encienden automáticamente cuando no hay luz, bien porque fuera de nocheo bien porque no haya luz en un día nublado. Es decir, que si sólo programáramos las luces para que se encendieran a partir de las 8 de la noche, porque es la hora a la que en verano debiéramos encender las luces, en invierno estaremos horas sin luz pues anochece mucho antes. Por tanto, necesitaremos un sistema que nos valga siempre, no dependiendo de la hora a la que anochezca o de si el día es nublado o despejado. \\
-Este ejercicio es muy simple por naturaleza, así que lo utilizaremos para afianzar el método de cálculo del valor de referencia de la luz ambiental explicado en el anterior \ref{ingles}. A partir de calcular este valor umbral, el de la luz ambiental del aula, se programará el robot para que, si apagamos las luces, se enciendan los LED de la placa (que sería el equivalente a las luces del coche).\\
+Este ejercicio es muy simple por naturaleza, así que lo utilizaremos para afianzar el método de cálculo del valor de referencia de la luz ambiental explicado en el anterior (\ref{ej:esconIngles}). A partir de calcular este valor umbral, el de la luz ambiental del aula, se programará el robot para que, si apagamos las luces, se enciendan los LED de la placa (que sería el equivalente a las luces del coche).\\
 
-\subsection{Huye-luz}
+\subsection{Huye-luz}\label{ej:huyeLuz}
 Esta vez, y no como ejercicio extra sino como uno distinto, diseñamos otro problema con el mismo sensor que ya hemos utilizado en el anterior. El motivo de que sea un ejercicio diferente es que no es un añadido al ejercicio, sino que cambia el requerimiento inicial del problema; éste será que el robot huya de la luz, persiguiéndolo con una linterna.\\
 Utilizaremos el mismo método de sacar el valor umbral de referencia pero, esta vez, si estamos por encima de ese valor (en vez de por debajo como antes), el robot tendrá que huir, dando marcha atrás y girando.\\
 
-\subsection{Sigue-líneas}
+\subsection{Sigue-líneas}\label{ej:sigueLineas}
 El siguiente sensor del robot es el sensor infrarrojo, que para este ejercicio colocaremos con los lectores hacia el suelo (como viene normalmente indicado en el kit de instalación de mBot).\\
 Utilizaremos, al principio, el circuito para seguir las líneas que viene en el kit del mBot, que hace un ocho con líneas negras sobre blanco. Es importante que cualquier otro circuito qe vayamos a hacer seguir al robot tenga claramente diferenciados el negro y blanco, pues el sensor es binario: está ''tapado'' o no, y si el suelo es oscuro entenderá que es una línea, y se comportará de forma errónea.\\
 El objetivo del ejercicio es, obviamente, que el robot siga, sin ninguna interacción humana, el circuito sin salirse de las curvas. Para los alumnos más jóvenes, atacar este problema directamente resulta demasiado grande y no sabrán como empezarlo sin una guía para aprender a usar el sensor. Lo más difícil de este sensor, en comparación con los otros, es el concepto de \textit{respuesta binaria}. El bloque de Scratch permite acceder a este sensor y darle dos opciones: sensor en negro o sensor en blanco. El primer ejercicio sería, entonces, saber qué significa que el sensor responda negro o blanco (por ejemplo, que encienda las luces), tapándolo y destapándolo, lo que será equivalente a que esté sobre la línea negra o no.\\
@@ -115,17 +121,63 @@ A partir de separar y entender las posibilidades que tenemos con los sensores, e
 	\item Del revés, si el robot está en una curva desviándose a la izquierda, tendrá que girar a la derecha para seguir la curva.
 	\item Si el robot lee los dos sensores en blanco, es que se ha salido del circuito y tendrá que volver a él (girando o dando marcha atrás hasta que el sensor vuelva a ser negro).
 \end{itemize}
-Una vez solucionado el ejercicio, sólo quedará perfeccionarlo, haciendo los giros más precisos para que el movimiento sea más fluido y continuo. La primera vuelta de este perfeccionamiento se hará ajustando las velocidades y las esperas. La segunda vuelta, la forma más correcta de hacerlo, será siguiendo la idea de ''girar hasta estar en el sitio correcto''; es decir, que mantendremos el movimiento deseado (el correspondiente a cada caso), hasta que los dos sensores lean negro y esté otra vez sobre la línea.
+Una vez solucionado el ejercicio, sólo quedará perfeccionarlo haciendo los giros más precisos para que el movimiento sea más fluido y continuo. La primera vuelta de este perfeccionamiento se hará ajustando las velocidades y las esperas. La segunda vuelta, la forma más correcta de hacerlo, será siguiendo la idea de ''girar hasta estar en el sitio correcto''; es decir, que mantendremos el movimiento deseado (el correspondiente a cada caso), hasta que los dos sensores lean negro y esté otra vez sobre la línea.
 
 \subsubsection{Ejercicio extra}
 Esta vez no aumentaremos la dificultad ni cambiaremos o ampliaremos las especificaciones del problema, sino que sólo lo pondremos a prueba con diferentes circuitos hechos por los alumnos, cada vez más difíciles o con más curvas, con el fin de demostrar que con una única solución tenemos cubiertos todos los escenarios en todas las situaciones que planteemos. \\
 Además, nos sirve para jugar con el programa que los alumnos han desarrollado, haciéndoles ver que sirve para algo más que sólo 'hacerlo'; es importante inculcarles la idea de que programar es divertido y de que ver los resultados es gratificante.
 
-\subsection{Choca-gira}
-Usaremos el mismo sensor de ultrasonido que en el ejercicio del \ref{muro} pero complicando el requerimiento principal. Esta vez, en lugar de sólo tener que parar para no chocar, el robot intentará evitar el obstáculo para huir de él. \\
+\subsection{Choca-gira}\label{ej:chocaGira}
+Usaremos el mismo sensor de ultrasonido que en el ejercicio del muro (\ref{ej:muro}) pero complicando el requerimiento principal. Esta vez, en lugar de sólo tener que parar para no chocar, el robot intentará evitar el obstáculo para huir de él. \\
 El ejercicio básico consistirá en perseguir al robot, poniéndole delante algo con que, de no esquivarlo, chocaría. Para esquivarlo, no sólo tendrá que parar si 'lee' un obstáculo delante sino que, deberá girar o dar marcha atrás o las dos cosas: serán los alumnos los que diseñen su propio algoritmo de \textbf{esquivado}; no hay una solución única y deberán demostrar su capacidad de decisión delante de una solución abierta.
 \subsubsection{Ejercicio extra}
 Con el mismo sensor y la misma filosofía que anteriormente, esta vez diseñaremos un algoritmo para \textbf{atravesar} los obstáculos y poder continuar la carrera, no para evitarlos y huir de ellos. \\
 El propósito es reforzar la autonomía de los alumnos a la hora de buscar una solución, no sólo de implementar un algoritmo (una solución) dado. La diferencia con la carrera de obstáculos del primer apartado de este mismo capítulo, en \ref{carrObst}, es que la disposición de estos obstáculos no será fija, sino que el robot deberá ser capaz de solucionar cualquier circuito.
-\subsection{Coche Tele-dirigido}
-En esta ocasión, utilizaremos el mando a distancia del Mbot. El sensor del 
+\subsection{Coche Tele-dirigido}\label{ej:cocheTele}
+En esta ocasión, utilizaremos el mando a distancia del Mbot. A pesar de, a primera visa para los alumnos, parecer un actuador, se trata de un sensor, pues recibe información del \textit{medio}; en este caso, del mando, que emitirá una señal infrarroja distinta dependiendo de qué tecla se pulse. Es, por tanto, un sensor del cual recibiremos información mucho más controlada que de cualquier otro, que no recibe datos continuamente y el cual, en Scratch, tiene todas las posibilidades de los botones predefinidas (no hará falta, como sí la haría tratando con otro lenguaje de programación, averiguar qué valor corresponde con cada botón, o cambiar ente tipos de datos). En Scratch, el bloque correspondiente al mando está nombrado como \textit{IR remote}\\
+Proponemos el ejercicio con la idea de que programen un coche teledirigido como los que se pueden comprar como juguete. Dependiendo de qué boton se pulse, el robot tendrá un movimiento u otro, utilizando las flechas para las direcciones y un botón bandera para parar (el central, por ejemplo, o el cero). \\
+Para desarrollar el ejercicio, utilizaremos bloques condicionales, ya que Scratch no dispone de bloques \textit{Switch-Case}. Cada rama del condicional, tendrá una de las teclas que tenga que leer el sensor, y hará un movimiento diferente; hasta que no pulsemos otra tecla no cambiará el movimiento. Por ejemplo, 'si tecla arriba $\rightarrow$ mover hacia delante'.
+\subsubsection{Ejercicio extra 1}
+Una vez utilizado por primera vez el mando, y comprobado que funciona, podemos hacer más funcional el coche añadiendo implementación para que vaya a distintas velocidades. Proponemos dos soluciones distintas (aunque no serán las únicas) para este desarrollo:
+\begin{itemize}
+	\item Dentro del bloque 'si se pulsa flecha', en el que se habrá definido 'mover con velocidad X', meter otro bloque 'si se pulsa la misma flecha', en el que, si se cumple, se especificará que el robot se moverá con una velocidad mayor. Es decir, si pulsamos una vez la flecha, el robot se moverá hacia delante con una velocidad, y si pulsamos la misma tecla otra vez, se moverá más rápido.
+	\item Definiremos la velocidad dentro de una variable, a la cual daremos un valor u otro dependiendo de un rango de valores numéricos que pulsemos. Por ejemplo, si pulsamos el 1, la \textit{velocidad} tendrá valor 100, si pulsamos el 2, tendrá valor 150, etc. Esta variable de velocidad será la que se utilizará más tarde para los motores en las distintas direcciones, dentro del bloque condicional original.
+\end{itemize}
+\subsubsection{Ejercicio extra 2}
+Otra posible variación de este mismo coche teledirigido consiste en darle la vuelta al cambio de movimiento. En vez de mantener el movimiento de una tecla hasta que se pulse la siguiente, eta vez sólo mantendremos un movimiento mientras que la tecla que lo produce esté pulsada. Es decir, mientras esté pulsada la tecla que significa movimiento hacia delante, el robot se moverá, pero si la dejamos de pulsar, el robot se parará. Para esto, sólo hará falta una rama en el bloque condicional en el que, si ninguna tecla está pulsada, el robot se pare (se mueva con velocidad cero): el correspondiente al \textit{else} de la programación tradicional.
+
+\section{Comportamientos}\label{sec:comportamientos}
+En las dos secciones previas se ha explicado cómo utilizar los sensores y actuadores propios del mBot con el lenguaje de programación Scratch, y se han propuesto ejercicios para practicar todos ellos. Sin embargo, y aunque siempre se ha intentado hacer estos ejercicios lo más reales posibles, a la hora de ponerlo en práctica podemos ver que los alumnos los superan fácilmente y que, en cuanto tienen resuelto el algoritmo, piden opciones que hacerle o le buscan formas distintas con las que poder jugar con el robot. \\
+Con ese propósito, para la última parte del curso, y ya teniendo en cuenta las herramientas de programación trabajadas hasta ahora, en esta sección propondremos ejercicios más completos y que requerirán de varios sensores y actuadores conjuntos, de comportamientos más complejos y con un propósito más específico. Seguiremos trabajando la programación, por ejemplo el concepto de 'máquina de estados', y pondremos mucho hincapié en el uso de funciones (en Scratch, bloques) con el propósito de no repetir código y de hacerlo más legible. \\
+Otro propósito de esta sección es el aprendizaje y autonomía de los alumnos a la hora de solucionar un problema. Es decir, no ya de dar la solución programada a un algoritmo, sino de diseñar ellos mismos ese algoritmo que compone la solución. A base de intentos, y distintas iteraciones, el refinamiento de la solución será un punto importante. Seguiremos la idea de la metodología \textbf{Agile} (Figura \ref{fig:agile}): diseño, desarrollo, prueba, rediseño. A pesar de haber seguido este método durante todo el curso, ahora es cuando mejor se puede poner en práctica debido a la naturaleza más continua de los ejercicios (no durarán sólo un día o una iteración).
+\begin{figure}[H]\centering
+	\includegraphics[scale=0.5]{img/agile.jpg}
+	\caption{Metodología AGILE de desarrollo de software}
+	\label{fig:agile}
+\end{figure}
+Ya en el último ejercicio del apartado anterior, \ref{ej:cocheTele}, se programó un comportamiento algo más elaborado y complejo que los ejercicios anteriores con el fin de introducir esta última parte del curso de introducción a la programación con Scratch. El objetivo final de esta parte del curso será que los alumnos sean autónomos a la hora de solucionar ejercicios y resolver los problemas complejos que se les presenten, siendo además capaces de refinar la solución hasta un punto óptimo. 
+
+\subsection{Lucha de sumo}
+Con este primer proyecto se pretende demostrar a los alumnos que son perfectamente capaces de programar comportamientos que pueden usarse de forma completa y única, sin ser necesariamente sólo una pequeña parte de un comportamiento más completo. Es decir, en el caso de las luces automáticas (\ref{ej:lucesAuto}) o del sistema de detección de muros (\ref{ej:muro}), los programas formaban parte de un comportamiento completo al que podríamos referirnos como 'comportamiento robótico de un coche'; no tenían una aplicación directa por ellos solos. Sin embargo, en este ejercicio que nos ocupa, el comportamiento se programará desde el principio y al completo, con el fin de que los alumnos puedan ver y jugar con un programa hecho por ellos de forma íntegra. \\
+El objetivo del juego es simular un combate de sumo en el que los robot serían los luchadores. Se juega dentro de un ring, si un robot se sale, pierde; un robot, para ganar, deberá sacar al otro del ring.
+
+\subsection{Interacción con la matriz LED}
+
+\label{key}
+\subsection{Fútbol}
+Después del ejercicio anterior, más técnico y menos ''entretenido'', proponemos esta versión de un partido de fútbol. Dado que los robot no tienen una velocidad muy alta ni mucha capacidad de girar rápidamente, para que el juego sea más ágil, será un 'dos contra dos' y el campo no será muy grande. \\
+Contaremos con el mando IR, que se usará para dirigir al robot hacia la pelota, aunque siempre a la misma velocidad. El robot sólo subirá la velocidad cuando, con el sensor de ultrasonidos delantero, \textit{encuentre} la pelota (el sensor lea un obstáculo a cierta distancia), como en un partido de fútbol normal que cuando un jugador tiene la pelota corre más rápido hacia la portería. Si deja de tener delante la pelota, volverá a la velocidad anterior. \\
+Además, usaremos el sensor de infrarrojos -sigue líneas- para evitar que el robot se salga del campo, por lo que deberá diferenciarse bien el contraste entre blanco y negro del campo y las líneas que lo delinean. \\
+
+Como se puede observar, en este ejercicio se tendrán que mantener muchos sensores y posibles variaciones a la vez, por lo que los alumnos deberán tener muy en cuenta todas las variantes y la posibilidad de que una combinación niegue a la otra. Por ejemplo, que el robot no se salga del campo es prioritario, así que esa condición deberán considerarla la primera, antes de considerar si tienen delante la pelota, o los controles del mando. Es decir, esa condición es bloqueante para considerar el resto.\\
+Como todas esas condiciones serán bloques de condición anidados, el código enseguida se haría ilegible, por lo que ahora más que nunca, es imprescindible utilizar funciones. Cada función será un comportamiento predefinido y que siempre será igual. Estas funciones serían las siguientes: 
+\begin{description}
+	\item [No salirse del campo] el robot siempre hará lo mismo cuando se encuentre una de las líneas que delimitan el campo (por ejemplo, dar marcha atrás y girar un segundo hacia la derecha o izquierda).
+	\item [Correr hacia la pelota] en cuanto el robot detecte, a una distancia predefinida, que la pelota está delante suya, correrá más rápido a por ella, y siempre a la misma velocidad. 
+	
+\end{description}
+Además, todos esos valores \textbf{constantes}, como las distintas velocidades o la distancia a la que considerar que la pelota está cerca, siempre serán \textit{variables globales}, en vez de valores numéricos embebidos en el código.
+
+\subsection{Coche teledirigido: versión de máquina de estados}
+\subsection{Laberinto}
+\subsection{Aparcamiento autónomo}
