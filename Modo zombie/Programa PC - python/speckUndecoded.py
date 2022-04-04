@@ -4,7 +4,7 @@ from time import sleep
 #-- Cadena de pruebas a enviar
 
 #-- Sacar mensaje inicial
-print ("Eco: python escribe; arduino lo escucha y lo devuelve por serial; python lo escribe por pantalla")
+print ("Eco: python escribe; arduino lo escucha y lo devuelve por serial; python lo escribe por pantalla.")
 
 try:
   serial = serial.Serial('com3', 9600, timeout=1)
@@ -29,7 +29,7 @@ while cadena != 'q':
     sleep (1)
     dataLeft = serial.inWaiting()
     Data += serial.read(dataLeft)
-    decoded = Data.decode('utf-8')
-    print (decoded)
+    #decoded = Data.decode('utf-8')
+    print (Data)
     break
 serial.close()
