@@ -18,31 +18,30 @@ sleep(1)
 serial.flushInput()
 serial.setDTR(True)
 cadena= ''
-mensaje = []
 while True:
-    print ("Send or quit?")
-    cadena=input()
-    if (cadena.lower() == 'quit'):
-        break
-    print ("Enter which ones led want to turn on")
-    leds=input()
-    serial.write(bytes(leds, 'utf-8'))
-    """ print ("Enter red value")
-    red=input()
-    serial.write(bytes(red, 'utf-8'))
-    print("Enter green value")
-    green=input()
-    serial.write(bytes(green, 'utf-8'))
-    print("Enter blue value")
-    blue=input()
-    serial.write(bytes(blue, 'utf-8'))
-    sleep (1) """
-    while 1:
-        Data = serial.read()
-        sleep (1)
-        
-        decoded = Data.decode('utf-8')
-        print (decoded)
-        break
+  print ("Send new message or quit?")
+  cadena=input()
+  if (cadena.lower() == 'quit'):
+    serial.write(bytes(cadena, 'utf-8'))
+    break
+  print ("Enter which ones led want to turn on: 0-both, 1-rigth, 2-left")
+  leds=input()
+  print ("Enter red value")
+  red=input()
+  print("Enter green value")
+  green=input()
+  print("Enter blue value")
+  blue=input()
+  mensaje = f"{leds},{red},{green},{blue}"
+  print (mensaje)
+  serial.write(bytes(mensaje, 'utf-8'))
+  while 1:
+    Data = serial.read()
+    sleep (1)
+    dataLeft = serial.inWaiting()
+    Data += serial.read(dataLeft)
+    decoded = Data.decode('utf-8')
+    print (decoded)
+    break
 
 serial.close()
