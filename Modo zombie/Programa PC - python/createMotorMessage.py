@@ -4,7 +4,7 @@ from time import sleep
 #-- Cadena de pruebas a enviar
 
 #-- Sacar mensaje inicial
-print ("Encender luz led componiendo el mensaje completo para mandar exactamente los valores")
+print ("Usar los motores (M1 y M2) componiendo el mensaje completo para mandar exactamente los valores")
 
 try:
   serial = serial.Serial('com3', 9600, timeout=1)
@@ -24,16 +24,12 @@ while True:
   if (cadena.lower() == 'quit'):
     serial.write(bytes(cadena, 'utf-8'))
     break
-  print ("Enter which ones led want to turn on: 0-both, 1-rigth, 2-left")
-  leds=input()
-  print ("Enter red value")
-  red=input()
-  print("Enter green value")
-  green=input()
-  print("Enter blue value")
-  blue=input()
-  mensaje = f"{leds};{red};{green};{blue}"
-  print (mensaje)
+  print ("Enter velocity for left motor (-255,255)")
+  izdo=input()
+  print ("Enter velocity for rigth motor (-255,255)")
+  dcho=input()
+  
+  mensaje = f"{izdo};{dcho}"
   serial.write(bytes(mensaje, 'utf-8'))
   while 1:
     Data = serial.read()
