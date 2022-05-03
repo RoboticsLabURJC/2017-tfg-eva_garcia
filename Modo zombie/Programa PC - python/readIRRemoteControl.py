@@ -21,6 +21,5 @@ sleep (1)
 while 1:
     Data = serial.readline()
     decoded = Data.decode()
-    distance = float(decoded)
-    print(distance)
+    print(decoded)
     

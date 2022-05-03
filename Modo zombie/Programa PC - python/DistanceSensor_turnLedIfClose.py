@@ -23,4 +23,9 @@ while 1:
     decoded = Data.decode()
     distance = float(decoded)
     print(distance)
-    
+    if (distance < 10):
+      leds = f"{0};{255};{0};{0}"
+      serial.write(bytes(leds, 'utf-8'))
+    else:
+      leds = f"{0};{0};{255};{0}"
+      serial.write(bytes(leds, 'utf-8'))
