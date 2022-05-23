@@ -13,12 +13,13 @@ Buzzer_Dictionary = {'B0':31,'C1':33,'D1':37,'E1':41,'F1':44,'G1':49,'A1':55,'B1
 
 def open_PortSerial (baudios, port, timeOutSec):
     try:
-        serial = serial.Serial(port, baudios, timeout=timeOutSec)
-        serial.setDTR(False)
+        serialAux = serial.Serial(port, baudios, timeout=timeOutSec)
+        serialAux.setDTR(False)
         sleep(1)
-        serial.flushInput()
-        serial.setDTR(True)
-        return serial
+        serialAux.flushInput()
+        serialAux.setDTR(True)
+        sleep (1)
+        return serialAux
     except serial.SerialException:
         #-- Error al abrir el puerto serie
         sys.stderr.write("Error al abrir puerto (%s)\n")
@@ -68,7 +69,11 @@ def create_Message_Buzzer(serial):
     mensaje = f"{noteInt};{duration}"
     return mensaje
 
-def create_Message_Led (serial):
+def create_Message_Led (list):
+    mensaje = f"{list[0]};{list[1]};{list[2]};{list[3]}"
+    return mensaje
+
+def ask_Message_Led(serial):
     print ("Type 'quit' for stopping or anything to send new message to leds")
     cadena=input()
     if (cadena.lower() == 'quit'):
@@ -82,7 +87,8 @@ def create_Message_Led (serial):
     green=input()
     print("Enter blue value")
     blue=input()
-    mensaje = f"{leds};{red};{green};{blue}"
-    return mensaje
+    list = [leds,red,green,blue]
+    leds = create_Message_Led(list)
+    return leds
 
 
