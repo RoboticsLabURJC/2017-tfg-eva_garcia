@@ -25,12 +25,12 @@ def open_PortSerial (baudios, port, timeOutSec):
         sys.stderr.write("Error al abrir puerto (%s)\n")
         sys.exit(1)
 
-# funciones de serial
+#### ---- funciones de serial
 def send_Message (message, serial):
     serial.write(bytes(message, 'utf-8'))
 
 
-def read_Message (serial):
+def read_Text_Message (serial):
     Data = serial.read()
     sleep (1)
     dataLeft = serial.inWaiting()
@@ -38,9 +38,33 @@ def read_Message (serial):
     decoded = Data.decode('utf-8')
     return decoded
 
-# funciones de actuadores
+def read_Sensor_Message (serial):
+    Data = serial.readline()
+    decoded = Data.decode()
+    try:
+      sensorValue = float(decoded)
+      return sensorValue
+    except (ValueError):
+      return -1
 
-def create_Message_Motors (serial): 
+
+#### ----- funciones de actuadores
+
+def create_Message_Led (list):
+    mensaje = f"{list[0]};{list[1]};{list[2]};{list[3]}"
+    return mensaje
+
+def create_Message_Buzzer(list):
+    mensaje = f"{list[0]};{list[1]}"
+    return mensaje
+
+def create_Message_Motor(list):
+    mensaje = f"{list[0]};{list[1]}"
+    return mensaje
+
+######
+
+def ask_Message_Motors (serial): 
     print ("Type 'quit' for stopping or anything to send new message to motors")
     cadena=input()
     if (cadena.lower() == 'quit'):
@@ -50,10 +74,11 @@ def create_Message_Motors (serial):
     izdo=input()
     print ("Enter velocity for rigth motor (-255,255)")
     dcho=input()
-    mensaje = f"{izdo};{dcho}"
-    return mensaje
+    list = [-izdo,dcho] #el motor izquierdo va del reves.
+    motors = create_Message_Motor(list)
+    return motors
 
-def create_Message_Buzzer(serial):
+def ask_Message_Buzzer(serial):
     print ("Type 'quit' for stopping, 'show' for seeing all possible notes or anything to send new message to the buzzer")
     cadena=input()
     if (cadena.lower() == 'quit'):
@@ -66,12 +91,9 @@ def create_Message_Buzzer(serial):
     noteInt = Buzzer_Dictionary[note.upper()]
     print ("Enter the duration -in seconds- for the note")
     duration=input()
-    mensaje = f"{noteInt};{duration}"
-    return mensaje
-
-def create_Message_Led (list):
-    mensaje = f"{list[0]};{list[1]};{list[2]};{list[3]}"
-    return mensaje
+    list = [noteInt,duration]
+    Buzzer = create_Message_Buzzer(list)
+    return Buzzer
 
 def ask_Message_Led(serial):
     print ("Type 'quit' for stopping or anything to send new message to leds")
@@ -91,4 +113,16 @@ def ask_Message_Led(serial):
     leds = create_Message_Led(list)
     return leds
 
+######
 
+def turnOn_Leds(list,serial):
+    mensaje = create_Message_Led(list)
+    send_Message(mensaje,serial)
+
+def turnOn_Buzzer(list,serial):
+    mensaje = create_Message_Buzzer(list)
+    send_Message(mensaje,serial)
+
+def turnOn_Motors(list,serial):
+    mensaje = create_Message_Motor(list)
+    send_Message(mensaje,serial)
