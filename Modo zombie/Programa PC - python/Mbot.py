@@ -38,28 +38,50 @@ def read_Text_Message (serial):
     decoded = Data.decode('utf-8')
     return decoded
 
-def read_Sensor_Message (serial):
+def read_Sensor (serial):
+    Data = serial.readline()
+    try:
+        decoded = Data.decode()
+    except (UnicodeDecodeError):
+        return -1 
+
+    list = decoded.split(';')
+    try:
+      sensorValue = float(list[1])
+    except (ValueError,IndexError):
+      return -1 
+    if (int(list[0]) == 0):
+        return ["distance",sensorValue]
+    elif (int(list[0]) == 1):
+            return ["siguelineas",sensorValue]
+    
+ 
+"""def read_Sensor_Message (serial):
     Data = serial.readline()
     decoded = Data.decode()
     try:
       sensorValue = float(decoded)
       return sensorValue
     except (ValueError):
-      return -1
+      return -1 """
 
 
 #### ----- funciones de actuadores
 
+# como estandar, los mensajes se mandan con un primer valor para que el residente distinga que actuador tiene que leer:
+# 0 para los leds; 1 para los motores, 2 para el buzzer
+
+
 def create_Message_Led (list):
-    mensaje = f"{list[0]};{list[1]};{list[2]};{list[3]}"
+    mensaje = f"0;{list[0]};{list[1]};{list[2]};{list[3]}"
     return mensaje
 
 def create_Message_Buzzer(list):
-    mensaje = f"{list[0]};{list[1]}"
+    mensaje = f"2;{list[0]};{list[1]}"
     return mensaje
 
 def create_Message_Motor(list):
-    mensaje = f"{list[0]};{list[1]}"
+    mensaje = f"1;{list[0]};{list[1]}"
     return mensaje
 
 ######
@@ -74,7 +96,7 @@ def ask_Message_Motors (serial):
     izdo=input()
     print ("Enter velocity for rigth motor (-255,255)")
     dcho=input()
-    list = [-izdo,dcho] #el motor izquierdo va del reves.
+    list = [izdo,dcho]
     motors = create_Message_Motor(list)
     return motors
 

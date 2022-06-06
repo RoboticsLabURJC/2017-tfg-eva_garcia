@@ -7,18 +7,18 @@ from Mbot import *
 #-- Sacar mensaje inicial
 print ("Lee del sensor de distancia (ultrasonic) y enciende led rojo si la pared está muy cerca y verde si no")
 
-serial = open_PortSerial(9600,'com3',1)
+serial = open_PortSerial(50000,'com3',1)
 
 
 while 1:
-    Data = serial.readline()
-    decoded = Data.decode()
-    try:
-      distance = float(decoded)
-    except (ValueError):
-      continue
-    if (distance < 10):
-      turnOn_Leds([0,255,0,0])
+    sensorMessage = read_Sensor(serial)
+    
+    if (sensorMessage == -1):
+        continue
     else:
-      turnOn_Leds([0,0,255,0])
+      if (sensorMessage[0].lower() == 'distance'):
+        if (sensorMessage[1] < 10):
+          turnOn_Leds([0,255,0,0],serial)
+        else:
+          turnOn_Leds([0,0,255,0],serial)
 

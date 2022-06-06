@@ -5,17 +5,20 @@ from Mbot import *
 #-- Cadena de pruebas a enviar
 
 #-- Sacar mensaje inicial
-print ("Lee del sensor de distancia (ultrasonic) y enciende led rojo si la pared está muy cerca y verde si no")
+print ("Avanza a velocidad 100, leyendo del sensor de distancia (ultrasonic) y se para si la pared está muy cerca")
 
-serial = open_PortSerial(15000,'com3',1)
+serial = open_PortSerial(50000,'com3',1)
 
 
 while 1:
-    distance = read_Sensor_Message(serial)
-    if (distance -1):
+    sensorMessage = read_Sensor(serial)
+    
+    
+    if (sensorMessage == -1):
         continue
     else:
-        if (distance < 10):
-            turnOn_Motors([100,100])
+      if (sensorMessage[0].lower() == 'distance'):
+        if (sensorMessage[1] < 10):
+            turnOn_Motors([0,0], serial)
         else:
-            turnOn_Motors([0,0])
+            turnOn_Motors([100,100], serial)
