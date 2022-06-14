@@ -1,0 +1,21 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Objetivos}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Infraestructura}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Entorno}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Placa Arduino}{6}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}MBot}{6}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Sensores}{8}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Actuadores}{9}{subsubsection.3.2.2.2}%
+\contentsline {section}{\numberline {3.3}Software}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Scratch y mBlock}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Arduino}{14}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Python}{14}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Plataforma PyBoKids}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Diseño}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Programa residente}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Resultado: programa PC y programa residente}{15}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Aplicación educativa}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{19}{chapter.6}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{21}{chapter*.15}%

@@ -11,8 +11,8 @@ serial = open_PortSerial(57600,'com3',1)
 
 
 while 1:
-    sensorMessage = read_Sensor(serial)
-    
+  try:
+    sensorMessage = read_Sensor(serial)    
     if (sensorMessage == -1):
         continue
     else:
@@ -21,4 +21,9 @@ while 1:
           turnOn_Leds([0,255,0,0],serial)
         else:
           turnOn_Leds([0,0,255,0],serial)
+  except KeyboardInterrupt:
+    send_Quit(serial)
+    break
+
+sys.exit(0)
 

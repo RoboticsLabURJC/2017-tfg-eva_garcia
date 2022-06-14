@@ -150,3 +150,6 @@ def turnOn_Buzzer(list,serial):
 def turnOn_Motors(list,serial):
     mensaje = create_Message_Motor(list)
     send_Message(mensaje,serial)
+
+def send_Quit(serial):
+    send_Message("quit",serial)
