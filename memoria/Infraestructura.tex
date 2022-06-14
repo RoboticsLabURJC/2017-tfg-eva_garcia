@@ -12,7 +12,7 @@ Al principio de este Trabajo, se consideró a Linux un entorno menos amigable pa
 
 \section{Hardware}\label{sec:hardware}
 En esta sección describiremos los componentes hardware utilizados. La razón de la elección de éstos responde a la misma filosofía que en la sección anterior, la facilidad de acceso a los componentes y la facilidad con que se complementa en el entorno.
-\subsection{Placa Arduino}\label{subsec:placa}
+\subsection{Placa Arduino}\label{subsec:placaBase}
 Las placas Arduino son las más extendidas en cuanto a robótica. Arduino nació como una solución barata con el principal objetivo de utilizarlo en Educación. Además, al ser un proyecto liberado al público, su uso está extendido a toda una comunidad, que amplía y comparte sus propios desarrollos.\\
 Estas placas son hardware libre (uno de las principales razones de su bajo coste), y contienen un procesador re-programable y una serie de pines hembra, donde se conectarán los periféricos de entrada/salida necesarios para controlar un robot. Hay diferentes modelos de placas Arduinos, cada una fabricada con un propósito diferente; en este caso, hemos utilizado el modelo mCore, basado en \href{https://arduino.cl/producto/arduino-uno/}{Arduino Uno}, ya que es la que lleva por defecto el robot educativo Mbot (que comentaremos en la sección \ref{subsec:mbot}). Además de los pines hembra, o puertos, contiene una serie de actuadores y sensores integrados en la placa.
 \begin{figure}[H]
@@ -204,6 +204,51 @@ Una vez instalado el software, el proceso para poder empezar a usar el mBot es m
 \end{enumerate}
  
 
-\par Este lenguaje, y la interfaz gráfica, es una perfecta primera aproximación a
+\par Este lenguaje, junto a la interfaz gráfica, es una perfecta primera aproximación a la programación y a la robótica, dando más importancia al aprendizaje conceptual que a la sintaxis y al lenguaje. \\
+Obviamente, los alumnos necesitarán que se les guíe, principalmente al comienzo del curso, en comprender las necesidades de incluir los diferentes bloques y las ventajas que produce en el código. El objetivo no será explicarles para que usar, por ejemplo, un bloque condicional,  sino proponerles un ejercicio en el que, para llegar a la solución, necesitarán de forma intuitiva programar un condicional, y lleguen naturalmente a la necesidad de ello.
 \subsection{Arduino}\label{subsec:arduino}
+Como se explicó cuando hablamos de la placa base en la sección \ref{subsec:placaBase}, ésta se programa en \textbf{Arduino}. Este lenguaje de programación está basado en C++, y pensado para interactuar con objetos electrónicos. \\
+Teniendo en cuenta el objetivo de este Trabajo Fin de Grado, ofrecer una posibilidad de programar el robot Mbot en Python, es necesario utilizar el lenguaje nativo de la placa base, con el fin de que el robot \textit{entienda} las órdenes programadas en Python. Por lo tanto, para crear este ''framework'', es necesario instalar el entorno Arduino. A continuación se explican las instrucciones para instalar el entorno en Windows, y para configurarlo para el robot.
+\begin{enumerate}
+	\item Descargar e instalar, Arduino IDE, el cual instala el entorno completo de Arduino. Para las versiones 8 y 10 de Windows, está disponible directamente en el Microsoft Store. Para otras versiones de Windows, está disponible en la  \href{https://www.arduino.cc/en/software}{página web oficial}.
+	\begin{figure}[h]
+		\includegraphics[width=10cm]{store.png}
+		\centering
+		\label{img:MStore}
+		\caption{Arduino IDE en el Microsoft Store}
+	\end{figure}
+	\item Descargar las librerías de \href{https://codeload.github.com/Makeblock-official/Makeblock-Libraries/zip/master}{Makeblock} para añadirlas a Arduino y poder utilizarlas en nuestro entorno.
+	\item Incluir el archivo comprimido descargado desde el Arduino IDE:\\ \textit{Programa - Incluir librería - Añadir biblioteca .ZIP - Seleccionar el fichero - Abrir}
+	\item Seleccionar la placa básica que se va a conectar al IDE:\\
+	\textit{Herramientas - Placa - Seleccionar Arduino Uno}
+	\item Especificar el modelo exacto de placa al principio del programa de Arduino; en este caso la placa que estábamos utilizando es la mCore. Así se cargan todos los métodos correspondientes al modelo de placa; debe incluirse en cada programa de Arduino que se escriba.
+	\begin{verbatim}	
+		#include "MeMCore.h"	
+	\end{verbatim}
+	\item Igual que con Scratch, primero se debe conectar el robot al software (con el robot enchufado al PC y encendido):\\
+	\textit{Herramientas - Puerto - Seleccionar el puerto en el que está el robot} \\
+	Los puertos USB en Windows son \textit{COM1, COM2, COM3}, etc.
+	\item  Una vez tengamos un programa en Arduino listo para subir a la placa y probar con el robot:\\
+	\textit{Programa - Subir } o el botón rápido de ''subir''. \\
+	Este proceso primero compilar el programa y, si está correcto, lo sube a la placa. Sin embargo, se puede compilar primero como comprobación \textit{(Programa - Verificar)}.
+\end{enumerate}
 \subsection{Python}\label{subsec:python}
+Por último, utilizaremos \textbf{python} para programar la lógica de los ejercicios. El objetivo es que se programe en python sólo los ejercicios, habiendo paquetizado todo lo relativo al robot en Arduino, y sólo utilizando la conexión con éste para obtener datos de los sensores y enviar datos a los actuadores. La descripción de este proceso y de la lógica de ambos lados (PC y robot) se describirá en profundida en el capítulo \ref{cap:PyBoKids}.
+\par La razón de utilizar Python como lenguaje de programación es la misma que la del resto de componentes: la facilidad para los alumnos de acceder a ello. Es uno de los lenguajes con sintaxis más simple (por comparación, Arduino / C++ es muy cerrado y complejo), además de ser las palabras reservadas significantemente entendibles (aunque es cierto que en inglés: \textit{while}, \textit{print}, \textit{read}, etc), así como la declaración de variables es más flexible. Además, y aparte de la cuestión educacional, el módulo \textit{serial} para conexión con periféricos, está con la instalación base, y es mucho más sencillo que en otros lenguajes, haciéndolo perfecto para la electrónica. 
+\par La instalación de python en Windows también es muy sencilla:
+\begin{enumerate}
+	\item Descargar el paquete de la \href{https://www.python.org/downloads/}{web oficia} y ejecutar el instalable descargado.
+	También es posible, para Windows 10, obtenerlo desde el Microsoft Store, tal y como se hizo para Arduino.
+	\item Una vez descargado, comprobar que se puede ejecutar abriendo una consola -Powershell- y escribiendo \textit{python},	se ejecutará la consola de python, y podremos probar que tenemos python instalado en nuestro entorno (\textit{exit()} para salir). También es útil comprobar que hemos instalado la versión correcta (3.10): \textit{python --version} en una consola de Powershell (no teniendo abierta la consola de python)
+	\begin{figure}[h]
+		\includegraphics[]{python.png}
+		\centering
+		\label{img:python}
+		\caption{Comprobar python}
+	\end{figure}
+	\item Para ejecutar un programa escrito en python desde la consola de Windows: 
+	\begin{verbatim}
+		py HelloWorld.py
+	\end{verbatim}
+\end{enumerate}
+Para escribir código en python, se puede utilizar cualquier editor de texto. El mismo instalador de python instala uno propio, \textit{IDLE shell}, suficientemente simple y preparado particularmente para su sintaxis.
