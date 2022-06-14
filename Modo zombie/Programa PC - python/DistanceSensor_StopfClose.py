@@ -7,13 +7,11 @@ from Mbot import *
 #-- Sacar mensaje inicial
 print ("Avanza a velocidad 100, leyendo del sensor de distancia (ultrasonic) y se para si la pared está muy cerca")
 
-serial = open_PortSerial(50000,'com3',1)
+serial = open_PortSerial(57600,'com3',1)
 
 
 while 1:
-    sensorMessage = read_Sensor(serial)
-    
-    
+    sensorMessage = read_Sensor(serial)    
     if (sensorMessage == -1):
         continue
     else:

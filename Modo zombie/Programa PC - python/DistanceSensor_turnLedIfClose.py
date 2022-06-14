@@ -7,7 +7,7 @@ from Mbot import *
 #-- Sacar mensaje inicial
 print ("Lee del sensor de distancia (ultrasonic) y enciende led rojo si la pared está muy cerca y verde si no")
 
-serial = open_PortSerial(50000,'com3',1)
+serial = open_PortSerial(57600,'com3',1)
 
 
 while 1:

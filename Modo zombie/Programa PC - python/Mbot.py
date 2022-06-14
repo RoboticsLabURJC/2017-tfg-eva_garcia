@@ -53,7 +53,9 @@ def read_Sensor (serial):
     if (int(list[0]) == 0):
         return ["distance",sensorValue]
     elif (int(list[0]) == 1):
-            return ["siguelineas",sensorValue]
+        return ["siguelineas",sensorValue]
+    elif (int(list[0]) == 2):
+        return ["luz",sensorValue]
     
  
 """def read_Sensor_Message (serial):
