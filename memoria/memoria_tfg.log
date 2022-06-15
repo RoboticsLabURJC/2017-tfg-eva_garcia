@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  14 JUN 2022 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  15 JUN 2022 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,7 +620,47 @@ l.1 \chapter
 
 ]
 Cap\'{\i }tulo 2.
-) (Infraestructura.tex [3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (26.69325pt too wide) in paragraph at lines 6--8
+[]\OT1/ptm/b/n/12 Programaci[]on en Python de un ro-bot ba-sa-do en Ar-duino\OT
+1/ptm/m/n/12 . El ob-je-ti-vo t[]ecni-co ser[]a pro-por-cio-nar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+) (Infraestructura.tex
+Overfull \hbox (14.02109pt too wide) in paragraph at lines 8--1
+[]\OT1/ptm/b/n/12 Propuesta edu-ca-ti-va com-ple-ta, ba-sa-da en Scratch y Pyth
+on, y es-ca-lo-na-da seg[]un di-fi-cul-tad\OT1/ptm/m/n/12 .
+ []
+
+
+Overfull \hbox (4.24397pt too wide) in paragraph at lines 8--1
+\OT1/ptm/m/n/12 Ofre-ce-re-mos una pro-pues-ta edu-ca-ti-va, pa-ra un cur-so es
+-co-lar, orien-ta-da seg[]un ni-ve-les de di-fi-cul-tad
+ []
+
+
+Overfull \hbox (24.42708pt too wide) in paragraph at lines 8--1
+\OT1/ptm/m/n/12 orien-ta-do prin-ci-pal-men-te a alum-nos de Edu-ca-ci[]on Pri-
+ma-ria o Se-cun-da-ria (alum-nos sin co-no-ci-mien-tos
+ []
+
+
+Overfull \hbox (34.49545pt too wide) in paragraph at lines 8--1
+\OT1/ptm/m/n/12 Para es-ta pro-pues-ta, uti-li-za-re-mos tan-to el len-gua-je d
+e pro-gra-ma-ci[]on por blo-ques Scratch, pro-por-cio-na-do
+ []
+
+[3]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [4
@@ -644,7 +684,7 @@ ash \OT1/ptm/m/n/12 ca-rac-ter[]^^Psti-cas
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-<img//mcore.png, id=152, 895.345pt x 567.11874pt>
+<img//mcore.png, id=150, 895.345pt x 567.11874pt>
 File: img//mcore.png Graphic file (type png)
 <use img//mcore.png>
 Package pdftex.def Info: img//mcore.png  used on input line 19.
@@ -663,7 +703,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 [6 <./img//mcore.png>]
-<img//Mbot.jpg, id=159, 426.59375pt x 386.44376pt>
+<img//Mbot.jpg, id=157, 426.59375pt x 386.44376pt>
 File: img//Mbot.jpg Graphic file (type jpg)
 <use img//Mbot.jpg>
 Package pdftex.def Info: img//Mbot.jpg  used on input line 28.
@@ -686,12 +726,12 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `img:mbot2' on page 7 undefined on input line 32.
 
-<img//Mbot-pack-piernas.jpg, id=163, 803.0pt x 803.0pt>
+<img//Mbot-pack-piernas.jpg, id=161, 803.0pt x 803.0pt>
 File: img//Mbot-pack-piernas.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas.jpg  used on input line 34.
 (pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
-<img//Mbot-pack-piernas2.jpg, id=164, 451.6875pt x 451.6875pt>
+<img//Mbot-pack-piernas2.jpg, id=162, 451.6875pt x 451.6875pt>
 File: img//Mbot-pack-piernas2.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas2.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas2.jpg  used on input line 35.
@@ -715,17 +755,17 @@ Overfull \hbox (10.62645pt too wide) in paragraph at lines 51--52
 de la ha-bi-ta-ci[]on en la que nos en-con-tre-mos,
  []
 
-<img//ultrasonidos.jpg, id=172, 351.3125pt x 351.3125pt>
+<img//ultrasonidos.jpg, id=170, 351.3125pt x 351.3125pt>
 File: img//ultrasonidos.jpg Graphic file (type jpg)
 <use img//ultrasonidos.jpg>
 Package pdftex.def Info: img//ultrasonidos.jpg  used on input line 58.
 (pdftex.def)             Requested size: 204.85846pt x 204.86566pt.
-<img//siguelineas.jpg, id=173, 759.83875pt x 759.83875pt>
+<img//siguelineas.jpg, id=171, 759.83875pt x 759.83875pt>
 File: img//siguelineas.jpg Graphic file (type jpg)
 <use img//siguelineas.jpg>
 Package pdftex.def Info: img//siguelineas.jpg  used on input line 63.
 (pdftex.def)             Requested size: 204.85846pt x 204.85774pt.
-<img//sensorLuz.png, id=174, 476.37975pt x 108.405pt>
+<img//sensorLuz.png, id=172, 476.37975pt x 108.405pt>
 File: img//sensorLuz.png Graphic file (type png)
 <use img//sensorLuz.png>
 Package pdftex.def Info: img//sensorLuz.png  used on input line 68.
@@ -733,7 +773,7 @@ Package pdftex.def Info: img//sensorLuz.png  used on input line 68.
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
 [8 <./img//Mbot-pack-piernas.jpg> <./img//Mbot-pack-piernas2.jpg>]
-<img//RGBled.png, id=180, 166.82326pt x 332.442pt>
+<img//RGBled.png, id=178, 166.82326pt x 332.442pt>
 File: img//RGBled.png Graphic file (type png)
 <use img//RGBled.png>
 Package pdftex.def Info: img//RGBled.png  used on input line 88.
@@ -753,17 +793,17 @@ a fa-ci-li-tar la pro-gra-ma-ci[]on a los alum-nos,
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
 [9 <./img//ultrasonidos.jpg> <./img//siguelineas.jpg> <./img//sensorLuz.png>]
-<img//puertomotor.png, id=193, 305.34074pt x 163.812pt>
+<img//puertomotor.png, id=191, 305.34074pt x 163.812pt>
 File: img//puertomotor.png Graphic file (type png)
 <use img//puertomotor.png>
 Package pdftex.def Info: img//puertomotor.png  used on input line 99.
 (pdftex.def)             Requested size: 204.85846pt x 109.90843pt.
-<img//motorDC2.png, id=194, 275.22826pt x 212.59425pt>
+<img//motorDC2.png, id=192, 275.22826pt x 212.59425pt>
 File: img//motorDC2.png Graphic file (type png)
 <use img//motorDC2.png>
 Package pdftex.def Info: img//motorDC2.png  used on input line 104.
 (pdftex.def)             Requested size: 150.23138pt x 116.04485pt.
-<img//motorDC.png, id=195, 251.13824pt x 224.037pt>
+<img//motorDC.png, id=193, 251.13824pt x 224.037pt>
 File: img//motorDC.png Graphic file (type png)
 <use img//motorDC.png>
 Package pdftex.def Info: img//motorDC.png  used on input line 109.
@@ -773,7 +813,7 @@ LaTeX Info: Redefining \% on input line 117.
 
 [10 <./img//RGBled.png> <./img//puertomotor.png> <./img//motorDC2.png> <./img//
 motorDC.png>]
-<img//buzzer.png, id=209, 148.75575pt x 130.086pt>
+<img//buzzer.png, id=207, 148.75575pt x 130.086pt>
 File: img//buzzer.png Graphic file (type png)
 <use img//buzzer.png>
 Package pdftex.def Info: img//buzzer.png  used on input line 133.
@@ -790,7 +830,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--137
 
  []
 
-<img//scratch.png, id=210, 317.38576pt x 100.57574pt>
+<img//scratch.png, id=208, 317.38576pt x 100.57574pt>
 File: img//scratch.png Graphic file (type png)
 <use img//scratch.png>
 Package pdftex.def Info: img//scratch.png  used on input line 145.
@@ -801,7 +841,7 @@ Overfull \hbox (4.60089pt too wide) in paragraph at lines 143--149
 pro-gra-ma-ble con Scratch, un len-gua-je
  []
 
-<img//scratch2.png, id=211, 284.262pt x 109.00725pt>
+<img//scratch2.png, id=209, 284.262pt x 109.00725pt>
 File: img//scratch2.png Graphic file (type png)
 <use img//scratch2.png>
 Package pdftex.def Info: img//scratch2.png  used on input line 153.
@@ -823,12 +863,12 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img//mblock.png, id=221, 290.2845pt x 113.223pt>
+<img//mblock.png, id=219, 290.2845pt x 113.223pt>
 File: img//mblock.png Graphic file (type png)
 <use img//mblock.png>
 Package pdftex.def Info: img//mblock.png  used on input line 164.
 (pdftex.def)             Requested size: 290.28378pt x 113.22272pt.
-<img//mblock2.png, id=222, 185.493pt x 287.8755pt>
+<img//mblock2.png, id=220, 185.493pt x 287.8755pt>
 File: img//mblock2.png Graphic file (type png)
 <use img//mblock2.png>
 Package pdftex.def Info: img//mblock2.png  used on input line 172.
@@ -839,17 +879,17 @@ Underfull \vbox (badness 2027) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 177.
 LaTeX Info: Redefining \% on input line 177.
  [12 <./img//scratch2.png> <./img//mblock.png>]
-<img//mblock3.png, id=233, 178.266pt x 187.902pt>
+<img//mblock3.png, id=231, 178.266pt x 187.902pt>
 File: img//mblock3.png Graphic file (type png)
 <use img//mblock3.png>
 Package pdftex.def Info: img//mblock3.png  used on input line 180.
 (pdftex.def)             Requested size: 178.26555pt x 187.90154pt.
-<img//mblock4.png, id=234, 307.1475pt x 130.68825pt>
+<img//mblock4.png, id=232, 307.1475pt x 130.68825pt>
 File: img//mblock4.png Graphic file (type png)
 <use img//mblock4.png>
 Package pdftex.def Info: img//mblock4.png  used on input line 192.
 (pdftex.def)             Requested size: 204.85846pt x 87.16582pt.
-<img//mblock5.png, id=235, 359.54324pt x 165.61874pt>
+<img//mblock5.png, id=233, 359.54324pt x 165.61874pt>
 File: img//mblock5.png Graphic file (type png)
 <use img//mblock5.png>
 Package pdftex.def Info: img//mblock5.png  used on input line 197.
@@ -874,7 +914,7 @@ Overfull \hbox (14.73045pt too wide) in paragraph at lines 210--212
 o. A con-ti-nua-ci[]on se ex-pli-can las ins-truc-cio-nes
  []
 
-<img//store.png, id=248, 1020.81375pt x 164.41425pt>
+<img//store.png, id=246, 1020.81375pt x 164.41425pt>
 File: img//store.png Graphic file (type png)
 <use img//store.png>
 Package pdftex.def Info: img//store.png  used on input line 215.
@@ -894,7 +934,7 @@ Overfull \hbox (6.95517pt too wide) in paragraph at lines 228--231
 t al soft-wa-re (con el ro-bot en-chu-fa-do
  []
 
-<img//python.png, id=266, 182.48175pt x 66.2475pt>
+<img//python.png, id=264, 182.48175pt x 66.2475pt>
 File: img//python.png Graphic file (type png)
 <use img//python.png>
 Package pdftex.def Info: img//python.png  used on input line 244.
@@ -959,9 +999,9 @@ es/utmbi8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts
 /type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on memoria_tfg.pdf (27 pages, 1790425 bytes).
+Output written on memoria_tfg.pdf (27 pages, 1792061 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
+ 376 PDF objects out of 1000 (max. 8388607)
  85 named destinations out of 1000 (max. 500000)
  271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
