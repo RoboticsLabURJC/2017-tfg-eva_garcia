@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{book}
+\documentclass[a4paper, 12pt,openany]{book}
 
 
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
@@ -14,6 +14,9 @@
 \usepackage{listings}
 \usepackage{color}
 \graphicspath{ {img/} }
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{amssymb}
 \usepackage{float}  %% H para posicionar figuras
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage[none]{hyphenat}
@@ -21,9 +24,8 @@
 \usepackage[pagestyles]{titlesec}
 \usepackage{lipsum}
 \setcounter{tocdepth}{3} %para que el índice llegue hasta subsubsection
-\setcounter{secnumdepth}{3}
 \usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref} %para que los enlaces no aparezcan recuadrados en rojo y cambia los colores de los enlaces
-
+\setcounter{secnumdepth}{3}
 
 \begin{document}
 
@@ -71,7 +73,7 @@
 	%descomentarlo y crear el archivo .tex	
 	\input{Objetivos}
 	\input{Infraestructura}
-	\input{MbotReal}
+	\input{PyBoKids}
 	\input{AplicacionEducativa}	
 	\input{Conclusiones}
 
