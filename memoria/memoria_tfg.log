@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  19 JUN 2022 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  22 JUN 2022 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,7 +597,7 @@ LaTeX Info: Redefining \nameref on input line 30.
 \@outlinefile=\write3
 \openout3 = `memoria_tfg.out'.
 
-<img//logo_urjc.jpg, id=139, 632.3625pt x 321.2pt>
+<img//logo_urjc.jpg, id=159, 632.3625pt x 321.2pt>
 File: img//logo_urjc.jpg Graphic file (type jpg)
 <use img//logo_urjc.jpg>
 Package pdftex.def Info: img//logo_urjc.jpg  used on input line 34.
@@ -739,7 +739,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5
 
 ]
-<img//mcore.png, id=229, 895.345pt x 567.11874pt>
+<img//mcore.png, id=254, 895.345pt x 567.11874pt>
 File: img//mcore.png Graphic file (type png)
 <use img//mcore.png>
 Package pdftex.def Info: img//mcore.png  used on input line 19.
@@ -758,7 +758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 [6 <./img//mcore.png>]
-<img//Mbot.jpg, id=236, 426.59375pt x 386.44376pt>
+<img//Mbot.jpg, id=261, 426.59375pt x 386.44376pt>
 File: img//Mbot.jpg Graphic file (type jpg)
 <use img//Mbot.jpg>
 Package pdftex.def Info: img//Mbot.jpg  used on input line 28.
@@ -776,12 +776,12 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `img:mbot2' on page 7 undefined on input line 32.
 
-<img//Mbot-pack-piernas.jpg, id=240, 803.0pt x 803.0pt>
+<img//Mbot-pack-piernas.jpg, id=265, 803.0pt x 803.0pt>
 File: img//Mbot-pack-piernas.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas.jpg  used on input line 34.
 (pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
-<img//Mbot-pack-piernas2.jpg, id=241, 451.6875pt x 451.6875pt>
+<img//Mbot-pack-piernas2.jpg, id=266, 451.6875pt x 451.6875pt>
 File: img//Mbot-pack-piernas2.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas2.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas2.jpg  used on input line 35.
@@ -805,17 +805,17 @@ Overfull \hbox (10.62645pt too wide) in paragraph at lines 51--52
 de la ha-bi-ta-ci[]on en la que nos en-con-tre-mos,
  []
 
-<img//ultrasonidos.jpg, id=249, 351.3125pt x 351.3125pt>
+<img//ultrasonidos.jpg, id=274, 351.3125pt x 351.3125pt>
 File: img//ultrasonidos.jpg Graphic file (type jpg)
 <use img//ultrasonidos.jpg>
 Package pdftex.def Info: img//ultrasonidos.jpg  used on input line 58.
 (pdftex.def)             Requested size: 204.85846pt x 204.86566pt.
-<img//siguelineas.jpg, id=250, 759.83875pt x 759.83875pt>
+<img//siguelineas.jpg, id=275, 759.83875pt x 759.83875pt>
 File: img//siguelineas.jpg Graphic file (type jpg)
 <use img//siguelineas.jpg>
 Package pdftex.def Info: img//siguelineas.jpg  used on input line 63.
 (pdftex.def)             Requested size: 204.85846pt x 204.85774pt.
-<img//sensorLuz.png, id=251, 476.37975pt x 108.405pt>
+<img//sensorLuz.png, id=276, 476.37975pt x 108.405pt>
 File: img//sensorLuz.png Graphic file (type png)
 <use img//sensorLuz.png>
 Package pdftex.def Info: img//sensorLuz.png  used on input line 68.
@@ -823,7 +823,7 @@ Package pdftex.def Info: img//sensorLuz.png  used on input line 68.
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
 [8 <./img//Mbot-pack-piernas.jpg> <./img//Mbot-pack-piernas2.jpg>]
-<img//RGBled.png, id=258, 166.82326pt x 332.442pt>
+<img//RGBled.png, id=283, 166.82326pt x 332.442pt>
 File: img//RGBled.png Graphic file (type png)
 <use img//RGBled.png>
 Package pdftex.def Info: img//RGBled.png  used on input line 88.
@@ -843,17 +843,17 @@ a fa-ci-li-tar la pro-gra-ma-ci[]on a los alum-nos,
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
 [9 <./img//ultrasonidos.jpg> <./img//siguelineas.jpg> <./img//sensorLuz.png>]
-<img//puertomotor.png, id=270, 305.34074pt x 163.812pt>
+<img//puertomotor.png, id=295, 305.34074pt x 163.812pt>
 File: img//puertomotor.png Graphic file (type png)
 <use img//puertomotor.png>
 Package pdftex.def Info: img//puertomotor.png  used on input line 99.
 (pdftex.def)             Requested size: 204.85846pt x 109.90843pt.
-<img//motorDC2.png, id=271, 275.22826pt x 212.59425pt>
+<img//motorDC2.png, id=296, 275.22826pt x 212.59425pt>
 File: img//motorDC2.png Graphic file (type png)
 <use img//motorDC2.png>
 Package pdftex.def Info: img//motorDC2.png  used on input line 104.
 (pdftex.def)             Requested size: 150.23138pt x 116.04485pt.
-<img//motorDC.png, id=272, 251.13824pt x 224.037pt>
+<img//motorDC.png, id=297, 251.13824pt x 224.037pt>
 File: img//motorDC.png Graphic file (type png)
 <use img//motorDC.png>
 Package pdftex.def Info: img//motorDC.png  used on input line 109.
@@ -863,18 +863,12 @@ LaTeX Info: Redefining \% on input line 117.
 
 [10 <./img//RGBled.png> <./img//puertomotor.png> <./img//motorDC2.png> <./img//
 motorDC.png>]
-Overfull \hbox (0.88261pt too wide) in paragraph at lines 130--131
-\OT1/ptm/m/n/12 de las le-tras: \OT1/ptm/b/n/12 C0 \OT1/ptm/m/n/12 es m[]as gra
--ve que \OT1/ptm/b/n/12 C5\OT1/ptm/m/n/12 . In-ter-na-men-te, el zum-ba-dor en-
-tien-de va-lo-res en-te-ros,
- []
-
-<img//buzzer.png, id=286, 148.75575pt x 130.086pt>
+<img//buzzer.png, id=311, 148.75575pt x 130.086pt>
 File: img//buzzer.png Graphic file (type png)
 <use img//buzzer.png>
 Package pdftex.def Info: img//buzzer.png  used on input line 133.
 (pdftex.def)             Requested size: 85.35826pt x 74.64601pt.
-<img//scratch.png, id=287, 317.38576pt x 100.57574pt>
+<img//scratch.png, id=312, 317.38576pt x 100.57574pt>
 File: img//scratch.png Graphic file (type png)
 <use img//scratch.png>
 Package pdftex.def Info: img//scratch.png  used on input line 145.
@@ -885,7 +879,7 @@ Overfull \hbox (4.60089pt too wide) in paragraph at lines 143--149
 pro-gra-ma-ble con Scratch, un len-gua-je
  []
 
-<img//scratch2.png, id=288, 284.262pt x 109.00725pt>
+<img//scratch2.png, id=313, 284.262pt x 109.00725pt>
 File: img//scratch2.png Graphic file (type png)
 <use img//scratch2.png>
 Package pdftex.def Info: img//scratch2.png  used on input line 153.
@@ -893,12 +887,12 @@ Package pdftex.def Info: img//scratch2.png  used on input line 153.
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
 [11 <./img//buzzer.png> <./img//scratch.png>]
-<img//mblock.png, id=298, 290.2845pt x 113.223pt>
+<img//mblock.png, id=323, 290.2845pt x 113.223pt>
 File: img//mblock.png Graphic file (type png)
 <use img//mblock.png>
 Package pdftex.def Info: img//mblock.png  used on input line 164.
 (pdftex.def)             Requested size: 290.28378pt x 113.22272pt.
-<img//mblock2.png, id=299, 185.493pt x 287.8755pt>
+<img//mblock2.png, id=324, 185.493pt x 287.8755pt>
 File: img//mblock2.png Graphic file (type png)
 <use img//mblock2.png>
 Package pdftex.def Info: img//mblock2.png  used on input line 172.
@@ -909,17 +903,17 @@ Underfull \vbox (badness 2027) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 177.
 LaTeX Info: Redefining \% on input line 177.
  [12 <./img//scratch2.png> <./img//mblock.png>]
-<img//mblock3.png, id=310, 178.266pt x 187.902pt>
+<img//mblock3.png, id=335, 178.266pt x 187.902pt>
 File: img//mblock3.png Graphic file (type png)
 <use img//mblock3.png>
 Package pdftex.def Info: img//mblock3.png  used on input line 180.
 (pdftex.def)             Requested size: 178.26555pt x 187.90154pt.
-<img//mblock4.png, id=311, 307.1475pt x 130.68825pt>
+<img//mblock4.png, id=336, 307.1475pt x 130.68825pt>
 File: img//mblock4.png Graphic file (type png)
 <use img//mblock4.png>
 Package pdftex.def Info: img//mblock4.png  used on input line 192.
 (pdftex.def)             Requested size: 204.85846pt x 87.16582pt.
-<img//mblock5.png, id=312, 359.54324pt x 165.61874pt>
+<img//mblock5.png, id=337, 359.54324pt x 165.61874pt>
 File: img//mblock5.png Graphic file (type png)
 <use img//mblock5.png>
 Package pdftex.def Info: img//mblock5.png  used on input line 197.
@@ -944,7 +938,7 @@ Overfull \hbox (14.73045pt too wide) in paragraph at lines 210--213
 o. A con-ti-nua-ci[]on se ex-pli-can las ins-truc-cio-nes
  []
 
-<img//store.png, id=325, 1020.81375pt x 164.41425pt>
+<img//store.png, id=350, 1020.81375pt x 164.41425pt>
 File: img//store.png Graphic file (type png)
 <use img//store.png>
 Package pdftex.def Info: img//store.png  used on input line 215.
@@ -964,7 +958,7 @@ Overfull \hbox (6.95517pt too wide) in paragraph at lines 228--231
 t al soft-wa-re (con el ro-bot en-chu-fa-do
  []
 
-<img//python.png, id=344, 182.48175pt x 66.2475pt>
+<img//python.png, id=369, 182.48175pt x 66.2475pt>
 File: img//python.png Graphic file (type png)
 <use img//python.png>
 Package pdftex.def Info: img//python.png  used on input line 244.
@@ -985,17 +979,226 @@ Overfull \hbox (6.72742pt too wide) in paragraph at lines 3--5
 za-do Ar-duino y su IDE na-ti-vo pa-ra es-ta pro-gra-ma-ci[]on,
  []
 
-) (AplicacionEducativa.tex [17
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+<img//flujocoms.png, id=393, 1010.77625pt x 948.54375pt>
+File: img//flujocoms.png Graphic file (type png)
+<use img//flujocoms.png>
+Package pdftex.def Info: img//flujocoms.png  used on input line 14.
+(pdftex.def)             Requested size: 303.23521pt x 284.56532pt.
+[17
 
 ]
+Overfull \hbox (4.23033pt too wide) in paragraph at lines 24--25
+[]\OT1/ptm/m/n/12 El pro-gra-ma re-si-den-te lee del ca-nal si tie-ne men-sa-je
+s pa-ra un ac-tua-dor y, en ca-so afir-ma-ti-vo,
+ []
+
+
+Overfull \hbox (9.34058pt too wide) in paragraph at lines 29--30
+[]\OT1/ptm/m/n/12 La bi-blio-te-ca re-si-den-te en Ar-duino se ha rea-li-za-do 
+de for-ma pro-gre-si-va, en-con-tran-do di-fe-ren-tes
+ []
+
+
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+stlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+stmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Overfull \hbox (25.2667pt too wide) in paragraph at lines 31--32
+\OT1/ptm/m/n/12 al ser un len-gua-je pen-sa-do pa-ra las co-mu-ni-ca-cio-nes el
+ectr[]oni-cas. La ini-cia-li-za-ci[]on de la co-mu-ni-ca-ci[]on
+ []
+
+
+Overfull \hbox (4.10011pt too wide) in paragraph at lines 31--32
+\OT1/ptm/m/n/12 Se-rial de-be ha-cer-se en la fun-ci[]on \OT1/ptm/m/it/12 se-tu
+p \OT1/ptm/m/n/12 de Ar-duino, don-de se co-lo-ca el c[]odi-go que de-be eje-cu
+-tar-se
+ []
+
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
+[18 <./img//flujocoms.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 32.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 3
+3.
+
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\oms
+ptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 4
+2.
+
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\oml
+ptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
+<img//MonitorEnviar.png, id=408, 591.4095pt x 110.21175pt>
+File: img//MonitorEnviar.png Graphic file (type png)
+<use img//MonitorEnviar.png>
+Package pdftex.def Info: img//MonitorEnviar.png  used on input line 65.
+(pdftex.def)             Requested size: 455.24411pt x 84.8364pt.
+<img//MonitorRespuesta.png, id=409, 585.98924pt x 100.57574pt>
+File: img//MonitorRespuesta.png Graphic file (type png)
+<use img//MonitorRespuesta.png>
+Package pdftex.def Info: img//MonitorRespuesta.png  used on input line 70.
+(pdftex.def)             Requested size: 455.24411pt x 78.1372pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 65--73
+ [][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 65--73
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
+
+Overfull \hbox (6.26099pt too wide) in paragraph at lines 81--82
+\OT1/ptm/m/n/12 pa-ra gi-rar el ro-bot, no de-be en-viar-se la mis-ma or-den al
+ mo-tor de-re-cho que al iz-quier-do,
+ []
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+[20 <./img//MonitorEnviar.png> <./img//MonitorRespuesta.png>]
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+ [21]
+Overfull \hbox (19.2736pt too wide) in paragraph at lines 136--137
+[]\OT1/ptm/m/n/12 Requiere tam-bi[]en es-pe-ci-fi-car a qu[]e puer-to se le ha 
+co-nec-ta-do, de-vol-vien-do
+ []
+
+
+Overfull \hbox (24.78459pt too wide) in paragraph at lines 140--141
+[][][][][][][][][][][][][][] 
+ []
+
+
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+stlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Info: Redefining \. on input line 152.
+LaTeX Info: Redefining \% on input line 152.
+ [22]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+74.
+
+(C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1
+ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Overfull \hbox (2.8881pt too wide) in paragraph at lines 179--180
+\OT1/ptm/m/n/12 for-mas de leer, con la fi-na-li-dad de ase-gu-rar que am-bos l
+a-dos pue-den es-ta-ble-cer una co-mu-ni-ca-ci[]on
+ []
+
+
+Overfull \hbox (0.45108pt too wide) in paragraph at lines 181--184
+\OT1/ptm/m/n/12 pro-to-co-lo de men-sa-jes; es ne-ce-sa-rio ase-gu-rar-se que a
+m-bas par-tes re-co-jan la in-for-ma-ci[]on co-rrec-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
+
+ []
+
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
+[23]
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+ [24]
+Overfull \hbox (41.56094pt too wide) in paragraph at lines 216--217
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.96072pt too wide) in paragraph at lines 221--222
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (41.56094pt too wide) in paragraph at lines 223--224
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.37491pt too wide) in paragraph at lines 235--236
+\OT1/ptm/m/n/12 PyBo-Kids2.0 es f[]acil-men-te am-plia-ble a m[]as sen-so-res o
+ ac-tua-do-res, pues-to que los iden-ti-fi-ca-do-res
+ []
+
+
+Overfull \hbox (12.53236pt too wide) in paragraph at lines 237--239
+[]\OT1/ptm/m/n/12 Obviamente, es-ta co-di-fi-ca-ci[]on de los men-sa-jes, jun-t
+o con to-da la fun-cio-na-li-dad co-rres-pon-dien-te
+ []
+
+
+Overfull \hbox (1.24411pt too wide) in paragraph at lines 237--239
+\OT1/ptm/m/n/12 fun-cio-nes con nom-bres au-to-ex-pli-ca-ti-vos, ta-les co-mo '
+tur-nOn-Leds' o 'read-Sen-sor'. To-da la l[]ogi-ca
+ []
+
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
+[25]
+Overfull \hbox (5.56058pt too wide) in paragraph at lines 263--264
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.1608pt too wide) in paragraph at lines 265--266
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (41.56094pt too wide) in paragraph at lines 280--281
+[][][][][][][][][][][][][][][][] 
+ []
+
+) (AplicacionEducativa.tex
+Overfull \hbox (8.93518pt too wide) in paragraph at lines 293--1
+[]\OT1/ptm/m/n/12 ulti-mo. Ten-dre-mos la opor-tu-ni-dad de am-pliar co-no-ci-m
+ien-tos con con-cep-tos co-mo lis-tas, di-fe-ren-tes
+ []
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[26]
 Cap\'{\i }tulo 5.
-) (Conclusiones.tex [18
+) (Conclusiones.tex [27
 
 ]
 Cap\'{\i }tulo 6.
-) (memoria_tfg.bbl [19
+) (memoria_tfg.bbl [28
 
-]) [20
+]) [29
 
 ] (memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1005,30 +1208,31 @@ LaTeX Info: Redefining \% on input line 25.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 357B21A0FDC170C368CE1FDF50A15964;5054.
+(rerunfilecheck)             Checksum: 72630E3583AA3B57052153F5CD6DAC73;5907.
  ) 
 Here is how much of TeX's memory you used:
- 15435 strings out of 478582
- 257449 string characters out of 2838209
- 641475 words of memory out of 3000000
- 33243 multiletter control sequences out of 15000+600000
- 496724 words of font info for 77 fonts, out of 8000000 for 9000
+ 16385 strings out of 478582
+ 269548 string characters out of 2838209
+ 857755 words of memory out of 3000000
+ 33998 multiletter control sequences out of 15000+600000
+ 503591 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,77p,982b,698s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 68i,8n,77p,1021b,1901s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ba
 se/8r.enc}<C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmmi12.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eva.garcia.doming
-o/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/ev
-a.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
-><C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
-es/utmbi8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts
-/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on memoria_tfg.pdf (25 pages, 1804692 bytes).
+o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/u
+crr8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type
+1/urw/times/utmb8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKT
+eX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local
+/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.ga
+rcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on memoria_tfg.pdf (34 pages, 2006200 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 270 named destinations out of 1000 (max. 500000)
+ 438 words of extra memory for PDF output out of 10000 (max. 10000000)
 

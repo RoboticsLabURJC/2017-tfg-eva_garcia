@@ -11,9 +11,9 @@ Buzzer_Dictionary = {'B0':31,'C1':33,'D1':37,'E1':41,'F1':44,'G1':49,'A1':55,'B1
                     'C7':2093,'D7':2349,'E7':2637,'F7':2794,'G7':3136,'A7':3520,'B7':3951,'C8':4186,'D8':4699}
 
 
-def open_PortSerial (baudios, port, timeOutSec):
+def open_PortSerial (baudios, timeOutSec):
     try:
-        serialAux = serial.Serial(port, baudios, timeout=timeOutSec)
+        serialAux = serial.Serial(115200, baudios, timeout=timeOutSec)
         serialAux.setDTR(False)
         sleep(1)
         serialAux.flushInput()

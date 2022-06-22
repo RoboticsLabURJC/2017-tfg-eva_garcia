@@ -1,11 +1,293 @@
-\chapter{Plataforma PyBo-Kids}
+\chapter{Plataforma PyBo-Kids-2.0}
 \label{cap:PyBoKids}
 En este capítulo explicaremos el proceso seguido para desarrollar las bibliotecas Arduino y Python, explicando el código y las distintas necesidades que han surgido durante el desarrollo. \\
 Como se explicó en el Capítulo \ref{cap:infra}, se ha utilizado Arduino  y su IDE nativo para esta programación, y Python 3 y un editor de texto estándar (en este caso, Visual Studio Code, de Microsoft) para la programación en Python. 
 
-
-\section{Programa residente}\label{sec:residente}
-El primer paso necesario en 
-\section{Programa PC}
 \section{Diseño}\label{sec:diseño}
-\section{Resultado: programa PC y programa residente}\label{resultado}
+Lo primero en el diseño de la plataforma ha sido el modelo ''PC - Residente''. Partiendo de la premisa dada de programación del robot en Python, era necesaria una forma para que, dado que la placa base iba a funcionar en Arduino, la comunicación Serial\footnote{Comunicación secuencial de información a través de un canal, electrónico en este caso} funcionara entre los dos lenguajes. \\
+\subsection{Comunicaciones}\label{subsec:comunicaciones}
+La comunicación con el robot, como se ha comentado en el Capítulo \ref{cap:infra} de Infraestructura, debe establecerse entre el entorno y el robot (con la placa base), cada vez que se encienda éste. Es, por tanto, el primer problema a solventar en ambos lenguajes. \\ 
+El protocolo \textit{Serial} abre una vía de comunicación a través de un canal electrónico, en este caso un cable USB, entre el entorno y el robot, a una velocidad en baudios\footnote{Velocidad, utilizada en electrónica, medida en número de símbolos por segundo}. Este canal para el traspaso de información es necesario para enviar datos a la placa (por ejemplo, los colores a los que encender los LED integrados) o recibir datos de ésta (los valores de lectura de los sensores) y poder utilizarlos en toma de decisiones. \\
+Al abrir la comunicación en ambas partes, placa base y PC, cualquiera de ellas es capaz de leer del canal la información que necesite, y de enviar a través de él (para que esto sea así, ambas partes deben haber abierto la comunicación a la misma velocidad). Por tanto, si la placa Arduino envia a través del canal Serial el dato que recoge del sensor de infrarrojos, el lado PC, que estaría leyendo de ese canal, obtendría este dato. \\
+En la parte Arduino, al grabar el programa residente completo en la placa, la comunicación se abre a la vez que se enciende el robot, puesto que el programa arranca con él. En la parte PC, de Python, la comunicación se abre cuando ejecutamos el programa que queremos que ejecute el robot. El flujo, entonces, podría dibujarse como el diagrama que aparece a continuación.
+\begin{figure}[h]
+	\includegraphics[scale=0.3]{flujocoms.png}
+	\centering
+	\label{img:FlujoComunicaciones}
+	\caption{Diagrama de comunicaciones}
+\end{figure}
+Como podemos observar, ocurren varias cosas de forma paralela:
+\begin{itemize}
+	\item El programa residente está recogiendo los valores de los sensores, conectados a su puerto correspondiente, y los envía por el canal.
+	\item El programa PC recoge los valores del sensor que le interese (dependerá del programa que queramos uno u otro).
+	\item En función del valor del sensor (con respecto a un valor umbral o \textit{threshold}), el programa PC envía por el canal unos valores concretos para un actuador concreto. Lee otra vez el valor -nuevo- del sensor, por si tuviera que cambiar de decisión.
+	\item El programa residente lee del canal si tiene mensajes para un actuador y, en caso afirmativo, recoge los valores y los envía al actuador correcto.
+\end{itemize}
+
+A continuación, detallaremos la forma técnica en la que se han realizado estas dos partes de la comunicación. 
+\subsection{Programa residente}\label{subsec:residente}
+La biblioteca residente en Arduino se ha realizado de forma progresiva, encontrando diferentes requerimientos y necesidades a lo largo del proceso. 
+\subsubsection{Comunicación serial}\label{subsubsec:comunicacionArduino}
+En Arduino, para utilizar el protocolo Serial no es necesario cargar ningún módulo añadido, al ser un lenguaje pensado para las comunicaciones electrónicas. La inicialización de la comunicación Serial debe hacerse en la función \textit{setup} de Arduino, donde se coloca el código que debe ejecutarse sólo una vez, al comienzo de la ejecución del programa, con la velocidad en baudios deseada como parámetro.
+\begin{lstlisting}[language=C,caption={Inicialización del protocolo Serial},captionpos=b]
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+\end{lstlisting}
+Durante el resto del código, cada vez que se quiera escribir o leer del canal, deberá llamarse al 'Serial' que hemos iniciado. Es importante comentar que, antes de llamar a una función que lea del canal, debemos asegurarnos que hay datos que poder leer, o el programa generará un error. Por ejemplo:
+\begin{lstlisting}[language=C,caption={eco en Arduino: lee del canal Serial y lo escribe},captionpos=b]
+char mensaje;
+void loop() {
+  if (Serial.available()>0)	{
+   mensaje = Serial.read();   
+   Serial.println(mensaje);
+  }
+}
+\end{lstlisting}
+A la hora de leer del canal Serial, en este caso en Arduino pero igual con cualquier herramienta, hay que tener en cuenta la cantidad de bytes que se leen cada vez. En este caso, estábamos considerando, a modo de test, un sólo carácter (inicializando la variable como \textit{char})\footnote{Variable que almacena un valor de carácter, que ocupa un sólo byte de memoria, y que debe escribirse entre comillas simples:\textit{ char mensaje = 'a';}}, por lo que leemos del canal un solo byte (método \textit{read()}). Sin embargo, si quisiéramos leer un \textit{String}\footnote{Array de caracteres, escrito entre comillas dobles, y que termina en valor nulo ('0' en código ASCII): \textit{String mensaje =  "Hello String";}}, como va a ser necesario para leer los mensajes que envíe el programa PC, tendríamos que inicializar la variable como \textit{String} y leer del canal un String entero, esto es, hasta leer el valor nulo en el que éste termina.
+\begin{lstlisting}[language=C,caption={eco en Arduino con un Strin},captionpos=b]
+String mensaje;
+void loop() {
+  if (Serial.available()>0) {
+   mensaje = Serial.readString();     
+   Serial.println(mensaje);
+  }
+}
+\end{lstlisting}
+
+Dado que primero estamos considerando solamente el entorno Arduino, para poder ver el resultado de esta comunicación, usaremos el Monitor Serie del propio IDE de Arduino, que permite escribir por el canal (lo que luego leamos con \textit{serial.readString()}), y muestra lo que Arduino escribe (\textit{Serial.println()}). El código anterior produciría la siguiente ejecución:
+\begin{figure}[h]
+\centering	
+\begin{subfigure}
+	[Escribir el String que Arduino lee del canal]{
+		\includegraphics[width=\textwidth]{MonitorEnviar.png}
+		\label{img:ComunicacionArduinoEnviar}}
+\end{subfigure}
+\begin{subfigure}
+	[Muestra el String que Arduino ha escrito en el canal]{
+		\includegraphics[width=\textwidth]{MonitorRespuesta.png}
+		\label{img:ComunicacionArduinoLeer}}
+\end{subfigure}
+\label{img:ComunicacionArduinoMonitorSerie}
+\caption{Visualización del eco de Arduino en el Monitor Serie de Arduino IDE}
+\end{figure}
+
+\subsubsection{Uso de sensores y actuadores}
+Una vez comprobadas las comunicaciones, continuamos con los actuadores y sensores del robot. Como se ha explicado en el apartado \ref{subsec:arduino} de Arduino, es necesario cargar los módulos correspondientes a la placa mCore. Una vez incluido el paquete, podremos utilizar los métodos de inicialización, lectura de sensores, envío de órdenes a los actuadores, etc. Este módulo contiene toda la información que necesitan los diferentes componentes (tipos de valores de entrada o de retorno, diferentes métodos, etc), incluidos ejemplos en los que poder apoyarnos. A continuación describiremos como se utilizan los diferentes actuadores y sensores en Arduino, siendo este paso necesario para crear la biblioteca ''Residente''.\\
+\begin{itemize}
+\item Actuadores: Como cualquier variable, los actuadores requieren de una inicialización; esta inicialización de variables corresponden al principio del programa, para poder utilizar la variable en las funciones principales. Luego, depende de qué actuador sea, requerirá de un tipo u otro de valor de entrada:
+\begin{description}
+	\item [Motores] Los motores de la placa mCore deben inicializarse cada uno por separado; al darles nombres diferentes podremos enviar la orden al motor correcto (por ejemplo, para girar el robot, no debe enviarse la misma orden al motor derecho que al izquierdo, sino invertir el sentido de uno de ellos, dependiendo de en qué dirección se quiera girar). 
+	\begin{lstlisting}[language=C,caption={Inicializar motores Mbot},captionpos=b]	
+		MeDCMotor motorIzdo(M1);
+		MeDCMotor motorDcho(M2);	
+	\end{lstlisting}
+	El valor de entrada para la velocidad es un valor entero (tipo \textit{int}), entre [-255,255], siendo los valores negativos para una velocidad de retroceso. En este caso, para que los motores se paren, no se les enviaría un valor de 0 sino que tiene un método propio.	
+	\begin{lstlisting}[language=C,caption={Uso de motores Mbot},captionpos=b]		
+	motorIzdo.run(100);
+	motorDcho.run(100);
+	delay (100);
+	motorIzdo.stop();
+	motorDcho.stop();	
+	\end{lstlisting}
+
+	\item [Leds integrados]  En este caso, la inicialización del led requiere el puerto (integrado de la placa) y un slot (de número de leds). Por tanto:
+	\begin{lstlisting}[language=C,caption={Inicializar leds},captionpos=b]	
+	const int PORT = 7;
+	const int SLOT = 2;
+	MeRGBLed led(PORT, SLOT);	
+	\end{lstlisting}
+	Los valores necesarios para los leds se han descrito en la sección de Actuadores \ref{subsec:actuadores}; Arduino requiere primero enviar la configuración de colores, y después mostrar esa configuración. En este caso, para apagarlos, sí se envía un valor de 0 para los tres valores RGB.
+	\begin{lstlisting}[language=C,caption={Uso de los leds},captionpos=b]	
+	led.setColor(ledsInt,redInt,greenInt,blueInt);
+	led.show();	
+	\end{lstlisting}
+
+	\item [Zumbador] Como sólo hay un zumbador en la placa, y está integrado en ella, no es necesario ningún puerto. Para que emita la nota deseada, es necesario un valor entero para la frecuencia y otro para la duración (en milisegundos):
+	\begin{lstlisting}[language=C,caption={Uso del zumbador},captionpos=b]	
+	MeBuzzer buzzer;
+	void loop() {
+	 buzzer.tone(87,3000);
+	 delay(100);
+	 // stop the tone playing:
+	 buzzer.noTone();
+	}
+	\end{lstlisting}
+\end{description}
+\item Sensores: Todos los sensores en Arduino tienen un método de lectura, además del de inicialización. Si queremos almacenar el valor recogido en una variable, Arduino requiere que ésta sea declarada también.
+\begin{description}
+	\item [Sensor de ultrasonidos] Al no ser un sensor integrado a la placa, es necesario que se especifique en qué puerto se ha conectado. Éste devuelve la distancia, en centímetros (como valor entero), a la que se encuentra un obstáculo.
+	\begin{lstlisting}[language=C,caption={Sensor de distancia},captionpos=b]	
+	MeUltrasonicSensor ultraSensor(PORT_3);
+	void loop() {
+	 int DistanceValue = ultraSensor.distanceCm();
+	 Serial.println(DistanceValue);
+	}
+	\end{lstlisting}
+	\item [Sensor de luz] El puerto especificado en la llamada al método, aunque integrado en la placa, especifica el pin interno al que está conectado. Devuelve un valor entero, de cantidad de luz. En este caso, para poder utilizar un valor de \textit{threshold} necesitaremos saber qué valor de luminosidad aproximada tiene la habitación (no tiene por qué ser siempre la misma)
+	\begin{lstlisting}[language=C,caption={Sensor de luz},captionpos=b]	
+	MeLightSensor lightSensor(PORT_6);
+	void loop() {
+	 int LigthValue = lightSensor.read();
+	 Serial.println(LigthValue);
+	}
+	\end{lstlisting}
+	\item [Sensor infrarrojo] Requiere también especificar a qué puerto se le ha conectado, devolviendo de la llamada de lectura un valor entero correspondiente a qué combinación de sensores sigue líneas están tapados o no (explicados en la sección de Actuadores (\ref{subsec:actuadores}))
+	\begin{lstlisting}[language=C,caption={Sensor siguelíneas},captionpos=b]	
+	MeLineFollower SigueLineas(PORT_1); 
+	void loop() {
+	 int LineFollowerValue = SigueLineas.readSensors();
+	 Serial.println(LineFollowerValue);
+	}
+	\end{lstlisting}
+\end{description}
+\end{itemize}
+
+Una vez conocido el funcionamiento de los componentes del mBot, tenemos la capacidad de abstraer este conocimiento y hacer con ello las funciones que compondrán esta biblioteca Arduino, para estructurar el programa residente de forma que funcione independientemente de qué datos se le envíen desde el programa PC. Esta estructura de biblioteca se explicará en la sección \ref{sec:resultado}, una vez conocida también la parte de programación en Python.
+\subsection{Programa PC}\label{subsec:pc}
+La finalidad de la ''Parte PC'' es construir una biblioteca de funciones que contengan la lógica de conexión, lectura, escritura, etc, y que la escondan a los alumnos, teniendo ellos que preocuparse solamente de llamar a una función con un nombre amigable. A continuación describiremos los puntos importantes que se han necesitado en la preparación de esta biblioteca:
+\begin{description}
+	\item [Protocolo Serial] En este caso, es necesario incluir el módulo Serial al principio del programa de Python. Para iniciar una comunicación Serial, al igual que con Arduino, es necesaria la velocidad en baudios a la que conectarse (como dijimos, debe ser la misma a la que se ha abierto la comunicación en la parte de Arduino); además es necesario el puerto al que está conectado el robot (de forma parecida a la que se especificaba en el Arduino IDE) y un tiempo de \textit{timeout} para el que, si no se ha establecido la comunicación, se eleva una excepción (que se deberá recoger con un bloque de \textit{try..catch})	
+	\begin{lstlisting}[language=python]	
+	import serial
+	serial = serial.Serial('com3', 9600, timeout=1)
+	serial.close()
+	\end{lstlisting}
+	Para leer del canal, deberemos tener en cuenta igualmente la cantidad de información que queramos leer. En general, como estaremos leyendo Strings de mensajes, python contiene (como Arduino) la función de lectura de una línea completa (hasta fin de línea). 
+	\begin{lstlisting}[language=python]
+	serial.readline() #leer hasta EOL		
+	\end{lstlisting}
+	Sin embargo, se puede leer un solo byte (como en el caso de leer un solo carácter), o una cantidad de bytes especificada.
+	
+	\item [Leer del canal] Dado que el String leído con el valor de un sensor, lo ha enviado Arduino y ha atravesado el canal, es necesario decodificarlo para obtener un String sin los caracteres de retorno de carro, end of line, etc. Si no, no podríamos utilizar como número ese valor, ya que al intentar convertirlo desde String, no debe tener ningún otro carácter.
+	\begin{lstlisting}[language=python]	
+	Data = serial.readline()
+	decoded = Data.decode()
+	sensorValue = float(decoded)
+	\end{lstlisting}
+	
+	
+	\item [Escribir en el canal] Al igual que para leer, para escribir en el canal y asegurarnos que en al programa residente le llegan datos que sea capaz de interpretar, el envío de datos (texto) debe hacerse forzando la codificación en UTF-8.
+	\begin{lstlisting}[language=python]
+	Data = "Hello World"
+	serial.write(bytes(Data, 'utf-8'))
+	\end{lstlisting}
+
+\end{description}
+
+	Estas decisiones de codificaciones, tanto para escribir como para leer del canal, son el resultado de pruebas entre uno y otro lado (Arduino - Python), con varios tipos de datos y de formas de leer, con la finalidad de asegurar que ambos lados pueden establecer una comunicación con éxito y que las opciones necesarias están recogidas.
+\section{Resultado: programa PC y programa residente}\label{sec:resultado}
+En esta sección explicaremos cómo se juntan los dos programa, Residente y PC, y cómo se utilizan las dos bibliotecas. \\
+Como se ha adelantado anteriormente, para que la comunicación sea posible es necesario un protocolo de mensajes; es necesario asegurarse que ambas partes recojan la información correcta y sepan qué deben hacer con ella. Poniendo un ejemplo: el Programa Residente debe estar preparado para recibir datos que enviar a los actuadores. Sin embargo, cada actuador requiere datos de entrada diferentes, por tanto, debe estar preparado también para saber para qué actuador le están enviando los datos. Igualmente, el Programa PC debe estar preparado para enviar la información de forma que sea inequívoca. \\
+El mismo caso se da para los sensores. El Residente tiene que enviar el dato de forma que el PC pueda saber que el dato que lee es el que necesita (no vale para lo mismo si lee el sensor de luz que el del Sigue Líneas) \\
+\subsection{Protocolo de mensajes}
+Este sistema de codificación de los mensajes, funciona de la siguiente forma:
+\begin{itemize}
+	\item Sensores
+	\begin{itemize}			
+	\item Dado que la forma más simple, efectiva en esa simpleza, de enviar datos es un string, será así como se enviará la información. Para ello, cuando se lea el dato del sensor, habrá que convertir el valor entero en un String. 
+	\item A cada sensor se le asignará un número, único (un identificador), que le representará sólo a él. Así, al sensor de ultrasonidos le corresponderá un 0, al Sigue Líneas un 1, etc. 
+	\item El Programa Residente, enviará la información en un único mensaje, como String, concatenando el identificador de sensor con el valor de este sensor recogido del robot, separando los dos valores con punto y coma (para diferenciarlo de una posible coma decimal).
+	\item El Programa PC, cuando está leyendo, separará el mensaje por ';' y ,dependiendo del primer \textit{substring}, devolverá al programa principal el tipo de sensor en texto, para que sea amigable para un alumno. 
+    \end{itemize}
+
+\item Actuadores
+\begin{itemize}
+	\item De forma análoga, a cada actuador se le asignará un identificador numérico.
+	\item El Programa PC concatenará, en un mismo mensaje, el identificador del actuador, y los datos necesarios para ese actuador (en caso de los LED, por ejemplo, el valor qué leds encender y los tres valores RGB). Igualmente, todos estos valores irán separados entre ';'.
+	\item Al leer del canal, el Residente separará el primer valor por el ';' y dependiendo de qué identificador sea, leerá una cantidad de valores u otra, y enviará esos valores a un actuador u otro (convirtiéndolo primero a valor numérico).
+\end{itemize}
+\end{itemize}
+
+Como ejemplo, el siguiente código correspondría al envío de información para encender los led:
+
+\begin{lstlisting}[language=python,caption={Envío de un mensaje desde el Programa PC},captionpos=b,label=cod:enviodesdePC]	
+	mensaje = "0;2;255;0;0"
+	send_Message(mensaje,serial)
+\end{lstlisting}
+
+Y el siguiente código, a la lectura de ese mensaje en el lado Residente:
+\begin{lstlisting}[language=C,caption={Lectura del mensaje en el lado Arduino},captionpos=b]	
+	void loop () {
+	 String mensaje = Serial.readString();
+	 int indexActuator = mensaje.indexOf(';');
+	 String Actuator = mensaje.substring(0,indexActuator);
+	 String mensajeActuador = mensaje.substring(indexActuator+1);
+	 if (Actuator == "0") {
+	  int IndexLeds = mensaje.indexOf(';');
+	  String leds = mensaje.substring(0, IndexLeds);
+	  int IndexRed = mensaje.indexOf(';', IndexLeds+1); 
+	  String red = mensaje.substring(IndexLeds+1, IndexRed+1);
+	  int IndexGreen = mensaje.indexOf(';', IndexRed+1);
+	  String green = mensaje.substring(IndexRed+1, IndexGreen+1);
+	  String blue = mensaje.substring(IndexGreen+1,-1);
+	  int ledsInt = leds.toInt();
+	  int redInt = red.toInt();
+	  int greenInt = green.toInt();
+	  int blueInt = blue.toInt();
+	  led.setColor(ledsInt, redInt, greenInt, blueInt);
+	  led.show();
+	 }
+	}
+\end{lstlisting}
+
+Como ventaja añadida, con este sistema de mensajes la funcionalidad de la plataforma PyBo-Kids2.0 es fácilmente ampliable a más sensores o actuadores, puesto que los identificadores son números enteros. 
+\subsection{Bibliotecas}
+Obviamente, esta codificación de los mensajes, junto con toda la funcionalidad correspondiente al uso del canal Serial, es la que estará ''escondida'' para que los alumnos utilicen simplemente funciones con nombres autoexplicativos, tales como 'turnOnLeds' o 'readSensor'. Toda la lógica de funciones, de parseo de mensajes, de lectura o escritura en el canal, está integrada en la biblioteca, que deberá cargarse como cualquier otra en python. \\
+Así, si utilizamos como ejemplo el mismo que en \ref{cod:enviodesdePC}, la funcionalidad en la biblioteca sería la siguiente:
+\begin{lstlisting}[language=python]	
+	def send_Message (message, serial):
+	 serial.write(bytes(message, 'utf-8'))
+	def create_Message_Led (list):
+	 mensaje = f"0;{list[0]};{list[1]};{list[2]};{list[3]}"
+	 return mensaje
+	def turnOn_Leds(list,serial):
+	 mensaje = create_Message_Led(list)
+	 send_Message(mensaje,serial)
+\end{lstlisting}
+Mientras que, en el programa principal, si un alumnos quisiera encender los dos led a rojo:
+\begin{lstlisting}[language=python]	
+	from library_Mbot_v1 import *
+	import sys
+	import serial
+	turnOn_Leds([0,255,0,0],serial)
+\end{lstlisting}
+
+En la parte de Arduino, por otro lado, tenemos toda la biblioteca en un solo archivo, que será el que carguemos en la placa base del robot. Con la finalidad de que pueda ser fácilmente ampliada, abstraeremos todo lo posible en funciones. El ejemplo anterior, quedaría entonces:
+\begin{lstlisting}[language=C]	
+void read_LedsMessage (String mensaje) {
+	int IndexLeds = mensaje.indexOf(';');
+	String leds = mensaje.substring(0, IndexLeds);
+	int IndexRed = mensaje.indexOf(';', IndexLeds+1);
+	String red = mensaje.substring(IndexLeds+1, IndexRed+1);
+	int IndexGreen = mensaje.indexOf(';', IndexRed+1);
+	String green = mensaje.substring(IndexRed+1, IndexGreen+1);
+	String blue = mensaje.substring(IndexGreen+1,-1);
+	int ledsInt = leds.toInt();
+	int redInt = red.toInt();
+	int greenInt = green.toInt();
+	int blueInt = blue.toInt();
+	led.setColor(ledsInt, redInt, greenInt, blueInt);
+	led.show();
+}
+
+void loop() {
+if (Serial.available()>0){
+	 String mensaje = Serial.readString();
+	 int indexActuator = mensaje.indexOf(';');
+	 String Actuator = mensaje.substring(0,indexActuator);
+	 String mensajeActuador = mensaje.substring(indexActuator+1);
+	 if (Actuator == "0") {
+	  read_LedsMessage(mensajeActuador);
+	 } else if (Actuator == "1") {
+	  read_MotorsMessage(mensajeActuador);
+	 } else if (Actuator == "2") {
+	  read_BuzzerMessage(mensajeActuador);
+	 }
+	}
+}
+\end{lstlisting}
+
+
+Tenemos, por tanto, una abstracción de la sintaxis y la complejidad de las herramientas usadas, mientras que seguimos pudiendo utilizar un lenguaje de programación real, como es Python, en vez de Scratch, para ampliar los conocimientos que se habrían iniciado con éste último. Tendremos la oportunidad de ampliar conocimientos con conceptos como listas, diferentes módulos, entrada y salida estándar, etc. 

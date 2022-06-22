@@ -73,7 +73,7 @@
 \newlabel{img:sensores}{{\caption@xref {img:sensores}{ on input line 70}}{9}{Sensores}{subfigure.3.4.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Sensores\relax }}{9}{figure.caption.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2.2}Actuadores}{9}{subsubsection.3.2.2.2}\protected@file@percent }
-\newlabel{ssubsec:actuadores}{{3.2.2.2}{9}{Actuadores}{subsubsection.3.2.2.2}{}}
+\newlabel{subsec:actuadores}{{3.2.2.2}{9}{Actuadores}{subsubsection.3.2.2.2}{}}
 \newlabel{img:led}{{\caption@xref {img:led}{ on input line 90}}{10}{Actuadores}{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Led RGB integrados\relax }}{10}{figure.caption.6}\protected@file@percent }
 \newlabel{img:puertomotor}{{3.6(a)}{10}{Subfigure 3 3.6(a)}{subfigure.3.6.1}{}}
@@ -122,40 +122,72 @@
 \newlabel{subsec:python}{{3.3.3}{15}{Python}{subsection.3.3.3}{}}
 \newlabel{img:python}{{\caption@xref {img:python}{ on input line 246}}{16}{Python}{figure.caption.16}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Comprobar python\relax }}{16}{figure.caption.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Plataforma PyBo-Kids}{17}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Plataforma PyBo-Kids-2.0}{17}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cap:PyBoKids}{{4}{17}{Plataforma PyBo-Kids}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Programa residente}{17}{section.4.1}\protected@file@percent }
-\newlabel{sec:residente}{{4.1}{17}{Programa residente}{section.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Programa PC}{17}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Diseño}{17}{section.4.3}\protected@file@percent }
-\newlabel{sec:diseño}{{4.3}{17}{Diseño}{section.4.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Resultado: programa PC y programa residente}{17}{section.4.4}\protected@file@percent }
-\newlabel{resultado}{{4.4}{17}{Resultado: programa PC y programa residente}{section.4.4}{}}
+\newlabel{cap:PyBoKids}{{4}{17}{Plataforma PyBo-Kids-2.0}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Diseño}{17}{section.4.1}\protected@file@percent }
+\newlabel{sec:diseño}{{4.1}{17}{Diseño}{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Comunicaciones}{17}{subsection.4.1.1}\protected@file@percent }
+\newlabel{subsec:comunicaciones}{{4.1.1}{17}{Comunicaciones}{subsection.4.1.1}{}}
+\newlabel{img:FlujoComunicaciones}{{\caption@xref {img:FlujoComunicaciones}{ on input line 16}}{18}{Comunicaciones}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de comunicaciones\relax }}{18}{figure.caption.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Programa residente}{18}{subsection.4.1.2}\protected@file@percent }
+\newlabel{subsec:residente}{{4.1.2}{18}{Programa residente}{subsection.4.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}Comunicación serial}{19}{subsubsection.4.1.2.1}\protected@file@percent }
+\newlabel{subsubsec:comunicacionArduino}{{4.1.2.1}{19}{Comunicación serial}{subsubsection.4.1.2.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}{\ignorespaces Inicialización del protocolo Serial}}{19}{lstlisting.4.1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}{\ignorespaces eco en Arduino: lee del canal Serial y lo escribe}}{19}{lstlisting.4.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.3}{\ignorespaces eco en Arduino con un Strin}}{19}{lstlisting.4.3}\protected@file@percent }
+\newlabel{img:ComunicacionArduinoEnviar}{{4.2(a)}{20}{Subfigure 4 4.2(a)}{subfigure.4.2.1}{}}
+\newlabel{sub@img:ComunicacionArduinoEnviar}{{(a)}{20}{Subfigure 4 4.2(a)\relax }{subfigure.4.2.1}{}}
+\newlabel{img:ComunicacionArduinoLeer}{{4.2(b)}{20}{Subfigure 4 4.2(b)}{subfigure.4.2.2}{}}
+\newlabel{sub@img:ComunicacionArduinoLeer}{{(b)}{20}{Subfigure 4 4.2(b)\relax }{subfigure.4.2.2}{}}
+\newlabel{img:ComunicacionArduinoMonitorSerie}{{\caption@xref {img:ComunicacionArduinoMonitorSerie}{ on input line 72}}{20}{Comunicación serial}{subfigure.4.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualización del eco de Arduino en el Monitor Serie de Arduino IDE\relax }}{20}{figure.caption.18}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Escribir el String que Arduino lee del canal}}}{20}{figure.caption.18}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Muestra el String que Arduino ha escrito en el canal}}}{20}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}Uso de sensores y actuadores}{20}{subsubsection.4.1.2.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.4}{\ignorespaces Inicializar motores Mbot}}{20}{lstlisting.4.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.5}{\ignorespaces Uso de motores Mbot}}{21}{lstlisting.4.5}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.6}{\ignorespaces Inicializar leds}}{21}{lstlisting.4.6}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.7}{\ignorespaces Uso de los leds}}{21}{lstlisting.4.7}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.8}{\ignorespaces Uso del zumbador}}{21}{lstlisting.4.8}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.9}{\ignorespaces Sensor de distancia}}{22}{lstlisting.4.9}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.10}{\ignorespaces Sensor de luz}}{22}{lstlisting.4.10}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.11}{\ignorespaces Sensor siguelíneas}}{22}{lstlisting.4.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Programa PC}{22}{subsection.4.1.3}\protected@file@percent }
+\newlabel{subsec:pc}{{4.1.3}{22}{Programa PC}{subsection.4.1.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Resultado: programa PC y programa residente}{23}{section.4.2}\protected@file@percent }
+\newlabel{sec:resultado}{{4.2}{23}{Resultado: programa PC y programa residente}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Protocolo de mensajes}{24}{subsection.4.2.1}\protected@file@percent }
+\newlabel{cod:enviodesdePC}{{4.12}{24}{Envío de un mensaje desde el Programa PC}{lstlisting.4.12}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.12}{\ignorespaces Envío de un mensaje desde el Programa PC}}{24}{lstlisting.4.12}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.13}{\ignorespaces Lectura del mensaje en el lado Arduino}}{25}{lstlisting.4.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Bibliotecas}{25}{subsection.4.2.2}\protected@file@percent }
 \citation{darwin2009origen}
 \citation{del1984luces}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Aplicación educativa}{18}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Aplicación educativa}{27}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cap:aplicationEducativa}{{5}{18}{Aplicación educativa}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Contexto}{18}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Primera etapa: Scratch}{18}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Objetivos docentes: metodología}{18}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Prácticas}{18}{subsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Segunda etapa: PyBo-Kids en Python}{18}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Objetivos docentes: metodología}{18}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Introducción a Python}{18}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Prácticas}{18}{subsection.5.3.3}\protected@file@percent }
+\newlabel{cap:aplicationEducativa}{{5}{27}{Aplicación educativa}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Contexto}{27}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Primera etapa: Scratch}{27}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Objetivos docentes: metodología}{27}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Prácticas}{27}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Segunda etapa: PyBo-Kids en Python}{27}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Objetivos docentes: metodología}{27}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Introducción a Python}{27}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Prácticas}{27}{subsection.5.3.3}\protected@file@percent }
 \citation{darwin2009origen}
 \citation{del1984luces}
 \bibstyle{acm}
 \bibdata{bibliografia_tfg.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusiones}{19}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusiones}{28}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cap:conclusiones}{{6}{19}{Conclusiones}{chapter.6}{}}
+\newlabel{cap:conclusiones}{{6}{28}{Conclusiones}{chapter.6}{}}
 \bibcite{darwin2009origen}{1}
 \bibcite{del1984luces}{2}
-\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{20}{chapter*.17}\protected@file@percent }
-\gdef \@abspage@last{25}
+\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{29}{chapter*.19}\protected@file@percent }
+\gdef \@abspage@last{34}

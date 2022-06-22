@@ -103,7 +103,7 @@ void Stop_Buzzer () {
 void setup() {
   // put your setup code here, to run once:
   //iniciamos el puerto serie
-  Serial.begin(57600);
+  Serial.begin(115200);
 }
 
 void loop() {
