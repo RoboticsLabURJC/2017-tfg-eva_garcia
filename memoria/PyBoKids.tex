@@ -289,5 +289,38 @@ if (Serial.available()>0){
 }
 \end{lstlisting}
 
+La velocidad, se ha establecido finalmente en 115200 baudios; al añadir los sensores fue necesario subir el valor para mantener la comunicación de forma útil. Este valor se establece como constante, para asegurarnos que es el mismo valor en las dos partes PC y Residente. 
 
-Tenemos, por tanto, una abstracción de la sintaxis y la complejidad de las herramientas usadas, mientras que seguimos pudiendo utilizar un lenguaje de programación real, como es Python, en vez de Scratch, para ampliar los conocimientos que se habrían iniciado con éste último. Tendremos la oportunidad de ampliar conocimientos con conceptos como listas, diferentes módulos, entrada y salida estándar, etc. 
+\begin{lstlisting}[language=python]	
+def open_PortSerial (baudios, timeOutSec):
+ try:
+  serialAux = serial.Serial(115200, baudios, timeout=timeOutSec)
+  serialAux.setDTR(False)
+  sleep(1)
+  serialAux.flushInput()
+  serialAux.setDTR(True)
+  sleep (1)
+  return serialAux
+ except serial.SerialException:
+  sys.stderr.write("Error al abrir puerto (%s)\n")
+  sys.exit(1)
+\end{lstlisting}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{programas.png}
+	\label{img:Mix}
+	\caption{Programa PC y Residente}
+\end{figure} 
+\par Como apunte añadido, y dado que la placa Arduino no se ''apaga'' dejando a neutro todos los valores electrónicos (si apagamos el robot teniendo los led encendidos, cuando se vuelva a encender, lo hará con ellos encendidos), hacía falta una forma de poder apagar todo. En el lado Arduino tendremos una función para 'apagar' cada actuador, mientras que en el lado Python tendremos una función 'Quit', que pedirá al residente apagarlo todo y parar. El uso de esta función dependerá de qué forma estemos programando el programa principal. Si, por ejemplo, estuviéramos leyendo de teclado y controlando el flujo con esas lecturas y dependiendo de uno de ellos, podríamos mandar la orden directamente. Sin embargo, si tenemos el flujo ocupado leyendo de los sensores, no podemos estar leyendo del teclado a la vez. Podríamos utilizar un segundo hilo de ejecución (\textit{thread}), pero encontramos que relentizaba la ejecución, importante en la lectura de los sensores, además de ser un concepto bastante más complejo para enseñárselo a un alumno o alumna que acabe de empezar a programar. La forma más efectiva por su simplicidad es capturar el terminar la ejecución en Python (Ctrl + C en Windows) y enviar ese mensaje \textit{quit} antes de terminar la ejecución de forma controlada, en vez de con el error \textit{Crtl + C}. \\
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics{quit.png}
+	\label{img:CrtlC}
+	\caption{Control de Fin de ejecución}
+\end{figure} 
+
+La idea de controlar los errores es más sencilla de enseñar a los alumnos, aunque al principio del curso, se les ayudará poniendo el bloque directamente en el programa ''esqueleto'', base para sus programas. Esto se explicará en profundidad en el Capítulo \ref{cap:aplicationEducativa}.
+\vspace{1cm}
+\par Tenemos, por tanto, una abstracción de la sintaxis y la complejidad de las herramientas usadas, mientras que seguimos pudiendo utilizar un lenguaje de programación real, como es Python, en vez de Scratch, para ampliar los conocimientos que se habrían iniciado con éste último. Tendremos la oportunidad de ampliar conocimientos con conceptos como listas, diferentes módulos, entrada y salida estándar, etc. 
