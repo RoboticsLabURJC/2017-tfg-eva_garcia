@@ -11,9 +11,9 @@ Buzzer_Dictionary = {'B0':31,'C1':33,'D1':37,'E1':41,'F1':44,'G1':49,'A1':55,'B1
                     'C7':2093,'D7':2349,'E7':2637,'F7':2794,'G7':3136,'A7':3520,'B7':3951,'C8':4186,'D8':4699}
 
 
-def open_PortSerial (baudios, timeOutSec):
+def open_PortSerial (port):
     try:
-        serialAux = serial.Serial(115200, baudios, timeout=timeOutSec)
+        serialAux = serial.Serial(115200, port, timeout=1)
         serialAux.setDTR(False)
         sleep(1)
         serialAux.flushInput()
@@ -139,6 +139,20 @@ def ask_Message_Led(serial):
 
 ######
 
+def functions_mbot ():
+    print("Tienes las siguientes funciones para el mBot:")
+    print("read_Sensor(serial) => lee de los sensores y te devuelve qué sensor es y el valor de éste")
+    print("turnOn_Leds(list,serial) => enciende las luces led")
+    print("turnOn_Buzzer(list,serial) => enciende el zumbador")
+    print("turnOn_Motors(list,serial) => enciende los motores")
+    print("send_Quit (serial) => manda un mensaje de apagado al mBot")
+    print("show_BuzzerNotes() => muestra todas las posibles notas para el zumbador")
+    print ("ask_message_Led(serial) => pide los valores para mandar a los led")
+    print ("ask_message_Buzzer(serial) => pide los valores para mandar al zumbador")
+    print ("ask_message_Motors(serial) => pide los valores para mandar a los motores")
+    print ("open_PortSerial(port) => abre la comunicación con el mBot")
+
+
 def turnOn_Leds(list,serial):
     mensaje = create_Message_Led(list)
     send_Message(mensaje,serial)
@@ -153,3 +167,6 @@ def turnOn_Motors(list,serial):
     
 def send_Quit(serial):
     send_Message("quit",serial)
+
+def show_BuzzerNotes():
+    print (Buzzer_Dictionary)

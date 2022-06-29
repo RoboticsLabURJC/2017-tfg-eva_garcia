@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  28 JUN 2022 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  29 JUN 2022 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1415,14 +1415,165 @@ Overfull \hbox (15.12642pt too wide) in paragraph at lines 207--208
 um-nos que tra-ba-jen a di-fe-ren-tes ve-lo-ci-da-des
  []
 
+
+Overfull \hbox (5.17937pt too wide) in paragraph at lines 212--214
+\OT1/ptm/m/n/12 es-tu-dian-tes en la pro-gra-ma-ci[]on cl[]asi-ca y dar un pa-s
+o m[]as en su apren-di-za-je en rob[]oti-ca, uti-li-zan-do
+ []
+
+<img//hola.png, id=727, 517.935pt x 166.82326pt>
+File: img//hola.png Graphic file (type png)
+<use img//hola.png>
+Package pdftex.def Info: img//hola.png  used on input line 219.
+(pdftex.def)             Requested size: 310.76338pt x 100.09471pt.
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+[41 <./img//mBotaparcamiento.jpg.png>]
+Overfull \hbox (10.44644pt too wide) in paragraph at lines 227--228
+\OT1/ptm/m/n/12 va-lor que ire-mos in-cre-men-tan-do en ca-da pa-sa-da del bu-c
+le (\OT1/ptm/m/it/12 i\OT1/ptm/m/n/12 ). Pri-me-ro ha-re-mos 5 ite-ra-cio-nes,
+ []
+
+<img//error.png, id=734, 510.10574pt x 87.9285pt>
+File: img//error.png Graphic file (type png)
+<use img//error.png>
+Package pdftex.def Info: img//error.png  used on input line 236.
+(pdftex.def)             Requested size: 306.0658pt x 52.75749pt.
+
+Overfull \hbox (23.08412pt too wide) in paragraph at lines 243--244
+\OT1/ptm/m/n/12 de for-ma pro-gre-si-va, pues el ob-je-ti-vo es que re-aprendan
+ to-dos es-tos con-cep-tos con una pro-gra-ma-ci[]on
+ []
+
+LaTeX Info: Redefining \. on input line 246.
+LaTeX Info: Redefining \% on input line 246.
+[42 <./img//hola.png> <./img//error.png>]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 #-- Poner aquí 
+                      las variables globales, si se necesitan
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "AD.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 #-- Poner aquí 
+                      las variables globales, si se necesitan
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259 #-- Sacar mensaje inicial: qué 
+                                      va a hacer el robot
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "A9.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259 #-- Sacar mensaje inicial: qué 
+                                      va a hacer el robot
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 #--Escribe aquí 
+                       el programa principal
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte "AD.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 #--Escribe aquí 
+                       el programa principal
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+<img//ayuda.png, id=749, 570.33075pt x 147.55125pt>
+File: img//ayuda.png Graphic file (type png)
+<use img//ayuda.png>
+Package pdftex.def Info: img//ayuda.png  used on input line 270.
+(pdftex.def)             Requested size: 342.20108pt x 88.53142pt.
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
+[43 <./img//ayuda.png>]
+Overfull \hbox (0.57228pt too wide) in paragraph at lines 288--290
+\OT1/ptm/m/n/12 Una vez ha-yan usa-do una vez el m[]eto-do y que pue-dan com-pr
+o-bar que fun-cio-na, pa-sa-re-mos
+ []
+
+
+Overfull \hbox (17.37881pt too wide) in paragraph at lines 291--293
+[]\OT1/ptm/m/n/12 Para apren-der a usar la for-ma de leer de los sen-so-res de 
+PyBo-Kids-2.0, les pro-pon-dre-mos
+ []
+
+
+Overfull \hbox (10.08624pt too wide) in paragraph at lines 293--294
+\OT1/ptm/m/n/12 pro-gra-mar los ejer-ci-cios m[]as com-pli-ca-dos, que re-quie-
+ren de ma-yor pro-gra-ma-ci[]on al mez-clar
+ []
+
 ) (Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [41 <./img//mBotaparcamiento.jpg.png>]
+ [44]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [45]
 Cap\'{\i }tulo 6.
-) (memoria_tfg.bbl [42
+) (memoria_tfg.bbl [46
 
-]) [43
+]) [47
 
 ] (memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1431,15 +1582,24 @@ LaTeX Info: Redefining \% on input line 25.
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
-(rerunfilecheck)             Checksum: F86AC9C8973D213F801EE0ED504A816E;6055.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `memoria_tfg.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `memoria_tfg.out':
+(rerunfilecheck)             Before: B74C4B5FB3F77EE7F54644A77A5D36F1;6055
+(rerunfilecheck)             After:  C8B44A7C9B3EFAAA4CDF2A629DCE0267;6075.
  ) 
 Here is how much of TeX's memory you used:
- 16569 strings out of 478582
- 272744 string characters out of 2838209
- 864364 words of memory out of 3000000
- 34124 multiletter control sequences out of 15000+600000
- 503591 words of font info for 92 fonts, out of 8000000 for 9000
+ 16657 strings out of 478582
+ 274071 string characters out of 2838209
+ 864611 words of memory out of 3000000
+ 34170 multiletter control sequences out of 15000+600000
+ 503924 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,9n,77p,1410b,1908s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ba
@@ -1454,9 +1614,9 @@ eX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/
 AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.ga
 rcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on memoria_tfg.pdf (48 pages, 4150199 bytes).
+Output written on memoria_tfg.pdf (52 pages, 4208026 bytes).
 PDF statistics:
- 852 PDF objects out of 1000 (max. 8388607)
- 319 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 920 PDF objects out of 1000 (max. 8388607)
+ 357 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
 
