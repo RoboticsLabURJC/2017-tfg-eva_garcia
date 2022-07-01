@@ -5,44 +5,55 @@ Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: acm.bst
 Reallocating 'name_of_file' (item size: 1) to 21 items.
 Database file #1: bibliografia_tfg.bib
-You've used 2 entries,
+Warning--entry type for "JdeRobot" isn't style-file defined
+--line 1 of file bibliografia_tfg.bib
+Warning--entry type for "arduinoURL" isn't style-file defined
+--line 8 of file bibliografia_tfg.bib
+Warning--entry type for "PythonRef" isn't style-file defined
+--line 14 of file bibliografia_tfg.bib
+Warning--entry type for "makeblock" isn't style-file defined
+--line 22 of file bibliografia_tfg.bib
+Warning--entry type for "arduinolenguaje" isn't style-file defined
+--line 28 of file bibliografia_tfg.bib
+You've used 5 entries,
             2253 wiz_defined-function locations,
-            537 strings with 4131 characters,
-and the built_in function-call counts, 462 in all, are:
-= -- 38
-> -- 14
+            544 strings with 4143 characters,
+and the built_in function-call counts, 1015 in all, are:
+= -- 80
+> -- 35
 < -- 0
-+ -- 6
-- -- 4
-* -- 22
-:= -- 85
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 6
++ -- 15
+- -- 10
+* -- 37
+:= -- 164
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 26
-empty$ -- 47
-format.name$ -- 4
-if$ -- 95
+cite$ -- 5
+duplicate$ -- 40
+empty$ -- 116
+format.name$ -- 10
+if$ -- 216
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 4
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 16
+int.to.str$ -- 5
+missing$ -- 0
+newline$ -- 23
+num.names$ -- 10
+pop$ -- 40
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 15
 quote$ -- 0
-skip$ -- 12
+skip$ -- 50
 stack$ -- 0
-substring$ -- 10
-swap$ -- 4
+substring$ -- 25
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 20
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 22
+while$ -- 10
+width$ -- 6
+write$ -- 37
+(There were 5 warnings)

@@ -1,14 +1,23 @@
 \begin{thebibliography}{1}
 
-\bibitem{darwin2009origen}
-{\sc Darwin, C.}
-\newblock {\em El origen de las especies por medio de la selecci{\'o}n
-  natural}.
-\newblock Editorial CSIC-CSIC Press, 2009.
+\bibitem{arduinoURL}
+{\sc Arduino}.
+\newblock Oficial arduino website.
 
-\bibitem{del1984luces}
-{\sc del Valle-Incl{\'a}n, R.}
-\newblock {\em Luces de bohemia}.
-\newblock Direcci{\'o}n General de M{\'u}sica y Teatro, 1984.
+\bibitem{arduinolenguaje}
+{\sc Arduino}.
+\newblock Referencia lenguaje arduino.
+
+\bibitem{JdeRobot}
+{\sc Julio~Vega, J. M.~C.}
+\newblock Pybo-kids.
+
+\bibitem{makeblock}
+{\sc Makeblock}.
+\newblock Oficial makeblock website.
+
+\bibitem{PythonRef}
+{\sc ORG, P.}
+\newblock Oficial python reference.
 
 \end{thebibliography}
