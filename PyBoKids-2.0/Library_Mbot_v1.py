@@ -99,8 +99,8 @@ def ask_Message_Motors (serial):
     print ("Enter velocity for rigth motor (-255,255)")
     dcho=input()
     list = [izdo,dcho]
-    motors = create_Message_Motor(list)
-    return motors
+    
+    return list
 
 def ask_Message_Buzzer(serial):
     print ("Type 'quit' for stopping, 'show' for seeing all possible notes or anything to send new message to the buzzer")
@@ -116,8 +116,8 @@ def ask_Message_Buzzer(serial):
     print ("Enter the duration -in seconds- for the note")
     duration=input()
     list = [noteInt,duration]
-    Buzzer = create_Message_Buzzer(list)
-    return Buzzer
+    
+    return list
 
 def ask_Message_Led(serial):
     print ("Type 'quit' for stopping or anything to send new message to leds")
@@ -134,8 +134,8 @@ def ask_Message_Led(serial):
     print("Enter blue value")
     blue=input()
     list = [leds,red,green,blue]
-    leds = create_Message_Led(list)
-    return leds
+   
+    return list
 
 ######
 
