@@ -1,14 +1,14 @@
 \chapter{Aplicación educativa}\label{cap:aplicationEducativa}
-En este capítulo proporcionaremos una propuesta educativa,  basada en ejercicios prácticos, cuyo objetivo global es el aprendizaje de robótica y programación, y de sus principios y conceptos básicos. \\
+En este capítulo proporcionaremos una propuesta educativa,  basada en ejercicios prácticos, cuyo objetivo global es el aprendizaje de robótica y pensamiento computacional, y de sus principios y conceptos básicos. \\
 Estos ejercicios prácticos utilizarán dos herramientas diferentes, cuyo orden temporal es fijo por necesidad y lógica educativa: la primera herramienta, Scratch, la nativa del fabricante del robot mBot, es más sencilla al no ser un lenguaje de programación al uso. Una vez superada la primera fase de aprendizaje, será posible pasar a un lenguaje de programación con sintaxis, compilación, ejecución por comando, etc, utilizando Python y la plataforma diseñada en este Trabajo Fin de Grado. 
 \section{Contexto}\label{sec:contexto}
-Los ejercicios de Scratch explicados a continuación no son el resultado de un diseño meramente teórico, sino que fueron puestas en práctica durante un curso completo, en el marco de unas clases extraordinarias de robótica, a alumnos y alumnas de Educación Primaria. Por tanto, pudo comprobarse la acogida y la efectividad de los contenidos, en algunos casos adaptando la dificultad o añadiendo pasos a la primera versión del ejercicio si fuera necesario. \\
+Los ejercicios de Scratch explicados a continuación no son el resultado de un diseño meramente teórico, sino que fueron puestas en práctica durante un curso completo, en el marco de unas clases extraordinarias de robótica, a alumnos y alumnas de Educación Primaria en el colegio Nuestra Señora de Rihondo, en Alcorcón (Madrid). Por tanto, pudo comprobarse la acogida y la efectividad de los contenidos, en algunos casos adaptando la dificultad o añadiendo pasos a la primera versión del ejercicio si fuera necesario. \\
 La plataforma Python original, PyBo-kids, requería de una instalación de JdeRobot y Gazebo, compleja, en Linux. Durante el curso escolar, se comprobó que esta era poco adaptable a un curso  completo de alumnos. Para este Trabajo Fin de Grado diseñamos por tanto, una versión de la plataforma que poder usar fácilmente en un contexto de clase colectiva. No es necesario instalar nada, aparte de Python, en los equipos (normalmente equipos de escuela, de prestaciones poco óptimas). De hecho, dado que el residente completo va grabado en el robot y no es necesario cambiar el programa grabado cuando se quiera usar una práctica diferente, no es necesario instalar siquiera Arduino. Sólo será necesario, entonces, la instalación de Python y el archivo \textit{.py} correspondiente a la biblioteca de PyBoKids-2.0 \\
 Las prácticas descritas para la segunda parte son una transcripción de algunas prácticas de Scratch (las relativas a comportamientos), adaptadas a los periféricos disponibles en PyBo-Kids-2.0 y con las limitaciones físicas que conllevan tener el robot conectado por cable al PC (para mantener la comunicación entre Python y el canal Serial). 
 
 
 \section{Objetivos docentes: metodología}\label{sec:metodología}
-Las metodologías de cualquier tipo de programación son perfectamente utilizables en robótica y en el trabajo con jóvenes. La más intuitiva de ellas, de hecho la que ellos mismos utilizan de una forma natural (aunque no completamente ordenada) es \textit{Agile}\footnote{Filosofía de Desarrollo web basada en iteraciones}. Aunque a los estudiantes no les explicaremos explícitamente que estamos usando este método, sino que diseñaremos los ejercicios con el fin de que deba usarse, y les guiaremos durante la ejecución con este método. 
+Las metodologías de cualquier tipo de programación son perfectamente utilizables en robótica y en el trabajo con jóvenes. La más intuitiva de ellas, de hecho la que ellos mismos utilizan de una forma natural (aunque no completamente ordenada) es \textit{Agile}\footnote{Filosofía de Desarrollo web basada en iteraciones}. Sin embargo, a los estudiantes no les explicaremos explícitamente que estamos usando este método, sino que diseñaremos los ejercicios con el fin de que deba usarse, y les guiaremos durante la ejecución con este método. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.3]{agile.png}
@@ -17,11 +17,30 @@ Las metodologías de cualquier tipo de programación son perfectamente utilizabl
 \end{figure}
 Aunque las etapas de una iteración Agile clásica son cinco (\textit{Plan, Diseño, Desarrollo, Test y Feedback}), al ser Scratch y las prácticas un entorno muy sencillo, haremos con éstas un Agile simplificado, fusionando las fases de Plan y Diseño, que con los alumnos serán trabajo común. Las fases de Test y Feedback no las fusionaremos propiamente dicho, sino que las haremos a la vez y poniendo las ideas en común: probando el ejercicio en el robot y comprobando si el comportamiento es el deseado. \\
 Durante las clases, por tanto, la metodología será de trabajo en común para el planteamiento del ejercicio, e individual (o por parejas dependiendo de el ratio de robot por persona) para el desarrollo y el test.
-\section{Primera etapa: Scratch}\label{sec:scratch}
-Las prácticas de esta etapa están pensadas con unos objetivos docentes individuales, y otros globales con respecto al resto de ejercicios. Además, no podemos perder de vista que, para los estudiantes, las clases de robótica deben ser \textit{divertidas}, no son curriculares, por lo que es importante mantener su atención creando ejercicios dinámicos y diferentes cada vez, además del contenido educativo. 
-\subsection{Prácticas}\label{subsec:practicas}
+\section{Programación robótica con Scratch}\label{sec:scratch}
+Las prácticas de esta etapa están pensadas con unos objetivos docentes individuales, y otros globales con respecto al curso completo de ejercicios. Además, no podemos perder de vista que, para los estudiantes, las clases de robótica deben ser \textit{entretenidas}; dado que no son curriculares es importante mantener su atención creando ejercicios dinámicos y diferentes cada vez, además de con contenido educativo. 
+\subsection{Makeblock}\label{subsec:makeblock}
+Antes de pasar a describir las prácticas diseñadas, hablaremos de la plataforma nativa para la programación del robot mBot \textbf{mBlock}, del fabricante Makeblock (ver en \cite{makeblock}), y cómo lo utilizaremos en las clases. \\
+Como hemos adelantado en el Capítulo \ref{cap:infra}, donde explicamos su instalación y uso básico, el fabricante pone a disposición un aplicativo, disponible para PC y dispositivo móvil (o tablet), para programar el robot mBot (en este caso, ya que es el que usamos en esta propuesta educativa, sin embargo están disponibles todos los modelo de robot del fabricante) con el lenguaje Scratch de una forma muy intuitiva. Este software es muy útil para el caso que nos ocupa, esto es, programación con jóvenes sin experiencia: requiere solamente de la instalación del software, y tiene integrados la forma de conectar con el robot y de grabar el código de un programa en la placa. \\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{mblock_ejemplo.png}
+	\label{img:pantallamblock}
+	\caption{Aplicación mBlock: pantalla inicial}
+\end{figure}
 
-\subsubsection{Actuadores} \label{subsubsec:actuadores}
+En nuestro caso, lo utilizaremos durante las clases en la primera parte del curso, orientada a la solución de los ejercicios con Scratch. 
+Para ello, el propio alumno/a hará el proceso inicial de actualización de firmware, sólo necesario una vez, y de conexión mBlock-Robot (esta, sin embargo, será necesaria cada vez, puede verse en el propio programa si el robot está conectado o no). Este procedimiento está explicado aquí \ref{list:conexionMblock}. \\
+El proceso de solución de un ejercicio utilizando Scratch y mBlock, siguiendo los objetivos Agile marcados, es el siguiente:
+\begin{enumerate}
+	\item Discusión sobre el problema planteado, toma de requerimientos común.
+	\item Diseño de un esquema de solución con soporte visual (pizarra), y separación del problema completo en pequeños ejercicios unitarios (\textit{bottom-up})
+	\item Programación en scratch del primer problema unitario
+	\item Grabado en el robot del programa (ver en \ref{img:uploadArduino}) diseñado. Para grabar el programa, será necesario que el robot esté conectado por USB al PC, encendido y establecida la conexión entre PC y mBlock
+	\item Prueba de la solución unitaria. Para ello, podemos desconectar el robot, ya que el programa está grabado en la placa (no hay ningún programa ejecutando en el PC que requiera mantener la conexión). Es notable el hecho de que, nada más subir el programa a la placa, comenzará a funcionar. Para poder ejecutar el programa ''desde cero en limpio'', podremos apagar el robot una vez hayamos grabado el programa, y volverlo a encender donde o cómo queramos probar la solución. La placa Arduino ejecutará el programa que tenga grabado desde cero cada vez que se encienda, hasta que otro programa sea grabado.
+	\item Continuación hasta la solución completa.
+\end{enumerate}
+\subsection{Prácticas con actuadores} \label{subsec:practicasactuadores}
  Como se ha explicado anteriormente, el propósito de un actuador es ejecutar la orden que recibe de la placa. Es, por tanto, muy visual y conveniente para introducir el curso de robótica, pues da pie a equivocarse y aprender de los errores de forma mucho más intuitiva que con otros componentes.
  
 \begin{description}
@@ -67,7 +86,7 @@ Vamos metiendo, poco a poco, acciones simultáneas, para que tengan que preocupa
 Con este ejercicio, aprendemos el concepto, tan necesario en la programación de robótica, de \textit{ocurrencia}. Cuándo, y sólo cuándo, el camión da marcha atrás, es cuando se encienden las luces y sirenas.
 \end{description}
 
-\subsubsection{Sensores} \label{subsubsec:sensores}
+\subsection{Prácticas con sensores} \label{subsec:practicassensores}
 Como se ha comentado en el Capítulo \ref{cap:infra}, los sensores recogen información del medio y la devuelven en forma numérica. Es misión del programador, pues, procesar el retorno y la interpretación de esa información de forma correcta, unívoca y cubriendo todos las posibilidades. \\
 Esto requiere unas habilidades más avanzadas, además de los conceptos básicos de programación como bucles, condicionales, ocurrencias, etc, que se han visto en los ejercicios anteriores de actuadores. Los alumnos deberán ser capaces de:
 \begin{enumerate}
@@ -145,7 +164,8 @@ El ejercicio básico consistirá en perseguir al robot, poniéndole delante algo
 \textbf{Ejercicio extra}. Con el mismo sensor y la misma filosofía que anteriormente, esta vez diseñaremos un algoritmo para \textbf{atravesar} los obstáculos y poder continuar la carrera, no para evitarlos y huir de ellos. \\
 El propósito es reforzar la autonomía de los alumnos a la hora de buscar una solución, no sólo de implementar un algoritmo (una solución) dado. La diferencia con la carrera de obstáculos del primer apartado de este mismo capítulo, en \ref{ej:carreras}, es que la disposición de estos obstáculos no será fija, sino que el robot deberá ser capaz de solucionar cualquier circuito.
 \end{description}
-\subsubsection{Comportamientos}\label{subsubsec:comportamientos}
+
+\subsection{Prácticas de aplicaciones}\label{subsec:practicasaplicaciones}
 En las dos secciones previas se ha explicado cómo utilizar los sensores y actuadores propios del mBot con el lenguaje de programación Scratch, y se han propuesto ejercicios para practicar todos ellos. Sin embargo, y aunque siempre se ha intentado hacer estos ejercicios lo más reales posibles, a la hora de ponerlo en práctica podemos ver que los alumnos los superan fácilmente y que, en cuanto tienen resuelto el algoritmo, piden opciones que hacerle o le buscan formas distintas con las que poder jugar con el robot. \\
 Con ese propósito, para la última parte del curso de Scratch, y ya teniendo en cuenta las herramientas de programación trabajadas hasta ahora, en esta sección propondremos algunos ejercicios más completos y que requerirán de varios sensores y actuadores conjuntos, con comportamientos más complejos y con un propósito más específico. Seguiremos trabajando la programación, reforzando los conceptos de \textit{funciones, variables, orden secuencial, ejecuciones bloqueantes, bucles anidados a condiciones, etc}. \\
 Otro propósito de esta sección es el aprendizaje y autonomía de los alumnos a la hora de solucionar un problema. Es decir, no ya de dar la solución programada a un algoritmo, sino de diseñar ellos mismos ese algoritmo que compone la solución. A base de intentos, y distintas iteraciones, el refinamiento de la solución será un punto importante. Seguiremos la idea de la metodología \textbf{Agile}: diseño, desarrollo, prueba, rediseño. A pesar de haber seguido este método durante todo el curso, ahora es cuando mejor se puede poner en práctica debido a la naturaleza más continua de los ejercicios (no durarán sólo un día o una iteración).
@@ -210,13 +230,30 @@ Otro propósito de esta sección es el aprendizaje y autonomía de los alumnos a
 \end{description}
 
 
-\section{Segunda etapa: PyBo-Kids-2.0 en Python}\label{sec:Python}
+\section{Programación robótica con Python: PyBoKids 2.0}\label{sec:Python}
 Esta segunda parte del curso educativo está supeditada a que los alumnos hayan tenido una buena acogida de los contenidos de la primera etapa, tanto educativa como temporalmente. Es importante que hayan aprendido globalmente conceptos de programación para poder introducir el concepto de 'código', con todas las normas que ello conlleva. Scratch para ello es una ventaja frente a otros lenguajes ''infantiles'', pues es una suerte de \textit{pseudocódigo}, frente a otros que no contienen nada de texto y son completamente pictográficos (orientados a alumnos aún más jóvenes, que no han empezado o terminado de aprender a leer). \\
-Se han diseñado pues, una serie de ejercicios de dificultad progresiva, para introducir a los estudiantes en la programación clásica y dar un paso más en su aprendizaje en robótica, utilizando la plataforma diseñada en este Trabajo Fin de Grado PyBo-Kids-2.0.
-\subsection{Introducción a Python}
-Como sería la primera vez que utilizan un lenguaje de programación clásico, es necesario introducirlos en las normas, en la sintaxis básica y en la forma de ejecución. Para ellos hemos preparado unos ejercicios simples sólo de lenguaje, a los que dedicar poco tiempo (pues no son de robótica de por si), a modo de introducción.
+Se han diseñado pues, una serie de ejercicios de dificultad progresiva, para introducir a los estudiantes en la programación clásica y dar un paso más en su aprendizaje en robótica, utilizando la plataforma diseñada en este Trabajo Fin de Grado PyBoKids 2.0.
+\subsection{PyBoKids 2.0}
+El objetivo de la plataforma desarrollada es ofrecer una fórmula para que personas que no han utilizado nunca un lenguaje formal de programación, programen el robot mBot con ese lenguaje. El hecho en sí es complicado, ya que tiene varios hándicap que superar: la edad de los alumnos, la complicación de empezar a programar y además, de aprender un lenguaje de cero, sumada al hecho de estar utilizándolo para robótica, y no sólo programación ''básica''. Esta plataforma, pues, ofrece una posibilidad para no depender del lenguaje de la placa, Arduino, más complejo y menos manejable para la situación. \\
+El uso en clase de  PyBoKids será muy sencillo:
+\begin{enumerate}
+	\item Los robot llevarán ya grabado el programa residente de Arduino, para que no sea necesario hacerlo en clase. Sin embargo, si un alumno u alumna quisiera hacerlo de forma independiente, el procedimiento de instalación está explicado en \ref{list:InstalacionArduino}. Será necesario: 
+	\begin{itemize}
+		\item Instalación del Arduino IDE
+		\item Descargar las librerías de Arduino y el programa residente de \href{https://github.com/JdeRobot/PyBoKids/tree/main/PyBoKids%202.0}{aquí}
+		\item Incluir las librerías según las instrucciones del Capítulo \ref{cap:infra} comentadas
+		\item Abrir el fichero de extensión .ino del programa residente anteriormente descargado, y grabarlo en la placa
+	\end{itemize}
+	\item Descargar e instalar Python 3.0 según las instrucciones en \ref{list:instalacionPython}
+	\item Descargar la biblioteca de PyBoKids (fichero \textit{Library\_mbot\_v1}) y el fichero \textit{esqueleto.py} desde \href{https://github.com/JdeRobot/PyBoKids/tree/main/PyBoKids%202.0}{el repositorio de PyBoKids 2.0}, y guardarla localmente en el directorio donde vayamos a trabajar.	
+	\item Abrir el fichero \textit{esqueleto} y guardarlo con el nombre del programa que vayamos a realizar, para guardar una copia (y no sobreescribirlo).
+\end{enumerate}
+
+Como puede verse, el proceso es muy sencillo, y al alcance de los alumnos. 
+\subsection{Prácticas de lenguaje}
+Como sería la primera vez que utilizan un lenguaje de programación clásico, es necesario introducirlos en las normas, en la sintaxis básica y en la forma de ejecución. Para ellos hemos preparado unos ejercicios simples sólo de lenguaje, a los que dedicar poco tiempo (pues no son de robótica), a modo de introducción.
 \begin{description}
-\item [Hola mundo] Como en cualquier curso introducctorio de lenguaje, el primer 'Hola mundo' es fundamental para enseñar a los alumnos a abrir un fichero nuevo, guardarlo, y ejecutarlo (en este caso, usaremos el IDLE nativo de python en Windows, al igual que su shell. Es por tanto, muy fácil ejecutar un programa guardado con la opción propia del IDLE).
+\item [Hola mundo] Como en cualquier curso introductorio de lenguaje, el primer 'Hola mundo' es fundamental para enseñar a los alumnos a abrir un fichero nuevo, guardarlo, y ejecutarlo (en este caso, usaremos el IDLE nativo de python en Windows, al igual que su shell. Es por tanto, muy fácil ejecutar un programa guardado con la opción propia del IDLE).
 	\begin{figure}[H]
 		\includegraphics[scale=0.6]{hola.png}
 		\centering
@@ -243,7 +280,7 @@ while i < 6:
 \end{description}
 
 Habiendo utilizado variables, bucles y condiciones, se puede empezar a programar el mBot de forma progresiva, pues el objetivo es que re-aprendan todos estos conceptos con una programación formal.
-\subsection{Prácticas}
+\subsection{Prácticas robóticas}
 Como se mencionó brevemente en el final del Capítulo \ref{cap:PyBoKids}, para esta etapa del curso educativo, se ha preparado un esqueleto de programación en Python, con el objetivo tanto de facilitar la programación a los estudiantes, como de guiarles en unas buenas prácticas (entre ellas, la obligatoriedad de la indentación propia de Python). Este esqueleto contiene la importación del módulo de la biblioteca, y una guía de dónde corresponde cada parte del programa. Lo utilizaremos, al menos las primeras veces, para hacer los ejercicios diseñados. Más adelante, y dependiendo del ejercicio, harán cambios en él, es sólo una guía para empezar. Además, en la biblioteca, tenemos una ayuda programada para mostrarle al alumno las posibles funciones que tiene disponibles (la función, al no ser una ayuda de Python ''al uso'', se llama \textit{functions\_mbot} y está pre-programada en el esqueleto):
 
 \begin{lstlisting}[language=python]

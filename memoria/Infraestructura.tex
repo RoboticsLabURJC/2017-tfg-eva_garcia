@@ -161,7 +161,7 @@ Ciertamente, y aunque el lenguaje Scratch puede utilizarse como lenguaje de prog
 
 Para utilizar Scratch y programar el robot, es necesario instalar un programa, que es el que contiene el compilador y el que permite conectar el robot al PC para enviarle el programa, llamado \textit{mBlock}. El ejecutable se descarga de la página oficial del fabricante, \href{https://www.makeblock.es/blog/descargas/}{Makeblock}, disponible para PC (también existe una versión simplificada para dispositivos móviles).\\
 Una vez instalado el software, el proceso para poder empezar a usar el mBot es muy simple:
-\begin{enumerate}
+\begin{enumerate}\label{list:conexionMblock}
 	\item Conectar el robot al pc con el cable USB, y conectarlo con el programa (el robot debe estar encendido).
 	\begin{figure}[H]
 		\includegraphics[]{mblock.png}
@@ -212,7 +212,7 @@ Obviamente, los alumnos necesitarán que se les guíe, principalmente al comienz
 \subsection{Arduino}\label{subsec:arduino}
 Como se explicó cuando hablamos de la placa base en la sección \ref{subsec:placaBase}, ésta se programa en \textbf{Arduino}. Este lenguaje de programación está basado en C++, y pensado para interactuar con objetos electrónicos. \\
 Teniendo en cuenta el objetivo de este Trabajo Fin de Grado, ofrecer una posibilidad de programar el robot Mbot en Python, es necesario utilizar el lenguaje nativo de la placa base, con el fin de que el robot \textit{entienda} las órdenes programadas en Python. Por lo tanto, para crear este ''framework'', es necesario instalar el entorno Arduino. A continuación se explican las instrucciones para instalar el entorno en Windows, y para configurarlo para el robot.
-\begin{enumerate}
+\begin{enumerate}\label{list:InstalacionArduino}
 	\item Descargar e instalar, Arduino IDE, el cual instala el entorno completo de Arduino. Para las versiones 8 y 10 de Windows, está disponible directamente en el Microsoft Store. Para otras versiones de Windows, está disponible en la  \href{https://www.arduino.cc/en/software}{página web oficial}.
 	\begin{figure}[h]
 		\includegraphics[width=10cm]{store.png}
@@ -220,7 +220,7 @@ Teniendo en cuenta el objetivo de este Trabajo Fin de Grado, ofrecer una posibil
 		\label{img:MStore}
 		\caption{Arduino IDE en el Microsoft Store}
 	\end{figure}
-	\item Descargar las librerías de \href{https://codeload.github.com/Makeblock-official/Makeblock-Libraries/zip/master}{Makeblock} para añadirlas a Arduino y poder utilizarlas en nuestro entorno.
+	\item Descargar las librerías de \href{https://codeload.github.com/Makeblock-official/Makeblock-Libraries/zip/master}{Makeblock} o del \href{https://github.com/JdeRobot/PyBoKids/tree/main/PyBoKids%202.0}{repositorio PyBoKids} para añadirlas a Arduino y poder utilizarlas en nuestro entorno.
 	\item Incluir el archivo comprimido descargado desde el Arduino IDE:\\ \textit{Programa - Incluir librería - Añadir biblioteca .ZIP - Seleccionar el fichero - Abrir}
 	\item Seleccionar la placa básica que se va a conectar al IDE:\\
 	\textit{Herramientas - Placa - Seleccionar Arduino Uno}
@@ -239,7 +239,7 @@ Teniendo en cuenta el objetivo de este Trabajo Fin de Grado, ofrecer una posibil
 Por último, utilizaremos \textbf{python} para programar la lógica de los ejercicios. El objetivo es que se programe en python sólo los ejercicios, habiendo paquetizado todo lo relativo al robot en Arduino, y sólo utilizando la conexión con éste para obtener datos de los sensores y enviar datos a los actuadores. La descripción de este proceso y de la lógica de ambos lados (PC y robot) se describirá en profundida en el capítulo \ref{cap:PyBoKids}.
 \par La razón de utilizar Python como lenguaje de programación es la misma que la del resto de componentes: la facilidad para los alumnos de acceder a ello. Es uno de los lenguajes con sintaxis más simple (por comparación, Arduino / C++ es muy cerrado y complejo), además de ser las palabras reservadas significantemente entendibles (aunque es cierto que en inglés: \textit{while}, \textit{print}, \textit{read}, etc), así como la declaración de variables es más flexible. Además, y aparte de la cuestión educacional, el módulo \textit{serial} para conexión con periféricos, está con la instalación base, y es mucho más sencillo que en otros lenguajes, haciéndolo perfecto para la electrónica. 
 \par La instalación de python en Windows también es muy sencilla:
-\begin{enumerate}
+\begin{enumerate}\label{list:instalacionPython}
 	\item Descargar el paquete de la \href{https://www.python.org/downloads/}{web oficia} y ejecutar el instalable descargado.
 	También es posible, para Windows 10, obtenerlo desde el Microsoft Store, tal y como se hizo para Arduino.
 	\item Una vez descargado, comprobar que se puede ejecutar abriendo una consola -Powershell- y escribiendo \textit{python},	se ejecutará la consola de python, y podremos probar que tenemos python instalado en nuestro entorno (\textit{exit()} para salir). También es útil comprobar que hemos instalado la versión correcta (3.10): \textit{python --version} en una consola de Powershell (no teniendo abierta la consola de python)
