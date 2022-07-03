@@ -17,33 +17,33 @@
 \contentsline {subsection}{\numberline {3.3.1}Scratch y mBlock}{11}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Arduino}{14}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Python}{16}{subsection.3.3.3}%
-\contentsline {chapter}{\numberline {4}Plataforma PyBoKids 2.0}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Diseño}{17}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Comunicaciones}{17}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Protocolo de mensajes}{19}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Programa residente}{20}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Comunicación serial}{20}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Uso de sensores y actuadores}{21}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Protocolo de mensajes}{24}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Programa PC}{27}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Comunicación Serial}{28}{subsection.4.3.1}%
-\contentsline {paragraph}{Leer del canal}{28}{paragraph*.24}%
-\contentsline {paragraph}{Escribir en el canal}{28}{paragraph*.25}%
-\contentsline {subsection}{\numberline {4.3.2}Protocolo de mensajes}{29}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Validación experimental}{33}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Aplicación educativa}{36}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Contexto}{36}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Objetivos docentes: metodología}{37}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Programación robótica con Scratch}{37}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Makeblock}{37}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Prácticas con actuadores}{39}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Prácticas con sensores}{41}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Prácticas de aplicaciones}{45}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Programación robótica con Python: PyBoKids 2.0}{49}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}PyBoKids 2.0}{50}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Prácticas de lenguaje}{50}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Prácticas robóticas}{52}{subsection.5.4.3}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Trabajos futuros}{60}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{62}{chapter*.41}%
+\contentsline {chapter}{\numberline {4}Plataforma PyBoKids 2.0}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Diseño}{18}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Comunicaciones}{18}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Protocolo de mensajes}{20}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Programa residente}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Comunicación serial}{21}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Uso de sensores y actuadores}{22}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Protocolo de mensajes}{25}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Programa PC}{28}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Comunicación Serial}{29}{subsection.4.3.1}%
+\contentsline {paragraph}{Leer del canal}{29}{paragraph*.25}%
+\contentsline {paragraph}{Escribir en el canal}{29}{paragraph*.26}%
+\contentsline {subsection}{\numberline {4.3.2}Protocolo de mensajes}{30}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Validación experimental}{34}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Aplicación educativa}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contexto}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Objetivos docentes: metodología}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Programación robótica con Scratch}{38}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Makeblock}{38}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Prácticas con actuadores}{40}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Prácticas con sensores}{42}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Prácticas de aplicaciones}{46}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Programación robótica con Python: PyBoKids 2.0}{50}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}PyBoKids 2.0}{51}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Prácticas de lenguaje}{51}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Prácticas robóticas}{53}{subsection.5.4.3}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{60}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{60}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Trabajos futuros}{61}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{63}{chapter*.42}%

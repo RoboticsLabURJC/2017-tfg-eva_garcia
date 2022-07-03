@@ -8,16 +8,16 @@
 {\sc Arduino}.
 \newblock Referencia lenguaje arduino.
 
-\bibitem{JdeRobot}
-{\sc Julio~Vega, J. M.~C.}
-\newblock Pybo-kids.
-
 \bibitem{makeblock}
 {\sc Makeblock}.
 \newblock Oficial makeblock website.
 
 \bibitem{PythonRef}
-{\sc ORG, P.}
+{\sc Python}.
 \newblock Oficial python reference.
+
+\bibitem{JdeRobot}
+{\sc {Vega, Julio}, and {Cañas, Jose María}}.
+\newblock Pybokids.
 
 \end{thebibliography}
