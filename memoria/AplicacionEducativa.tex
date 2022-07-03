@@ -283,7 +283,7 @@ Habiendo utilizado variables, bucles y condiciones, se puede empezar a programar
 \subsection{Prácticas robóticas}
 Como se mencionó brevemente en el final del Capítulo \ref{cap:PyBoKids}, para esta etapa del curso educativo, se ha preparado un esqueleto de programación en Python, con el objetivo tanto de facilitar la programación a los estudiantes, como de guiarles en unas buenas prácticas (entre ellas, la obligatoriedad de la indentación propia de Python). Este esqueleto contiene la importación del módulo de la biblioteca, y una guía de dónde corresponde cada parte del programa. Lo utilizaremos, al menos las primeras veces, para hacer los ejercicios diseñados. Más adelante, y dependiendo del ejercicio, harán cambios en él, es sólo una guía para empezar. Además, en la biblioteca, tenemos una ayuda programada para mostrarle al alumno las posibles funciones que tiene disponibles (la función, al no ser una ayuda de Python ''al uso'', se llama \textit{functions\_mbot} y está pre-programada en el esqueleto):
 
-\begin{lstlisting}[language=python]
+\begin{lstlisting}[language=python,tabsize=2]
 # -- Esto es un comentario
 
 # -- Aqui los modulos necesarios
@@ -315,22 +315,239 @@ sys.exit(0))
 A continuación explicaremos los ejercicios programados para esta parte del curso. Muchos de ellos, al ser los mismos que en Scratch (\ref{sec:scratch}) no los repetiremos a no ser que sean necesarias aclaraciones o ayudas debido al cambio de plataforma.
 
 \begin{description}
-	\item [Conexión con el robot] Aunque no vaya a hacer ningún efecto, lo primero que deben aprender es la forma de conectarse al robot. Se les explicará haciendo referencia a la conexión en Scratch, que también era necesaria, y se les mostrará cómo usar la función preparada para ello \begin{lstlisting}[language=Python]
-		open\_portSerial(port)
+	\item [Conexión con el robot] Aunque no vaya a hacer ningún efecto, lo primero que deben aprender es la forma de conectarse al robot. Se les explicará haciendo referencia a la conexión en Scratch, que también era necesaria, y se les mostrará cómo usar la función preparada para ello 
+	\begin{lstlisting}[language=Python]
+		open_portSerial(port)
 	\end{lstlisting}
 	Este primer ''programa'' no ejecutará nada, sino que la forma de ver que ha funcionado correctamente es comprobar que no genera fallo. Si cambiáramos el puerto en la función, podríamos comprobar que no funciona.
 	\item [Luces Led] Al ser el actuador más sencillo, será el primero que utilicemos.  Lo primero es la toma de decisiones (qué queremos que el robot haga), después debemos pasar esos datos a lenguaje, y después utilizar la biblioteca del mBot. Es importante explicarles cómo funcionan las funciones de envío de datos. En este caso, cómo hacer un array (una lista) con los datos que queremos empaquetar para enviar al robot.
-	\begin{lstlisting}[language=Python]
-		serial = open_PortSerial('com3')
-		turnOn_Leds([0,255,0,0],serial)
-	\end{lstlisting}
-	\item [Carreras] Realizaremos el mismo ejercicio que en la parte anterior, esta vez enviando los datos a los motores con la biblioteca de PyBo-Kids-2.0. La toma de decisiones pasará por decidir la velocidad a la que mandar los motores moverse, y por crear el objeto de lista con los valores que enviar. Es notable que este ejercicio debemos realizarle con cuidado, ya que continuamos teniendo el robot conectado por cable al PC.
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
+print ("Prueba de led")
+
+try:
+	#--Escribe aqui el programa principal
+	turnOn_Leds([0,255,0,0],serial)
+	sleep(3)
+	send_Quit(serial)
+except KeyboardInterrupt:
+	send_Quit(serial)
+
+serial.close()
+sys.exit(0)
+\end{lstlisting}
+	\item [Carreras] Realizaremos el mismo ejercicio que en la parte anterior, esta vez enviando los datos a los motores con la biblioteca de PyBoKids 2.0. La toma de decisiones pasará por decidir la velocidad a la que mandar los motores moverse, y por crear el objeto de lista con los valores que enviar. Es notable que este ejercicio se debe realizar con cuidado, ya que continuamos teniendo el robot conectado por cable al PC.
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
+
+print ("Usar los motores (M1 y M2) componiendo el mensaje completo para mandar exactamente los valores")
+	
+while True:
+	try:
+		print ("Send new message or quit?")
+		cadena=input()
+		if (cadena.lower() == 'quit'):
+			send_Quit(serial)
+			break
+		print ("Enter velocity for left motor (-255,255)")
+		izdo=input()
+		print ("Enter velocity for rigth motor (-255,255)")
+		dcho=input()	
+		turnOn_Motors([100,100],serial)
+	except KeyboardInterrupt:
+		send_Quit(serial)
+		break
+	
+serial.close()
+sys.exit(0)
+\end{lstlisting}
 	\item [SOS] Esta vez, para hacer el mismo ejercicio de SOS que anteriormente, elegiremos la nota a la que emitir y las dos duraciones diferentes por teclado. La propuesta es que se repita el SOS tres veces (o \textit{n} veces) y después termine, usando el mensaje \textit{quit} programado.
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
+print ("Mensaje de socorro con el zumbador")
+
+try:
+	#--Escribe aqui el programa principal
+	Mensaje_Zumbador_punto = ask_Message_Buzzer(serial)
+	Mensaje_Zumbador_raya = ask_Message_Buzzer(serial)
+	for i in range(6):
+		for i in range (3):
+			turnOn_Buzzer(Mensaje_Zumbador_punto,serial)
+		for i in range (3):
+			turnOn_Buzzer(Mensaje_Zumbador_raya,serial)
+		for i in range (3):
+			turnOn_Buzzer(Mensaje_Zumbador_punto,serial)
+		sleep(3)
+		send_Quit(serial)
+except KeyboardInterrupt:
+	send_Quit(serial)
+
+serial.close()
+sys.exit(0)
+\end{lstlisting}
 	\item [Sensores] Para aprender a usar la forma de leer de los sensores de PyBo-Kids-2.0, les propondremos leer del sensor, comprueben que es el que necesitan (con un bloque \textit{if..else}) e impriman el valor del sensor por pantalla. Además, así aprenden a acceder a un Array, no sólo a crearlo. \\
 	Haremos esto con los tres sensores, para aprender cómo usarlos y poder pasar a programar los ejercicios mezclando sensores y actuadores. Lo más importante, obviamente aparte de aprender a usar la plataforma, es que vean la necesidad de un bucle para mantener leyendo del sensor al robot, ya que el valor puede cambiar en cualquier momento.
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
+
+print ("Lee de los sensores para distinguir de cual viene el mensaje")
+
+while True:
+	try:
+		#--Escribe aqui el programa principal
+		sensorMessage = read_Sensor(serial)
+		if (sensorMessage == -1):
+			pass
+		else:
+			if (sensorMessage[0] == 'distance'):
+				print ("distance: " + sensorMessage[1])
+			elif (sensorMessage[0] == 'siguelineas'):
+				print ("siguelineas: " + sensorMessage[1])
+			elif (sensorMessage[0] == 'luz'):
+				print ("sensor de luz: " + sensorMessage[1])
+	except KeyboardInterrupt:
+		send_Quit(serial)
+
+serial.close()
+sys.exit(0)
+\end{lstlisting}
+
 	\item [Luces rojas si hay un muro delante] Una vez comprobados los sensores, el siguiente paso es programar los ejercicios más complicados, que requieren de mayor programación al mezclar la lectura de sensores, el tratamiento de los datos y decisión sobre ellos, y el envío de datos a los actuadores. Aún así, el más sencillo de ellos siguen siendo los led, por lo que empezaremos encendiendo una luz roja si el valor del sensor de Distancia es menor que un valor threshold guardado como valor global, o pedido por pantalla, y verde en caso contrario (es importante recordar que el sensor recoge un valor máximode 400 cm).
-	\item [Condicionales] Lo más interesante de poder utilizar el PC para la entrada de datos es la diferencia de órdenes que enviar al robot. Así, con el mismo programa podremos utilizar actuadores diferentes dependiente de lo que escribamos por teclado, utilizando comparadores y bloques condicionales para, por ejemplo, encender un led u otro, el zumbador, o los motores. 
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
 	
+print ("Lee del sensor de distancia (ultrasonic) y enciende led 
+rojo si la pared esta muy cerca y verde si no")
+
+while 1:
+	try:
+		sensorMessage = read_Sensor(serial)    
+		if (sensorMessage == -1):
+			continue
+		else:
+			if (sensorMessage[0].lower() == 'distance'):
+				if (sensorMessage[1] < 10):
+					turnOn_Leds([0,255,0,0],serial)
+				else:
+					turnOn_Leds([0,0,255,0],serial)
+	except KeyboardInterrupt:
+		send_Quit(serial)
+		break
+	
+serial.close()
+sys.exit(0)
+\end{lstlisting}
+	\item [Condicionales] Lo más interesante de poder utilizar el PC para la entrada de datos es la diferencia de órdenes que enviar al robot. Así, con el mismo programa podremos utilizar actuadores diferentes dependiente de lo que escribamos por teclado, utilizando comparadores y bloques condicionales para, por ejemplo, encender un led u otro, el zumbador, o los motores. En este caso pondremos también el foco en la opción por defecto de los bloques condicionales, concepto muy importante en pensamiento computacional y robótica
+\begin{lstlisting}[language=python,caption={Solución de referencia del ejercicio},captionpos=b,tabsize=2,tabsize=2]
+# -- Esto es un comentario		
+# -- Aqui los modulos necesarios
+import sys
+import serial
+from time import sleep
+from Library_Mbot_v1 import *
+
+#-- Poner aqui las variables globales, si se necesitan
+serial = open_PortSerial('com3')
+#-- Sacar mensaje inicial: que va a hacer el robot
+
+print ("Opciones diferentes para hacer")
+
+while 1:
+try:
+	#--Escribe aqui el programa principal
+	print ("Escribe lo que quieres hacer: quit,
+	 leds, motores, o zumbador")
+	cadena=input()
+	if (cadena.lower() == 'quit'):
+		send_Quit(serial)
+		break
+	elif (cadena.lower() == 'leds'):
+		print ("Color?: rojo, azul, verde")
+		cadenacolor=input()
+		if (cadenacolor.lower() == 'red'):
+			turnOn_Leds([0,255,0,0],serial)
+		elif (cadenacolor.lower() == 'verde'):
+			turnOn_Leds([0,0,255,0],serial)
+		elif (cadenacolor.lower() == 'azul'):
+			turnOn_Leds([0,0,0,255],serial)
+		else:
+			print ("color equivocado")
+			continue
+	elif (cadena.lower() == 'motores'):
+		print ("rapido o lento?")
+		cadenavelocidad = input()
+		if (cadenavelocidad.lower() == 'rapido'):
+			turnOn_Motors([255,255],serial)
+		if (cadenavelocidad.lower() == 'lento'):
+			turnOn_Motors([100,100],serial)
+		else:
+			print ("velocidad equivocada")
+			continue
+	elif (cadena.lower() == 'motores'):
+		print ("agudo o grave?")
+		cadenanota = input()
+		if (cadenanota.lower() == 'agudo'):
+			turnOn_Buzzer([659,3],serial)
+		elif (cadenanota.lower() == 'grave'):
+			turnOn_Buzzer([73,3],serial)
+		else:
+			print("opcion equivocada")
+			continue
+	else:
+		print("No te he entendido. Escribe exactamente la orden")
+		continue
+
+except KeyboardInterrupt:
+	send_Quit(serial)
+
+serial.close()
+sys.exit(0)
+\end{lstlisting}
 \end{description}
 
 Después de estos ejercicios, los alumnos estarán capacitados para hacer el resto de ejercicios posibles de la sección de Scratch (\ref{sec:scratch}), u otros que se nos ocurran teniendo en cuenta el modelo de entrada de datos que nos proporciona tener el PC (y no tener grabado a fuego el programa en la placa, como sucedía con Scratch). Lo más importante es guiarles en el proceso Agile y tratar que no se salten pasos por falsa confianza, y en la posible ayuda que necesiten sobre el lenguaje y su sintaxis. 

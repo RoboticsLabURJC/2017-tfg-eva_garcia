@@ -114,7 +114,8 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 		\end{figure}
 	
 	\item [Zumbador] También integrado en la placa, emite notas musicales codificadas en nomenclatura americana. La equivalencia, que los alumnos necesitan conocer, está en la tabla siguiente. Para utilizar diferentes notas más agudas o más graves, se utilizan números a continuación de las letras (\textbf{C0} es más grave que \textbf{C5}). Internamente, el zumbador entiende valores enteros, correspondientes en frecuencia con cada nota (en la tabla, sólo se pone el valor para los valores \textit{1}, a modo de ejemplo):
-	\begin{center}
+	\begin{table}[h]
+		\centering
 		\begin{tabular}{ c | c | c}	
 			Europea & Americana & Valor entero \\
 			\hline			
@@ -126,7 +127,9 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 			LA & A & 55\\
 			SI & B & 62\\
 		\end{tabular}
-	\end{center}
+	\label{table:notasZumbador}
+	\caption{Relación entre notas para el Zumbador del mBot}
+	\end{table}
 
 	
 	\begin{figure}[H]

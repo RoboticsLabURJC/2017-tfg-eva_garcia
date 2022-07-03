@@ -13,15 +13,14 @@ Buzzer_Dictionary = {'B0':31,'C1':33,'D1':37,'E1':41,'F1':44,'G1':49,'A1':55,'B1
 
 def open_PortSerial (port):
     try:
-        serialAux = serial.Serial(115200, port, timeout=1)
+        serialAux = serial.Serial(port,115200, timeout=1)
         serialAux.setDTR(False)
         sleep(1)
         serialAux.flushInput()
         serialAux.setDTR(True)
         sleep (1)
         return serialAux
-    except serial.SerialException:
-        #-- Error al abrir el puerto serie
+    except serial.SerialException:        #-- Error al abrir el puerto serie
         sys.stderr.write("Error al abrir puerto (%s)\n")
         sys.exit(1)
 
@@ -84,6 +83,7 @@ def create_Message_Buzzer(list):
 
 def create_Message_Motor(list):
     mensaje = f"1;{list[0]};{list[1]}"
+    print (mensaje)
     return mensaje
 
 ######

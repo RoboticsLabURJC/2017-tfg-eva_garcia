@@ -9,6 +9,7 @@ from Library_Mbot_v1 import *
 
 #-- Sacar mensaje inicial: qué va a hacer el robot
 
+serial = open_PortSerial('com3')
 Distancia_threshold = 10
 
 while 1: # -- para que sea infinito
@@ -17,7 +18,7 @@ while 1: # -- para que sea infinito
         if (sensorMessage == -1):
             continue
         else:
-            if (sensorMessage[0].lower() == 'distance'):
+            if (sensorMessage[0] == 'distance'):
                 if (sensorMessage[1] < Distancia_threshold):
                     turnOn_Motors([100,100],serial)
                 else:
