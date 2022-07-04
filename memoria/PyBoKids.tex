@@ -5,7 +5,7 @@ Como se explicó en el Capítulo \ref{cap:infra}, se ha utilizado Arduino  y su 
 
 \section{Diseño}\label{sec:diseño}
 Lo primero en el diseño de la plataforma ha sido el modelo ''PC - Residente''. Partiendo de la premisa dada de programación del robot en Python, era necesaria una forma para que, dado que la placa base funciona en Arduino, la comunicación Serial\footnote{Comunicación secuencial de información a través de un canal, electrónico en este caso} funcionara entre los dos lenguajes. \\
-\subsection{Comunicaciones}\label{subsec:comunicaciones}
+
 La comunicación con el robot, como se ha comentado en el Capítulo \ref{cap:infra} de Infraestructura, debe establecerse entre el entorno y el robot (con la placa base), cada vez que se encienda éste. Es, por tanto, el primer problema a solventar para ambos entornos. \\ 
 El protocolo \textit{Serial} abre una vía de comunicación a través de un canal electrónico, en este caso un cable USB, entre el entorno y el robot, a una velocidad en baudios\footnote{Velocidad, utilizada en electrónica, medida en número de símbolos por segundo}. Este canal para el traspaso de información es necesario para enviar datos a la placa (por ejemplo, los colores a los que encender los LED integrados) o recibir datos de ésta (los valores de lectura de los sensores) y poder utilizarlos en toma de decisiones. \\
 Al abrir la comunicación en ambas partes, placa base y PC, cualquiera de ellas es capaz de leer del canal la información que necesite, y de enviar a través de él (para que esto sea así, ambas partes deben haber abierto la comunicación a la misma velocidad). Por tanto, si la placa Arduino envia a través del canal Serial el dato que recoge del sensor de infrarrojos, el lado PC, que estaría leyendo de ese canal, obtendría este dato. \\
@@ -32,7 +32,7 @@ Como podemos observar, ocurren varias cosas de forma paralela:
 	\item El programa residente lee del canal si tiene mensajes para un actuador y, en caso afirmativo, recoge los valores y los envía al actuador correcto.
 \end{itemize}
 
-\subsection{Protocolo de mensajes}\label{subsec:protocolomensajes}
+\section{Protocolo de mensajes}\label{sec:protocolomensajes}
 Para que la comunicación entre el programa PC y Residente sea posible es necesario un protocolo de mensajes; es necesario asegurarse que ambas partes recojan la información correcta y sepan qué deben hacer con ella. Poniendo un ejemplo: el Programa Residente debe estar preparado para recibir datos que enviar a los actuadores. Sin embargo, cada actuador requiere datos de entrada diferentes, por tanto, debe estar preparado también para saber para qué actuador le están enviando los datos. Igualmente, el Programa PC debe estar preparado para enviar la información de forma que sea inequívoca. \\
 El mismo caso se da para los sensores. El Residente tiene que enviar el dato de forma que el PC pueda saber que el dato que lee es el que necesita (no vale para lo mismo si lee el sensor de luz que el del Sigue Líneas) \\
 
@@ -69,7 +69,7 @@ Este sistema de codificación de los mensajes, funciona de la siguiente forma:
 Con este protocolo de mensajes la funcionalidad de la plataforma PyBoKids 2.0 es fácilmente ampliable a más sensores o actuadores, puesto que los identificadores son números enteros. \\
 
 A continuación, detallaremos la forma técnica en la que se han en la que se ha desarrollado el diseño en ambas partes, Residente y PC, explicando el acceso a los periféricos, la construcción de las bibliotecas y el manejo de este protocolo de mensajes. 
-\section{Programa residente}\label{sec:residente}
+\section{Programa residente en robot}\label{sec:residente}
 La biblioteca residente en Arduino se ha realizado de forma progresiva, encontrando diferentes requerimientos y necesidades a lo largo del proceso. 
 \subsection{Comunicación serial}\label{subsec:SerialArduino}
 En Arduino, para utilizar el protocolo Serial no es necesario cargar ningún módulo añadido, al ser un lenguaje pensado para las comunicaciones electrónicas. La inicialización de la comunicación Serial debe hacerse en la función \textit{setup} de Arduino, donde se coloca el código que debe ejecutarse sólo una vez, al comienzo de la ejecución del programa, con la velocidad en baudios deseada como parámetro.

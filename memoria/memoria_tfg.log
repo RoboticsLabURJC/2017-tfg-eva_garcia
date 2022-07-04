@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  3 JUL 2022 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.5)  4 JUL 2022 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,7 +597,7 @@ LaTeX Info: Redefining \nameref on input line 30.
 \@outlinefile=\write3
 \openout3 = `memoria_tfg.out'.
 
-<img//logo_urjc.jpg, id=187, 632.3625pt x 321.2pt>
+<img//logo_urjc.jpg, id=195, 632.3625pt x 321.2pt>
 File: img//logo_urjc.jpg Graphic file (type jpg)
 <use img//logo_urjc.jpg>
 Package pdftex.def Info: img//logo_urjc.jpg  used on input line 34.
@@ -609,13 +609,13 @@ Package pdftex.def Info: img//logo_urjc.jpg  used on input line 34.
 <./img//logo_urjc.jpg>] [2] (memoria_tfg.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
 (C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
 msa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
 (C:\Users\eva.garcia.domingo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
 msb.fd
@@ -647,15 +647,90 @@ l.69 	\mainmatter
 
 ] (introduccion.tex
 Cap\'{\i }tulo 1.
-) (Objetivos.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (1.36394pt too wide) in paragraph at lines 7--8
+\OT1/ptm/m/n/12 pro-ce-so electr[]oni-co pro-gra-ma-do pa-ra cum-plir una o va-
+rias fun-cio-nes in-ter-ac-tuan-do con el me-dio.
+ []
+
+
+Overfull \hbox (12.96594pt too wide) in paragraph at lines 10--12
+\OT1/ptm/m/n/12 ocu-rrir a cual-quier per-so-na el co-no-ci-do ''chat de con-ta
+c-to'' en las apli-ca-cio-nes web (asis-ten-tes
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Objetivos} [1
+l.12 	\item [Internet Of Things.]
+                                 \footnote{Internet de las cosas} Muy escuch...
+[1
 
 ]
+Overfull \hbox (2.24022pt too wide) in paragraph at lines 15--16
+\OT1/ptm/m/n/12 sino que est[]as pre-pa-ra-das pa-ra re-co-ger da-tos siem-pre 
+que est[]en dis-po-ni-bles, y mos-trar
+ []
+
+
+Overfull \hbox (6.50998pt too wide) in paragraph at lines 20--21
+\OT1/ptm/m/n/12 con-cep-to que tra-di-cio-nal-men-te se ten[]^^Pa de In-te-li-g
+en-cia Ar-ti-fi-cial (co-mo he-mos co-men-tan-do,
+ []
+
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 	
+       [2]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Overfull \hbox (20.56284pt too wide) in paragraph at lines 28--29
+\OT1/ptm/m/n/12 con-cep-tos am-plia-men-te dis-cu-ti-dos y for-mu-la-dos, pa-ra
+ po-der lle-gar a las Ma-tem[]ati-cas m[]as avan-za-das.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33 
+      [3]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+) (Objetivos.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [4]
 Cap\'{\i }tulo 2.
 
 Overfull \hbox (15.91695pt too wide) in paragraph at lines 7--8
@@ -672,14 +747,7 @@ ython y es-ca-lo-na-da
 
 Underfull \vbox (badness 1048) has occurred while \output is active []
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.16 	\item L
-             a plataforma desarrollada, llamada PyBo-Kids-2.0, deberá ejecu...
-[2
+ [5
 
 ]
 Overfull \hbox (15.0055pt too wide) in paragraph at lines 20--21
@@ -707,16 +775,10 @@ uino, a la que ir a[]nadien-do los pe-rif[]eri-cos
 
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.33 \end{enumerate}
-                     [3]) (Infraestructura.tex
+[6]) (Infraestructura.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [4]
+ [7]
 Cap\'{\i }tulo 3.
 
 Overfull \hbox (9.00772pt too wide) in paragraph at lines 8--12
@@ -734,10 +796,10 @@ ash \OT1/ptm/m/n/12 ca-rac-ter[]^^Psti-cas
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5
+ [8
 
 ]
-<img//mcore.png, id=286, 895.345pt x 567.11874pt>
+<img//mcore.png, id=315, 895.345pt x 567.11874pt>
 File: img//mcore.png Graphic file (type png)
 <use img//mcore.png>
 Package pdftex.def Info: img//mcore.png  used on input line 19.
@@ -755,8 +817,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
-[6 <./img//mcore.png>]
-<img//Mbot.jpg, id=295, 426.59375pt x 386.44376pt>
+[9 <./img//mcore.png>]
+<img//Mbot.jpg, id=324, 426.59375pt x 386.44376pt>
 File: img//Mbot.jpg Graphic file (type jpg)
 <use img//Mbot.jpg>
 Package pdftex.def Info: img//Mbot.jpg  used on input line 28.
@@ -767,14 +829,14 @@ Package caption Warning: \label without proper reference on input line 37.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `img:mbot2' on page 7 undefined on input line 32.
+LaTeX Warning: Reference `img:mbot2' on page 10 undefined on input line 32.
 
-<img//Mbot-pack-piernas.jpg, id=299, 803.0pt x 803.0pt>
+<img//Mbot-pack-piernas.jpg, id=328, 803.0pt x 803.0pt>
 File: img//Mbot-pack-piernas.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas.jpg  used on input line 34.
 (pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
-<img//Mbot-pack-piernas2.jpg, id=300, 451.6875pt x 451.6875pt>
+<img//Mbot-pack-piernas2.jpg, id=329, 451.6875pt x 451.6875pt>
 File: img//Mbot-pack-piernas2.jpg Graphic file (type jpg)
 <use img//Mbot-pack-piernas2.jpg>
 Package pdftex.def Info: img//Mbot-pack-piernas2.jpg  used on input line 35.
@@ -784,13 +846,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [7 <./img//Mbot.jpg>]
+ [10 <./img//Mbot.jpg>]
 
 Package caption Warning: \label without proper reference on input line 29.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `img:mbot' on page 8 undefined on input line 40.
+LaTeX Warning: Reference `img:mbot' on page 11 undefined on input line 40.
 
 
 Overfull \hbox (10.62645pt too wide) in paragraph at lines 51--52
@@ -798,25 +860,25 @@ Overfull \hbox (10.62645pt too wide) in paragraph at lines 51--52
 de la ha-bi-ta-ci[]on en la que nos en-con-tre-mos,
  []
 
-<img//ultrasonidos.jpg, id=309, 351.3125pt x 351.3125pt>
+<img//ultrasonidos.jpg, id=337, 351.3125pt x 351.3125pt>
 File: img//ultrasonidos.jpg Graphic file (type jpg)
 <use img//ultrasonidos.jpg>
 Package pdftex.def Info: img//ultrasonidos.jpg  used on input line 58.
 (pdftex.def)             Requested size: 204.85846pt x 204.86566pt.
-<img//siguelineas.jpg, id=310, 759.83875pt x 759.83875pt>
+<img//siguelineas.jpg, id=338, 759.83875pt x 759.83875pt>
 File: img//siguelineas.jpg Graphic file (type jpg)
 <use img//siguelineas.jpg>
 Package pdftex.def Info: img//siguelineas.jpg  used on input line 63.
 (pdftex.def)             Requested size: 204.85846pt x 204.85774pt.
-<img//sensorLuz.png, id=311, 476.37975pt x 108.405pt>
+<img//sensorLuz.png, id=339, 476.37975pt x 108.405pt>
 File: img//sensorLuz.png Graphic file (type png)
 <use img//sensorLuz.png>
 Package pdftex.def Info: img//sensorLuz.png  used on input line 68.
 (pdftex.def)             Requested size: 204.85846pt x 46.61653pt.
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
-[8 <./img//Mbot-pack-piernas.jpg> <./img//Mbot-pack-piernas2.jpg>]
-<img//RGBled.png, id=318, 166.82326pt x 332.442pt>
+[11 <./img//Mbot-pack-piernas.jpg> <./img//Mbot-pack-piernas2.jpg>]
+<img//RGBled.png, id=345, 166.82326pt x 332.442pt>
 File: img//RGBled.png Graphic file (type png)
 <use img//RGBled.png>
 Package pdftex.def Info: img//RGBled.png  used on input line 88.
@@ -835,18 +897,18 @@ a fa-ci-li-tar la pro-gra-ma-ci[]on a los alum-nos,
 
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
-[9 <./img//ultrasonidos.jpg> <./img//siguelineas.jpg> <./img//sensorLuz.png>]
-<img//puertomotor.png, id=330, 305.34074pt x 163.812pt>
+[12 <./img//ultrasonidos.jpg> <./img//siguelineas.jpg> <./img//sensorLuz.png>]
+<img//puertomotor.png, id=357, 305.34074pt x 163.812pt>
 File: img//puertomotor.png Graphic file (type png)
 <use img//puertomotor.png>
 Package pdftex.def Info: img//puertomotor.png  used on input line 99.
 (pdftex.def)             Requested size: 204.85846pt x 109.90843pt.
-<img//motorDC2.png, id=331, 275.22826pt x 212.59425pt>
+<img//motorDC2.png, id=358, 275.22826pt x 212.59425pt>
 File: img//motorDC2.png Graphic file (type png)
 <use img//motorDC2.png>
 Package pdftex.def Info: img//motorDC2.png  used on input line 104.
 (pdftex.def)             Requested size: 150.23138pt x 116.04485pt.
-<img//motorDC.png, id=332, 251.13824pt x 224.037pt>
+<img//motorDC.png, id=359, 251.13824pt x 224.037pt>
 File: img//motorDC.png Graphic file (type png)
 <use img//motorDC.png>
 Package pdftex.def Info: img//motorDC.png  used on input line 109.
@@ -854,14 +916,14 @@ Package pdftex.def Info: img//motorDC.png  used on input line 109.
 LaTeX Info: Redefining \. on input line 133.
 LaTeX Info: Redefining \% on input line 133.
 
-[10 <./img//RGBled.png> <./img//puertomotor.png> <./img//motorDC2.png> <./img//
+[13 <./img//RGBled.png> <./img//puertomotor.png> <./img//motorDC2.png> <./img//
 motorDC.png>]
-<img//buzzer.png, id=346, 148.75575pt x 130.086pt>
+<img//buzzer.png, id=373, 148.75575pt x 130.086pt>
 File: img//buzzer.png Graphic file (type png)
 <use img//buzzer.png>
 Package pdftex.def Info: img//buzzer.png  used on input line 136.
 (pdftex.def)             Requested size: 85.35826pt x 74.64601pt.
-<img//scratch.png, id=347, 317.38576pt x 100.57574pt>
+<img//scratch.png, id=374, 317.38576pt x 100.57574pt>
 File: img//scratch.png Graphic file (type png)
 <use img//scratch.png>
 Package pdftex.def Info: img//scratch.png  used on input line 151.
@@ -877,13 +939,13 @@ Underfull \vbox (badness 1215) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 156.
 LaTeX Info: Redefining \% on input line 156.
- [11 <./img//buzzer.png>]
-<img//scratch2.png, id=355, 284.262pt x 109.00725pt>
+ [14 <./img//buzzer.png>]
+<img//scratch2.png, id=383, 284.262pt x 109.00725pt>
 File: img//scratch2.png Graphic file (type png)
 <use img//scratch2.png>
 Package pdftex.def Info: img//scratch2.png  used on input line 159.
 (pdftex.def)             Requested size: 284.26129pt x 109.00697pt.
-<img//mblock.png, id=357, 290.2845pt x 113.223pt>
+<img//mblock.png, id=385, 290.2845pt x 113.223pt>
 File: img//mblock.png Graphic file (type png)
 <use img//mblock.png>
 Package pdftex.def Info: img//mblock.png  used on input line 170.
@@ -893,13 +955,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
- [12 <./img//scratch.png> <./img//scratch2.png>]
-<img//mblock2.png, id=367, 185.493pt x 287.8755pt>
+ [15 <./img//scratch.png> <./img//scratch2.png>]
+<img//mblock2.png, id=395, 185.493pt x 287.8755pt>
 File: img//mblock2.png Graphic file (type png)
 <use img//mblock2.png>
 Package pdftex.def Info: img//mblock2.png  used on input line 178.
 (pdftex.def)             Requested size: 185.49254pt x 287.87479pt.
-<img//mblock3.png, id=368, 178.266pt x 187.902pt>
+<img//mblock3.png, id=396, 178.266pt x 187.902pt>
 File: img//mblock3.png Graphic file (type png)
 <use img//mblock3.png>
 Package pdftex.def Info: img//mblock3.png  used on input line 186.
@@ -909,13 +971,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
- [13 <./img//mblock.png> <./img//mblock2.png>]
-<img//mblock4.png, id=379, 307.1475pt x 130.68825pt>
+ [16 <./img//mblock.png> <./img//mblock2.png>]
+<img//mblock4.png, id=407, 307.1475pt x 130.68825pt>
 File: img//mblock4.png Graphic file (type png)
 <use img//mblock4.png>
 Package pdftex.def Info: img//mblock4.png  used on input line 198.
 (pdftex.def)             Requested size: 204.85846pt x 87.16582pt.
-<img//mblock5.png, id=380, 359.54324pt x 165.61874pt>
+<img//mblock5.png, id=408, 359.54324pt x 165.61874pt>
 File: img//mblock5.png Graphic file (type png)
 <use img//mblock5.png>
 Package pdftex.def Info: img//mblock5.png  used on input line 203.
@@ -940,8 +1002,8 @@ o. A con-ti-nua-ci[]on se ex-pli-can las ins-truc-cio-nes
 
 LaTeX Info: Redefining \. on input line 218.
 LaTeX Info: Redefining \% on input line 218.
-[14 <./img//mblock3.png> <./img//mblock4.png> <./img//mblock5.png>]
-<img//store.png, id=397, 1020.81375pt x 164.41425pt>
+[17 <./img//mblock3.png> <./img//mblock4.png> <./img//mblock5.png>]
+<img//store.png, id=424, 1020.81375pt x 164.41425pt>
 File: img//store.png Graphic file (type png)
 <use img//store.png>
 Package pdftex.def Info: img//store.png  used on input line 221.
@@ -960,13 +1022,13 @@ t al soft-wa-re (con el ro-bot en-chu-fa-do
 
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
-[15 <./img//store.png>]
-<img//python.png, id=416, 182.48175pt x 66.2475pt>
+[18 <./img//store.png>]
+<img//python.png, id=443, 182.48175pt x 66.2475pt>
 File: img//python.png Graphic file (type png)
 <use img//python.png>
 Package pdftex.def Info: img//python.png  used on input line 250.
 (pdftex.def)             Requested size: 182.4813pt x 66.24733pt.
-<img//pyserial.jpg, id=417, 636.12656pt x 70.76437pt>
+<img//pyserial.jpg, id=444, 636.12656pt x 70.76437pt>
 File: img//pyserial.jpg Graphic file (type jpg)
 <use img//pyserial.jpg>
 Package pdftex.def Info: img//pyserial.jpg  used on input line 264.
@@ -981,7 +1043,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 270.
 LaTeX Info: Redefining \% on input line 270.
-[16 <./img//python.png>]) (PyBoKids.tex
+[19 <./img//python.png>]) (PyBoKids.tex
 Overfull \hbox (5.75249pt too wide) in paragraph at lines 271--1
 []\OT1/ptm/m/n/12 Para es-cri-bir c[]odi-go en python, se pue-de uti-li-zar cua
 l-quier edi-tor de tex-to. El mis-mo ins-ta-la-dor
@@ -989,7 +1051,7 @@ l-quier edi-tor de tex-to. El mis-mo ins-ta-la-dor
 
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[17 <./img//pyserial.jpg>]
+[20 <./img//pyserial.jpg>]
 Cap\'{\i }tulo 4.
 
 Overfull \hbox (6.72742pt too wide) in paragraph at lines 3--5
@@ -1002,7 +1064,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<img//flujo1.png, id=439, 1567.8575pt x 620.3175pt>
+<img//flujo1.png, id=467, 1567.8575pt x 620.3175pt>
 File: img//flujo1.png Graphic file (type png)
 <use img//flujo1.png>
 Package pdftex.def Info: img//flujo1.png  used on input line 14.
@@ -1012,17 +1074,20 @@ Overfull \hbox (15.11678pt too wide) in paragraph at lines 14--17
  [][] 
  []
 
-[18
 
-]
-<img//flujo2.png, id=448, 792.46063pt x 780.41562pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img//flujo2.png, id=468, 792.46063pt x 780.41562pt>
 File: img//flujo2.png Graphic file (type png)
 <use img//flujo2.png>
 Package pdftex.def Info: img//flujo2.png  used on input line 21.
 (pdftex.def)             Requested size: 237.74002pt x 234.12648pt.
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
- [19 <./img//flujo1.png> <./img//flujo2.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21
+
+]
 Overfull \hbox (4.23033pt too wide) in paragraph at lines 32--33
 []\OT1/ptm/m/n/12 El pro-gra-ma re-si-den-te lee del ca-nal si tie-ne men-sa-je
 s pa-ra un ac-tua-dor y, en ca-so afir-ma-ti-vo,
@@ -1046,19 +1111,18 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<img//mensajeSensor.png, id=457, 1444.39626pt x 326.21875pt>
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+ [22 <./img//flujo1.png>]
+<img//mensajeSensor.png, id=483, 1444.39626pt x 326.21875pt>
 File: img//mensajeSensor.png Graphic file (type png)
 <use img//mensajeSensor.png>
 Package pdftex.def Info: img//mensajeSensor.png  used on input line 49.
 (pdftex.def)             Requested size: 433.32222pt x 97.86636pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
-[20]
-<img//mensajeActuador.png, id=463, 1299.85625pt x 345.29pt>
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+ [23 <./img//flujo2.png> <./img//mensajeSensor.png>]
+<img//mensajeActuador.png, id=492, 1299.85625pt x 345.29pt>
 File: img//mensajeActuador.png Graphic file (type png)
 <use img//mensajeActuador.png>
 Package pdftex.def Info: img//mensajeActuador.png  used on input line 61.
@@ -1112,9 +1176,9 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
-LaTeX Info: Redefining \. on input line 81.
-LaTeX Info: Redefining \% on input line 81.
- [21 <./img//mensajeSensor.png> <./img//mensajeActuador.png>]
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+ [24 <./img//mensajeActuador.png>]
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 8
 6.
 
@@ -1124,12 +1188,12 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 86.
-<img//MonitorEnviar.png, id=478, 591.4095pt x 110.21175pt>
+<img//MonitorEnviar.png, id=507, 591.4095pt x 110.21175pt>
 File: img//MonitorEnviar.png Graphic file (type png)
 <use img//MonitorEnviar.png>
 Package pdftex.def Info: img//MonitorEnviar.png  used on input line 109.
 (pdftex.def)             Requested size: 455.24411pt x 84.8364pt.
-<img//MonitorRespuesta.png, id=479, 585.98924pt x 100.57574pt>
+<img//MonitorRespuesta.png, id=508, 585.98924pt x 100.57574pt>
 File: img//MonitorRespuesta.png Graphic file (type png)
 <use img//MonitorRespuesta.png>
 Package pdftex.def Info: img//MonitorRespuesta.png  used on input line 114.
@@ -1154,18 +1218,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
 LaTeX Info: Redefining \. on input line 123.
 LaTeX Info: Redefining \% on input line 123.
-[22]
+[25]
 Overfull \hbox (6.26099pt too wide) in paragraph at lines 125--126
 \OT1/ptm/m/n/12 pa-ra gi-rar el ro-bot, no de-be en-viar-se la mis-ma or-den al
  mo-tor de-re-cho que al iz-quier-do,
  []
 
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
-[23 <./img//MonitorEnviar.png> <./img//MonitorRespuesta.png>]
-LaTeX Info: Redefining \. on input line 173.
-LaTeX Info: Redefining \% on input line 173.
- [24]
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+[26 <./img//MonitorEnviar.png> <./img//MonitorRespuesta.png>]
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+ [27]
 Overfull \hbox (19.2736pt too wide) in paragraph at lines 180--181
 []\OT1/ptm/m/n/12 Requiere tam-bi[]en es-pe-ci-fi-car a qu[]e puer-to se le ha 
 co-nec-ta-do, de-vol-vien-do
@@ -1177,7 +1241,7 @@ Overfull \hbox (24.78459pt too wide) in paragraph at lines 184--185
  []
 
 
-LaTeX Warning: Reference `subsubsec:protocolomensajes' on page 25 undefined on 
+LaTeX Warning: Reference `subsubsec:protocolomensajes' on page 28 undefined on 
 input line 193.
 
 
@@ -1191,12 +1255,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--213
 
  []
 
-LaTeX Info: Redefining \. on input line 218.
-LaTeX Info: Redefining \% on input line 218.
-[25]
-LaTeX Info: Redefining \. on input line 256.
-LaTeX Info: Redefining \% on input line 256.
- [26]
+LaTeX Info: Redefining \. on input line 220.
+LaTeX Info: Redefining \% on input line 220.
+[28]
+LaTeX Info: Redefining \. on input line 262.
+LaTeX Info: Redefining \% on input line 262.
+ [29]
 Overfull \hbox (5.56058pt too wide) in paragraph at lines 268--269
 [][][][][][][][][][][][][][][][][][][] 
  []
@@ -1211,9 +1275,9 @@ Overfull \hbox (5.56058pt too wide) in paragraph at lines 282--283
 [][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \. on input line 299.
-LaTeX Info: Redefining \% on input line 299.
-[27]
+LaTeX Info: Redefining \. on input line 307.
+LaTeX Info: Redefining \% on input line 307.
+[30]
 Overfull \hbox (7.68753pt too wide) in paragraph at lines 332--333
 \OT1/ptm/m/n/12 fun-cio-nes crear[]an la es-truc-tu-ra del pro-gra-ma re-si-den
 -te de for-ma que fun-cio-ne in-de-pen-dien-te-men-te
@@ -1226,7 +1290,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Info: Redefining \. on input line 339.
 LaTeX Info: Redefining \% on input line 339.
- [28]
+ [31]
 Overfull \hbox (19.96072pt too wide) in paragraph at lines 342--343
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1236,15 +1300,15 @@ Overfull \hbox (5.56058pt too wide) in paragraph at lines 350--351
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \. on input line 374.
-LaTeX Info: Redefining \% on input line 374.
-[29]
+
 Overfull \hbox (2.43127pt too wide) in paragraph at lines 380--383
 \OT1/ptm/m/n/12 ''es-con-di-da'' pa-ra que los alum-nos uti-li-cen sim-ple-men-
 te fun-cio-nes con nom-bres au-to-ex-pli-ca-ti-vos,
  []
 
-
+LaTeX Info: Redefining \. on input line 383.
+LaTeX Info: Redefining \% on input line 383.
+[32]
 Overfull \hbox (14.14056pt too wide) in paragraph at lines 404--405
 []\OT1/ptm/m/n/12 Estas fun-cio-nes, nos de-vuel-ven el men-sa-je crea-do lis-t
 o pa-ra en-viar.Sin em-bar-go, es-tas fun-cio-nes
@@ -1256,34 +1320,31 @@ Overfull \hbox (6.75113pt too wide) in paragraph at lines 404--405
 ar[]an los alum-nos y alum-nas des-de el pro-gra-ma
  []
 
-LaTeX Info: Redefining \. on input line 405.
-LaTeX Info: Redefining \% on input line 405.
-[30]
-LaTeX Info: Redefining \. on input line 446.
-LaTeX Info: Redefining \% on input line 446.
- [31]
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+[33]
+LaTeX Info: Redefining \. on input line 454.
+LaTeX Info: Redefining \% on input line 454.
+ [34]
 Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
-LaTeX Info: Redefining \. on input line 478.
-LaTeX Info: Redefining \% on input line 478.
-[32]
 LaTeX Info: Redefining \. on input line 482.
 LaTeX Info: Redefining \% on input line 482.
- [33]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
-<img//programas.png, id=786, 982.872pt x 514.92375pt>
+<img//programas.png, id=809, 982.872pt x 514.92375pt>
 File: img//programas.png Graphic file (type png)
 <use img//programas.png>
 Package pdftex.def Info: img//programas.png  used on input line 505.
 (pdftex.def)             Requested size: 393.14183pt x 205.96585pt.
 LaTeX Info: Redefining \. on input line 515.
 LaTeX Info: Redefining \% on input line 515.
-[34 <./img//programas.png>]
+[36 <./img//programas.png>]
 Overfull \hbox (293.5635pt too wide) in paragraph at lines 517--518
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
@@ -1299,7 +1360,7 @@ Overfull \hbox (27.1608pt too wide) in paragraph at lines 529--530
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<img//ejemploEjercicio.png, id=805, 758.835pt x 148.1535pt>
+<img//ejemploEjercicio.png, id=828, 758.835pt x 148.1535pt>
 File: img//ejemploEjercicio.png Graphic file (type png)
 <use img//ejemploEjercicio.png>
 Package pdftex.def Info: img//ejemploEjercicio.png  used on input line 550.
@@ -1310,25 +1371,25 @@ Overfull \hbox (33.72401pt too wide) in paragraph at lines 555--556
 i-fi-ca y ex-trae el iden-ti-fi-ca-dor '1' co-rres-pon-dien-te
  []
 
-<img//ejemploEjercicio2.png, id=806, 398.08725pt x 100.57574pt>
+<img//ejemploEjercicio2.png, id=829, 398.08725pt x 100.57574pt>
 File: img//ejemploEjercicio2.png Graphic file (type png)
 <use img//ejemploEjercicio2.png>
 Package pdftex.def Info: img//ejemploEjercicio2.png  used on input line 562.
 (pdftex.def)             Requested size: 204.85846pt x 51.75793pt.
-<img//ejemploEjercicio3.png, id=807, 554.07pt x 144.54pt>
+<img//ejemploEjercicio3.png, id=830, 554.07pt x 144.54pt>
 File: img//ejemploEjercicio3.png Graphic file (type png)
 <use img//ejemploEjercicio3.png>
 Package pdftex.def Info: img//ejemploEjercicio3.png  used on input line 567.
 (pdftex.def)             Requested size: 227.62206pt x 59.37866pt.
 LaTeX Info: Redefining \. on input line 571.
 LaTeX Info: Redefining \% on input line 571.
-[35 <./img//ejemploEjercicio.png>]
-<img//ejemploEjercicio4.png, id=845, 461.92575pt x 69.861pt>
+[37 <./img//ejemploEjercicio.png>]
+<img//ejemploEjercicio4.png, id=868, 461.92575pt x 69.861pt>
 File: img//ejemploEjercicio4.png Graphic file (type png)
 <use img//ejemploEjercicio4.png>
 Package pdftex.def Info: img//ejemploEjercicio4.png  used on input line 582.
 (pdftex.def)             Requested size: 323.34583pt x 48.90234pt.
-<img//ejemploEjercicio5.png, id=846, 475.7775pt x 298.716pt>
+<img//ejemploEjercicio5.png, id=869, 475.7775pt x 298.716pt>
 File: img//ejemploEjercicio5.png Graphic file (type png)
 <use img//ejemploEjercicio5.png>
 Package pdftex.def Info: img//ejemploEjercicio5.png  used on input line 589.
@@ -1336,7 +1397,7 @@ Package pdftex.def Info: img//ejemploEjercicio5.png  used on input line 589.
 ) (AplicacionEducativa.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [36 <./img//ejemploEjercicio2.png> <./img//ejemploEjercicio3.png> <./img//ejem
+ [38 <./img//ejemploEjercicio2.png> <./img//ejemploEjercicio3.png> <./img//ejem
 ploEjercicio4.png> <./img//ejemploEjercicio5.png>]
 Cap\'{\i }tulo 5.
 
@@ -1351,7 +1412,7 @@ Overfull \hbox (15.1506pt too wide) in paragraph at lines 5--8
  los pe-rif[]eri-cos dis-po-ni-bles en PyBo-Kids-2.0
  []
 
-<img//agile.png, id=862, 1144.275pt x 501.875pt>
+<img//agile.png, id=886, 1144.275pt x 501.875pt>
 File: img//agile.png Graphic file (type png)
 <use img//agile.png>
 Package pdftex.def Info: img//agile.png  used on input line 14.
@@ -1372,10 +1433,10 @@ tu-dian-tes
 
 Underfull \vbox (badness 2556) has occurred while \output is active []
 
- [37
+ [39
 
 ]
-<img//mblock_ejemplo.png, id=869, 916.6245pt x 272.217pt>
+<img//mblock_ejemplo.png, id=893, 916.6245pt x 272.217pt>
 File: img//mblock_ejemplo.png Graphic file (type png)
 <use img//mblock_ejemplo.png>
 Package pdftex.def Info: img//mblock_ejemplo.png  used on input line 27.
@@ -1383,13 +1444,13 @@ Package pdftex.def Info: img//mblock_ejemplo.png  used on input line 27.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
 
-[38 <./img//agile.png>]
+[40 <./img//agile.png>]
 
 Package caption Warning: \label without proper reference on input line 205.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `img:uploadArduino' on page 39 undefined on input line
+LaTeX Warning: Reference `img:uploadArduino' on page 41 undefined on input line
  39.
 
 
@@ -1400,8 +1461,8 @@ es-co-nec-tar el ro-bot, ya que el pro-gra-ma
 
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
-[39 <./img//mblock_ejemplo.png>]
-<img//carreras.png, id=892, 202.356pt x 226.446pt>
+[41 <./img//mblock_ejemplo.png>]
+<img//carreras.png, id=915, 202.356pt x 226.446pt>
 File: img//carreras.png Graphic file (type png)
 <use img//carreras.png>
 Package pdftex.def Info: img//carreras.png  used on input line 56.
@@ -1414,7 +1475,7 @@ t[]acu-los y de dis-tan-cias, in-tro-du-ci-mos
 
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
-[40 <./img//carreras.png>]
+[42 <./img//carreras.png>]
 Overfull \hbox (6.0421pt too wide) in paragraph at lines 78--83
 \OT1/ptm/m/n/12 pun-tos y ra-yas del mor-se los tra-du-ci-mos a es-pe-ras de me
 -nos y m[]as tiem-po, res-pec-ti-va-men-te.
@@ -1422,7 +1483,7 @@ Overfull \hbox (6.0421pt too wide) in paragraph at lines 78--83
 
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
-[41]
+[43]
 Overfull \hbox (3.10358pt too wide) in paragraph at lines 90--93
 \OT1/ptm/m/n/12 in-ter-pre-ta-ci[]on de esa in-for-ma-ci[]on de for-ma co-rrec-
 ta, un[]^^Pvo-ca y cu-brien-do to-dos las po-si-bi-li-da-des. 
@@ -1441,7 +1502,7 @@ Overfull \hbox (3.31622pt too wide) in paragraph at lines 99--101
  []
 
 
-LaTeX Warning: Reference `subsubsec:camion' on page 42 undefined on input line 
+LaTeX Warning: Reference `subsubsec:camion' on page 44 undefined on input line 
 108.
 
 
@@ -1458,7 +1519,7 @@ un-cio-na-li-dad no la po-dre-mos in-tro-du-cir
 
 LaTeX Info: Redefining \. on input line 117.
 LaTeX Info: Redefining \% on input line 117.
-[42]
+[44]
 Overfull \hbox (3.18684pt too wide) in paragraph at lines 119--125
 \OT1/ptm/m/n/12 fac-tor, habr[]a que vol-ver a sa-car es-te ni-vel ba-rre-ra. P
 a-ra te-ner que evi-tar ha-cer es-to, me-te-mos
@@ -1466,7 +1527,7 @@ a-ra te-ner que evi-tar ha-cer es-to, me-te-mos
 
 LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
-[43]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
@@ -1479,8 +1540,8 @@ Overfull \hbox (1.59076pt too wide) in paragraph at lines 131--136
 
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[44]
-<img//mBotSigueLineas.jpg.png, id=923, 385.44pt x 455.90324pt>
+[46]
+<img//mBotSigueLineas.jpg.png, id=946, 385.44pt x 455.90324pt>
 File: img//mBotSigueLineas.jpg.png Graphic file (type png)
 <use img//mBotSigueLineas.jpg.png>
 Package pdftex.def Info: img//mBotSigueLineas.jpg.png  used on input line 152.
@@ -1490,11 +1551,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
- [45]
+ [47]
 LaTeX Info: Redefining \. on input line 172.
 LaTeX Info: Redefining \% on input line 172.
 
-[46 <./img//mBotSigueLineas.jpg.png>]
+[48 <./img//mBotSigueLineas.jpg.png>]
 Overfull \hbox (31.79027pt too wide) in paragraph at lines 175--181
 []\OT1/ptm/m/n/12 Con es-te pri-mer pro-yec-to se pre-ten-de de-mos-trar a los 
 alum-nos que son per-fec-ta-men-te
@@ -1502,13 +1563,13 @@ alum-nos que son per-fec-ta-men-te
 
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[47]
-<img//laberinto.png, id=942, 367.97475pt x 350.5095pt>
+[49]
+<img//laberinto.png, id=965, 367.97475pt x 350.5095pt>
 File: img//laberinto.png Graphic file (type png)
 <use img//laberinto.png>
 Package pdftex.def Info: img//laberinto.png  used on input line 191.
 (pdftex.def)             Requested size: 85.35826pt x 81.30542pt.
-<img//mBotlaberinto.jpg, id=943, 3661.68pt x 2746.26pt>
+<img//mBotlaberinto.jpg, id=966, 3661.68pt x 2746.26pt>
 File: img//mBotlaberinto.jpg Graphic file (type jpg)
 <use img//mBotlaberinto.jpg>
 Package pdftex.def Info: img//mBotlaberinto.jpg  used on input line 199.
@@ -1524,7 +1585,7 @@ Underfull \vbox (badness 2359) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
- [48 <./img//laberinto.png>]
+ [50 <./img//laberinto.png>]
 Overfull \hbox (38.81407pt too wide) in paragraph at lines 204--207
 \OT1/ptm/m/n/12 Siguiendo el mis-mo pro-ce-di-mien-to Agi-le que du-ran-te el c
 ur-so, pro-gra-ma-re-mos el com-por-ta-mien-to
@@ -1538,13 +1599,13 @@ a-ra el ro-bot un si-tio ''su-fi-cien-te-men-te
 
 LaTeX Info: Redefining \. on input line 219.
 LaTeX Info: Redefining \% on input line 219.
-[49 <./img//mBotlaberinto.jpg>]
+[51 <./img//mBotlaberinto.jpg>]
 Overfull \hbox (10.71288pt too wide) in paragraph at lines 219--220
 []\OT1/ptm/m/n/12 Tras en-con-trar un hue-co, el ro-bot de-ber[]a pa-rar y dar 
 mar-cha atr[]as (gi-ran-do li-ge-ra-men-te)
  []
 
-<img//mBotaparcamiento.jpg.png, id=958, 360.1455pt x 393.26926pt>
+<img//mBotaparcamiento.jpg.png, id=982, 360.1455pt x 393.26926pt>
 File: img//mBotaparcamiento.jpg.png Graphic file (type png)
 <use img//mBotaparcamiento.jpg.png>
 Package pdftex.def Info: img//mBotaparcamiento.jpg.png  used on input line 224.
@@ -1570,7 +1631,7 @@ o m[]as en su apren-di-za-je en rob[]oti-ca, uti-li-zan-do
 
 LaTeX Info: Redefining \. on input line 236.
 LaTeX Info: Redefining \% on input line 236.
-[50 <./img//mBotaparcamiento.jpg.png>]
+[52 <./img//mBotaparcamiento.jpg.png>]
 Overfull \hbox (0.31932pt too wide) in paragraph at lines 240--242
 []\OT1/ptm/m/n/12 Los ro-bot lle-var[]an ya gra-ba-do el pro-gra-ma re-si-den-t
 e de Ar-duino, pa-ra que no sea ne-ce-sa-rio
@@ -1582,20 +1643,20 @@ Overfull \hbox (21.4027pt too wide) in paragraph at lines 240--242
 sie-ra ha-cer-lo de for-ma in-de-pen-dien-te,
  []
 
-<img//hola.png, id=975, 517.935pt x 166.82326pt>
+<img//hola.png, id=998, 517.935pt x 166.82326pt>
 File: img//hola.png Graphic file (type png)
 <use img//hola.png>
 Package pdftex.def Info: img//hola.png  used on input line 258.
 (pdftex.def)             Requested size: 310.76338pt x 100.09471pt.
 LaTeX Info: Redefining \. on input line 263.
 LaTeX Info: Redefining \% on input line 263.
-[51]
+[53]
 Overfull \hbox (10.44644pt too wide) in paragraph at lines 266--267
 \OT1/ptm/m/n/12 va-lor que ire-mos in-cre-men-tan-do en ca-da pa-sa-da del bu-c
 le (\OT1/ptm/m/it/12 i\OT1/ptm/m/n/12 ). Pri-me-ro ha-re-mos 5 ite-ra-cio-nes,
  []
 
-<img//error.png, id=984, 510.10574pt x 87.9285pt>
+<img//error.png, id=1007, 510.10574pt x 87.9285pt>
 File: img//error.png Graphic file (type png)
 <use img//error.png>
 Package pdftex.def Info: img//error.png  used on input line 275.
@@ -1608,18 +1669,18 @@ Overfull \hbox (23.08412pt too wide) in paragraph at lines 282--283
 
 LaTeX Info: Redefining \. on input line 283.
 LaTeX Info: Redefining \% on input line 283.
-[52 <./img//hola.png> <./img//error.png>]
-<img//ayuda.png, id=999, 570.33075pt x 147.55125pt>
+[54 <./img//hola.png> <./img//error.png>]
+<img//ayuda.png, id=1022, 570.33075pt x 147.55125pt>
 File: img//ayuda.png Graphic file (type png)
 <use img//ayuda.png>
 Package pdftex.def Info: img//ayuda.png  used on input line 309.
 (pdftex.def)             Requested size: 342.20108pt x 88.53142pt.
 LaTeX Info: Redefining \. on input line 316.
 LaTeX Info: Redefining \% on input line 316.
- [53 <./img//ayuda.png>]
+ [55 <./img//ayuda.png>]
 LaTeX Info: Redefining \. on input line 349.
 LaTeX Info: Redefining \% on input line 349.
- [54]
+ [56]
 Overfull \hbox (322.9382pt too wide) in paragraph at lines 361--363
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
@@ -1627,7 +1688,7 @@ Overfull \hbox (322.9382pt too wide) in paragraph at lines 361--363
 
 LaTeX Info: Redefining \. on input line 393.
 LaTeX Info: Redefining \% on input line 393.
-[55]
+[57]
 Overfull \hbox (17.37881pt too wide) in paragraph at lines 415--417
 []\OT1/ptm/m/n/12 Para apren-der a usar la for-ma de leer de los sen-so-res de 
 PyBo-Kids-2.0, les pro-pon-dre-mos
@@ -1640,7 +1701,7 @@ Overfull \hbox (78.13571pt too wide) in paragraph at lines 429--431
 
 LaTeX Info: Redefining \. on input line 432.
 LaTeX Info: Redefining \% on input line 432.
-[56]
+[58]
 Overfull \hbox (10.08624pt too wide) in paragraph at lines 451--452
 \OT1/ptm/m/n/12 pro-gra-mar los ejer-ci-cios m[]as com-pli-ca-dos, que re-quie-
 ren de ma-yor pro-gra-ma-ci[]on al mez-clar
@@ -1653,7 +1714,7 @@ Overfull \hbox (27.7352pt too wide) in paragraph at lines 464--465
 
 LaTeX Info: Redefining \. on input line 473.
 LaTeX Info: Redefining \% on input line 473.
-[57]
+[59]
 Overfull \hbox (5.40103pt too wide) in paragraph at lines 485--486
 []\OT1/ptm/m/n/12 Lo m[]as in-tere-san-te de po-der uti-li-zar el PC pa-ra la e
 n-tra-da de da-tos es la di-fe-ren-cia
@@ -1673,7 +1734,7 @@ Overfull \hbox (3.63081pt too wide) in paragraph at lines 485--486
 
 LaTeX Info: Redefining \. on input line 514.
 LaTeX Info: Redefining \% on input line 514.
-[58]
+[60]
 Overfull \hbox (13.33505pt too wide) in paragraph at lines 542--543
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1681,7 +1742,7 @@ Overfull \hbox (13.33505pt too wide) in paragraph at lines 542--543
 ) (Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [59]
+ [61]
 Cap\'{\i }tulo 6.
 
 Overfull \hbox (9.28249pt too wide) in paragraph at lines 11--12
@@ -1695,7 +1756,7 @@ Overfull \hbox (8.58788pt too wide) in paragraph at lines 14--16
 eal. Sin em-bar-go, hay l[]^^Pneas y po-si-bi-li-da-des
  []
 
-[60
+[62
 
 ]
 Overfull \hbox (6.07896pt too wide) in paragraph at lines 20--21
@@ -1711,7 +1772,7 @@ en rea-li-zar-se en las dos bi-blio-te-cas.
 
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
-[61]
+[63]
 Overfull \hbox (19.57773pt too wide) in paragraph at lines 30--31
 []\OT1/ptm/m/n/12 Actualizar la bi-blio-te-ca mBot.py en el re-po-si-to-rio don
 -de se est[]e tra-ba-jan-do con los es-tu-dian-tes. 
@@ -1720,7 +1781,7 @@ Overfull \hbox (19.57773pt too wide) in paragraph at lines 30--31
 ) (memoria_tfg.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [62]) [63
+ [64]) [65
 
 ] (memoria_tfg.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1730,16 +1791,16 @@ LaTeX Info: Redefining \% on input line 25.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `memoria_tfg.out' has not changed.
-(rerunfilecheck)             Checksum: F3247EF34DB44E416CE16710F750247A;7053.
+(rerunfilecheck)             Checksum: B4346B0E527D6DBFE784860B3A60C5AA;7331.
  ) 
 Here is how much of TeX's memory you used:
- 17238 strings out of 478582
- 284195 string characters out of 2838209
- 877053 words of memory out of 3000000
- 34353 multiletter control sequences out of 15000+600000
+ 17245 strings out of 478582
+ 284258 string characters out of 2838209
+ 868462 words of memory out of 3000000
+ 34355 multiletter control sequences out of 15000+600000
  503924 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,10n,77p,1057b,2069s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 68i,10n,77p,1272b,2071s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ba
 se/8r.enc}<C:/Users/eva.garcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmmi12.pfb><C:/Users/eva.garcia.domingo/AppData/Local/Prog
@@ -1752,9 +1813,9 @@ eX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eva.garcia.domingo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.garcia.domingo/
 AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eva.ga
 rcia.domingo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on memoria_tfg.pdf (68 pages, 6834768 bytes).
+Output written on memoria_tfg.pdf (70 pages, 6850873 bytes).
 PDF statistics:
- 1486 PDF objects out of 1728 (max. 8388607)
- 746 named destinations out of 1000 (max. 500000)
- 594 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1509 PDF objects out of 1728 (max. 8388607)
+ 751 named destinations out of 1000 (max. 500000)
+ 610 words of extra memory for PDF output out of 10000 (max. 10000000)
 
