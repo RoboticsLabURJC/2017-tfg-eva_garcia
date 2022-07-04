@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: memoria_tfg.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: acm.bst
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+Database file #1: bibliografia_tfg.bib
+Warning--entry type for "JdeRobot" isn't style-file defined
+--line 1 of file bibliografia_tfg.bib
+Warning--entry type for "arduinoURL" isn't style-file defined
+--line 8 of file bibliografia_tfg.bib
+Warning--entry type for "PythonRef" isn't style-file defined
+--line 14 of file bibliografia_tfg.bib
+Warning--entry type for "makeblock" isn't style-file defined
+--line 22 of file bibliografia_tfg.bib
+Warning--entry type for "arduinolenguaje" isn't style-file defined
+--line 28 of file bibliografia_tfg.bib
+You've used 5 entries,
+            2253 wiz_defined-function locations,
+            544 strings with 4147 characters,
+and the built_in function-call counts, 1048 in all, are:
+= -- 83
+> -- 40
+< -- 0
++ -- 17
+- -- 12
+* -- 41
+:= -- 170
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 40
+empty$ -- 116
+format.name$ -- 12
+if$ -- 222
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 0
+newline$ -- 23
+num.names$ -- 10
+pop$ -- 41
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 25
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 0
+while$ -- 10
+width$ -- 6
+write$ -- 37
+(There were 5 warnings)

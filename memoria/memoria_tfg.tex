@@ -13,6 +13,24 @@
 \usepackage{subfigure}
 \usepackage{listings}
 \usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\lstset{ %
+	breakatwhitespace=true,
+	breaklines=true, 
+	stringstyle=\color{BrickRed},
+	basicstyle=\ttfamily\small,
+	backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+	keywordstyle=\color{RoyalBlue},
+	commentstyle=\color{OliveGreen},
+	deletekeywords={list},
+	otherkeywords={String},
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores          
+	tabsize=3,          % sets default tabsize to 2 spaces
+	captionpos=b,           % sets the caption-position to bottom
+	frame=tb,
+}
 \graphicspath{ {img/} }
 \usepackage{enumitem}
 \usepackage{pifont}
