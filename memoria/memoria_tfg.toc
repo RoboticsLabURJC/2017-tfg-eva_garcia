@@ -32,8 +32,8 @@
 \contentsline {subsection}{\numberline {4.4.1}Manejo de sensores}{32}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Manejo de actuadores}{32}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Comunicaciones}{34}{subsection.4.4.3}%
-\contentsline {paragraph}{Leer del canal}{35}{paragraph*.26}%
-\contentsline {paragraph}{Escribir en el canal}{35}{paragraph*.27}%
+\contentsline {paragraph}{Leer del canal}{35}{paragraph*.27}%
+\contentsline {paragraph}{Escribir en el canal}{35}{paragraph*.28}%
 \contentsline {subsubsection}{\numberline {4.4.3.1}Protocolo de mensajes}{35}{subsubsection.4.4.3.1}%
 \contentsline {section}{\numberline {4.5}Validación experimental}{37}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Aplicación educativa}{40}{chapter.5}%
@@ -52,4 +52,4 @@
 \contentsline {chapter}{\numberline {6}Conclusiones}{67}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Conclusiones}{67}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Trabajos futuros}{68}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{70}{chapter*.52}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{70}{chapter*.53}%

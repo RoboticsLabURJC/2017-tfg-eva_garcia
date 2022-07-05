@@ -33,6 +33,7 @@
 }
 \graphicspath{ {img/} }
 \usepackage{enumitem}
+\usepackage{ragged2e}
 \usepackage{pifont}
 \usepackage{amssymb}
 \usepackage{float}  %% H para posicionar figuras
@@ -79,16 +80,15 @@
 	
 	%\input{dedicatoria}
 	%\input{agradecimientos}
-	%\input{resumen}
+	\input{resumen}
 	
 	\tableofcontents
+	\clearpage
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
 	\mainmatter
 
 	\input{introduccion}
-	%cada vez que quieras un capitulo nuevo, 
-	%descomentarlo y crear el archivo .tex	
 	\input{Objetivos}
 	\input{Infraestructura}
 	\input{PyBoKids}
