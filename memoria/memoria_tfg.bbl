@@ -8,9 +8,25 @@
 {\sc Arduino}.
 \newblock Referencia lenguaje arduino.
 
+\bibitem{Roberta}
+{\sc Google}.
+\newblock Plataforma de robótica educativa roberta.
+
+\bibitem{Lego}
+{\sc Google}.
+\newblock Robots educativos de lego.
+
+\bibitem{kibotics}
+{\sc JdeRobot}.
+\newblock Kibotics.
+
 \bibitem{makeblock}
 {\sc Makeblock}.
 \newblock Oficial makeblock website.
+
+\bibitem{mblock}
+{\sc of~Technology, M. M.~I.}
+\newblock mblock.
 
 \bibitem{PythonRef}
 {\sc Python}.
