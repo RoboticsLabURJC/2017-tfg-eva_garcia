@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt,openany]{book}
+\documentclass[oneside,a4paper,12pt]{book}
 
 
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
@@ -47,7 +47,7 @@
 \setcounter{secnumdepth}{3}
 
 \begin{document}
-
+\pagestyle{empty}
 	\begin{titlepage}
 		\centering
 		\includegraphics[scale=0.5]{logo_urjc.jpg}
@@ -72,7 +72,7 @@
 		\vspace{2.5 cm}
 		
 		\large
-		Autor :  Eva García Domingo\\
+		Autora :  Eva García Domingo\\
 		Tutor : Jose María Cañas Plaza \\
 		\afterpage{\null\newpage}
 		\pagestyle{empty}
@@ -80,12 +80,14 @@
 	
 	%\input{dedicatoria}
 	%\input{agradecimientos}
+	
 	\input{resumen}
 	
 	\tableofcontents
-	\clearpage
-	\pagenumbering{arabic}
+
+	\pagenumbering{arabic}	
 	\setcounter{page}{1}
+	\pagestyle{headings}
 	\mainmatter
 
 	\input{introduccion}

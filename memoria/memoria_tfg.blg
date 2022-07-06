@@ -5,16 +5,16 @@ Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: acm.bst
 Reallocating 'name_of_file' (item size: 1) to 21 items.
 Database file #1: bibliografia_tfg.bib
-Warning--entry type for "JdeRobot" isn't style-file defined
---line 1 of file bibliografia_tfg.bib
-Warning--entry type for "arduinoURL" isn't style-file defined
---line 8 of file bibliografia_tfg.bib
-Warning--entry type for "PythonRef" isn't style-file defined
---line 14 of file bibliografia_tfg.bib
 Warning--entry type for "makeblock" isn't style-file defined
---line 22 of file bibliografia_tfg.bib
+--line 1 of file bibliografia_tfg.bib
+Warning--entry type for "JdeRobot" isn't style-file defined
+--line 6 of file bibliografia_tfg.bib
+Warning--entry type for "arduinoURL" isn't style-file defined
+--line 13 of file bibliografia_tfg.bib
+Warning--entry type for "PythonRef" isn't style-file defined
+--line 19 of file bibliografia_tfg.bib
 Warning--entry type for "arduinolenguaje" isn't style-file defined
---line 28 of file bibliografia_tfg.bib
+--line 29 of file bibliografia_tfg.bib
 You've used 5 entries,
             2253 wiz_defined-function locations,
             544 strings with 4147 characters,

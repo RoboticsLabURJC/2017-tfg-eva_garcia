@@ -1,54 +1,60 @@
 \chapter{Infraestructura}
 \label{cap:infra}
 
-En este capítulo describiremos la infraestructura utilizada, tanto software como hardware, detallando los pasos a seguir si se desea emular. En caso de que algún componente haya sido elegido entre otros de igual aplicación, expondremos las razones de la elección.
+En este Capítulo describiremos la infraestructura utilizada, tanto software como hardware, detallando los pasos a seguir si se desea reproducir. En caso de que algún componente haya sido elegido entre otros de igual aplicación, expondremos las razones de la elección.
 
 
 \section{Entorno}\label{sec:entorno}
 Teniendo el cuenta el carácter educativo de este Trabajo, y su pretendida aplicación en estudiantes de Educación Primaria, se ha elegido el sistema operativo Windows, un entorno conocido, amigable y fácilmente accesible, para instalar y utilizar las diferentes herramientas software. \\
 Tradicionalmente, cuando se hablaba de programación y especialmente de programación robótica, siempre se ha utilizado el sistema operativo Linux. Éste daba la posibilidad de instalar todos los paquetes de lenguajes de programación y entornos, mientras que Windows era especialmente cerrado en cuanto a lenguajes no nativos (fuera de \textit{bash} o de \textit{visual basic}, se hacía complicado utilizar un lenguaje de programación sin acabar recurriendo a virtualizar una máquina Linux), y los entornos software (aplicaciones) de terceros diseñados para programar habitualmente no tenían una versión instalable para Windows. \\
-Sin embargo, los últimos años el Sistema Operativo se ha abierto a esta operativa, ya que la política popular demandaba poder utilizarlo, siendo el sistema operativo más utilizado por usuarios, como herramienta de desarrollo también a nivel usuario. La nueva línea de comandos de Windows, \textbf{\textit{Powershell}} (también lenguaje de scripting), añadió a la original \textit{Bash} características nativas de Linux, siendo una herramienta de programación además de administración. De hecho, en la última versión, está disponible para el propio SO de Linux (en algunas distribuciones). \\
-Al principio de este Trabajo, se consideró a Linux un entorno menos amigable para usuarios sin experiencia en programación, y de la edad comentada anteriormente, por ser considerado "no de usuario": en el poco probable caso de que un estudiante conociera el sistema, lo consideraba algo muy complejo y no accesible para su nivel. Por tanto, elegir Windows eliminaba ese prejuicio y contaba con la ventaja de predisponer positivamente al alumno y de facilitarle el acceso al entorno. 
+Sin embargo, los últimos años el Sistema Operativo se ha abierto a esta operativa, ya que la política popular demandaba poder utilizarlo como herramienta de desarrollo también a nivel usuario. La nueva línea de comandos de Windows, \textbf{\textit{Powershell}} (también lenguaje de scripting) añadió a la original \textit{Bash} características nativas de Linux, siendo una herramienta de programación además de administración. De hecho, en la última versión, está disponible para el propio SO de Linux (en algunas distribuciones). \\
+Al principio de este Trabajo, se consideró a Linux un entorno menos amigable para usuarios sin experiencia en programación por ser considerado "no de usuario". En el poco probable caso de que un estudiante conociera el sistema, lo consideraba algo muy complejo y no accesible para su nivel. Por tanto, elegir Windows eliminaba ese prejuicio y contaba con la ventaja de predisponer positivamente al alumno y de facilitarle el acceso al entorno. 
 
 \section{Hardware}\label{sec:hardware}
-En esta sección describiremos los componentes hardware utilizados. La razón de la elección de éstos responde a la misma filosofía que en la sección anterior, la facilidad de acceso a los componentes y la facilidad con que se complementa en el entorno.
+En esta sección describiremos los componentes hardware utilizados. La razón de la elección de éstos responde a la misma filosofía de facilitar el acceso a los componentes y la facilidad con que éstos se complementan en el entorno.
 \subsection{Placa Arduino}\label{subsec:placaBase}
-Las placas Arduino son las más extendidas en cuanto a robótica. Arduino nació como una solución barata con el principal objetivo de utilizarlo en Educación. Además, al ser un proyecto liberado al público, su uso está extendido a toda una comunidad, que amplía y comparte sus propios desarrollos (\cite{arduinoURL}).\\
-Estas placas son hardware libre (uno de las principales razones de su bajo coste), y contienen un procesador re-programable y una serie de pines hembra, donde se conectarán los periféricos de entrada/salida necesarios para controlar un robot. Hay diferentes modelos de placas Arduinos, cada una fabricada con un propósito diferente; en este caso, hemos utilizado el modelo mCore, basado en \href{https://arduino.cl/producto/arduino-uno/}{Arduino Uno}, ya que es la que lleva por defecto el robot educativo Mbot (que comentaremos en la sección \ref{subsec:mbot}). Además de los pines hembra, o puertos, contiene una serie de actuadores y sensores integrados en la placa.
+Las placas Arduino son las más extendidas en cuanto a robótica. El proyecto de Arduino \cite{arduinoURL} nació como una solución barata con el principal objetivo de utilizar sus componentes y recursos en Educación. Al ser un proyecto liberado al público, su uso está extendido a toda una comunidad, que amplía y comparte sus propios desarrollos.\\
+Estas placas base son hardware libre, uno de las principales razones de su bajo coste. Contienen un procesador re-programable y una serie de pines hembra, donde se conectarán los periféricos de entrada/salida necesarios para controlar un robot. Hay diferentes modelos de placas Arduino, cada una fabricada con un propósito diferente. En este caso, hemos utilizado el modelo mCore, basado en \href{https://arduino.cl/producto/arduino-uno/}{Arduino Uno}, ya que es la que lleva por defecto el robot educativo mBot (que comentaremos en la sección \ref{subsec:mbot}). Además de los pines hembra, o puertos, contiene una serie de actuadores y sensores integrados en la placa.
 \begin{figure}[H]
 		\includegraphics[width=8cm]{mcore.png}\centering
 	\label{img:Mcore}
 	\caption{Placa mCore}
 \end{figure}
-\subsection{MBot}\label{subsec:mbot}
-Actualmente hay una gran variedad de robots educativos, orientados principalmente a los alumnos más jóvenes. El objetivo de la robótica educativa es ofrecer un entorno amigable y divertido, además de \textit{más realista} que la programación tradicional. Es más fácil para un niño o niña sentirse interesado por algo que tiene una reacción \textit{visible}, en algo que puede tocar y manejar, que en la programación normal que, aunque produce una reacción, es mucho más abstracta. Esto convierte la robótica en la herramienta perfecta para enseñar lenguajes, conceptos básicos de programación como funciones, uso de variables, y avanzar hasta la algoritmia se hace un proceso natural al que los propios alumnos llegan ellos mismos. \\
-El principal problema al que nos enfrentamos para enseñar programación a los más jóvenes son los lenguajes de programación. Son poco intuitivos y legibles, sumado a la dificultad de mantener la atención de un alumno o alumna tan joven escribiendo en un ordenador en estos lenguajes. Era necesaria, por tanto, una forma de enseñar estos conceptos de programación comentados anteriormente sin tener que utilizar lenguajes clásicos de programación, al menos para los alumnos más jóvenes. La solución fue la programación por bloques de \textit{pseudocódigo}. El pseudocódigo es un \textit{framework}, una carcasa, que recubre el verdadero lenguaje de programación de la placa del robot, y lo hace legible y entendible. Además, siendo esto una de las grandes ventajas añadidas, la mayoría de los pseudocódigos están en casi todos los idiomas, permitiendo a los alumnos programar en su propio idioma. \\
-\par Esto nos lleva al robot Mbot (\cite{makeblock}). Está basado en una placa Arduino Uno, y pensado especialmente para la enseñanza: los diferentes sensores y actuadores (los que vienen en el paquete básico, aunque hay muchos más posibles del mismo fabricante)están pensados para ofrecer prácticas entretenidas y, lo más importante, con diferentes niveles de dificultad, por lo que se puede utilizar con alumnos de diferentes edades y, durante un mismo curso escolar, crear prácticas con las que evolucionar en los conceptos. 
+\subsection{mBot}\label{subsec:mbot}
+Actualmente hay una gran variedad de robots educativos, orientados principalmente a los alumnos más jóvenes. El objetivo de la robótica educativa es ofrecer un entorno amigable, divertido y más \textit{realista} que la programación tradicional. Es más fácil para un niño o niña sentirse interesado por algo que tiene una reacción \textit{visible}, en algo que puede tocar y manejar, que en la programación normal que produce una reacción mucho más abstracta. Esto convierte la robótica en la herramienta perfecta para enseñar lenguajes y conceptos básicos de programación (como funciones o uso de variables) y con el que avanzar hasta la algoritmia se hace un proceso natural al que los propios alumnos llegan ellos mismos. \\
+
+El principal problema al que nos enfrentamos para enseñar programación a los más jóvenes son los lenguajes de programación. Son poco intuitivos y legibles, a lo que se suma la dificultad de mantener la atención de un alumno o alumna tan joven escribiendo en un ordenador durante mucho tiempo. Era necesaria, por tanto, una forma de enseñar los conceptos de programación comentados sin tener que utilizar lenguajes clásicos de programación, al menos para los alumnos más jóvenes. La solución fue la programación por bloques de \textit{pseudocódigo}. El pseudocódigo es un \textit{framework}, una carcasa, que recubre el verdadero lenguaje de programación de la placa del robot y lo hace legible y entendible. Además, una de las grandes ventajas añadidas es que la mayoría de los pseudocódigos están en casi todos los idiomas, permitiendo a los alumnos programar en su propio idioma. \\
+\par Esto nos lleva al robot mBot del fabricante Makeblock \cite{makeblock}. Está basado en una placa Arduino Uno y pensado especialmente para la enseñanza. Los diferentes sensores y actuadores (los que vienen en el paquete básico, aunque hay muchos más posibles del mismo fabricante) están pensados para ofrecer ejercicios entretenidos y, lo más importante, con diferentes niveles de dificultad. Esto lo hace perfecto para ser utilizado con alumnos de diferentes edades y crear prácticas con las que evolucionar en los conceptos. 
 \begin{figure}[H]
 	\includegraphics[width=8cm]{Mbot.jpg}\centering
-	\label{img:mbot}\caption{Modelo Mbot utilizado}
+	\caption{Modelo mBot utilizado}
+	\label{img:mbot}
 \end{figure}
-Este robot Mbot se programa utilizando un  lenguaje llamado \textit{Scratch} (\ref{subsec:scratch}),  un pseudo código muy gráfico y sencillo pero potente, que ''recubre'' la placa base. Sin embargo, al ser una placa Arduino y por lo tanto, reprogramable, siempre se puede programar en el propio lenguaje Arduino. Esto  se comentará en profundidad más adelante, en el punto \ref{cap:PyBoKids}. \\
-Como se puede observar en la imagen, el robot cuenta con dos motores conectados a la placa; contiene además cuatro puertos a los que poder conectar diferentes periféricos con los que trabajar (numerados del uno al cuatro), sin contar con los motores. El modelo mostrado es el básico, sin embargo se pueden cambiar los componentes, añadiendo y/o cambiando la estructura base, y crear ''otro'' robot (por ejemplo, en las figuras siguientes \ref{img:mbot2} ). Aunque en este Trabajo de Fin de Grado solo trabajaremos con la versión básica del Mbot, esta posibilidad de añadirle componentes o cambiarlos es muy interesante para los alumnos, ya que trabajan la mecánica y pueden utilizar más tipos de periféricos.
+Este robot mBot puede programarse utilizando un  lenguaje llamado \textit{Scratch},  un pseudocódigo muy gráfico y sencillo pero potente, que ``recubre'' la placa base. Sin embargo, al ser las placas Arduino reprogramables, siempre se puede programar en el propio lenguaje Arduino. Esto  se explicará en profundidad más adelante, en el Capítulo \ref{cap:PyBoKids}. \\
+
+Como puede observarse en la imagen \ref{img:mbot}, el robot cuenta con dos motores conectados a la placa; contiene además cuatro puertos numerados a los que poder añadir diferentes periféricos con los que trabajar. Aunque el modelo mostrado es el básico, se pueden cambiar los componentes añadiendo y/o cambiando la estructura base y crear ``otro'' robot (por ejemplo, en las imágenes de la figura \ref{img:mbot2} ). Aunque en este Trabajo de Fin de Grado solo trabajaremos con la versión básica del Mbot, esta posibilidad de añadirle componentes o cambiarlos es muy interesante para los alumnos, ya que trabajan la mecánica y pueden utilizar más tipos de periféricos.
 \begin{figure}[H]
 	\includegraphics[width=6cm]{Mbot-pack-piernas.jpg}
 	\includegraphics[width=6cm]{Mbot-pack-piernas2.jpg}
 	\centering
-	\label{img:mbot2}\caption{Posibles cambios en el Mbot}
+	\caption{Posibles cambios en el mBot}
+	\label{img:mbot2}
 \end{figure}
 \subsubsection{Sensores}\label{ssubsec:sensores}
-En robótica un \textit{sensor} es un periférico de entrada que, conectado a una placa base, recoge información del medio (cantidad de ruido, temperatura, distancia frontal, etc) y la envía a la placa, dejándola disponible para toma de decisiones. La cantidad de información que se pueda recibir sólo depende de la cantidad de sensores que se pueda conectar a la vez a la placa (cuatro, en este caso, si solo se trabajara con sensores y ningún actuador). En el robot básico (de la imagen \ref{img:mbot}) los sensores son:
+En robótica un \textit{sensor} es un periférico de entrada que, conectado a una placa base, recoge información del medio (cantidad de ruido, temperatura, distancia frontal, etc) y la envía a la placa, dejándola disponible para toma de decisiones. La cantidad de información que se pueda recibir sólo depende de la cantidad de sensores que se pueda conectar a la vez a la placa (cuatro, en este caso, si solo se trabajara con sensores y ningún actuador). En el robot básico (de la imagen \ref{img:mbot}) los sensores son los siguientes:
 \begin{description}
-	\item [Sensor de ultrasonidos] Está colocado en el frente, y recoge información de \textbf{distancia} hasta un objeto, en \textit{cm} (el valor máximo es 400)
+	\item [Sensor de ultrasonidos] Está colocado en el frente, y recoge información de \textit{distancia} hasta un objeto medida en \textit{cm} (el valor máximo es 400). Puede verse en la imagen \ref{img:ultrasonidos}
 	
-	\item [Sensor infrarrojo \textit{Sigue Líneas}] Está ubicado de tal forma que lea, del ''suelo'', si el sensor está tapado o no, es decir: está sobre blanco o negro (de fondo, es un sensor binario). Se compone en realidad de dos sensores, izquierdo y derecho, por lo que habrá cuatro posibilidades, cada una codificada con un valor numérico (el valor que devuelve el sensor a la placa Arduino):
+	\item [Sensor infrarrojo \textit{Sigue Líneas}] Se compone en realidad de dos sensores, izquierdo y derecho, por lo que habrá cuatro posibilidades de respuesta del sensor completo. Cada uno de los sensores lee de forma binaria si está sobre tapado o no. A cada posibilidad le corresponde un valor numérico (el valor que devuelve el sensor a la placa Arduino):
 	\begin{itemize}
 		\item Ningún sensor tapado: 0
 		\item Sensor izquierdo tapado y derecho no: 1
 		\item Sensor derecho tapado e izquierdo no: 2
 		\item Los dos sensores tapados: 3
 	\end{itemize}
-	 \item [Sensor de Luz] En este caso, está integrado en la placa, por lo que no es necesario utilizar un puerto para él. Nos da un valor de cantidad de luz en el ambiente, pudiéndolo utilizar para saber si hay más o menos luminosidad de la deseada. Por supuesto, para este valor ''deseado'' será necesario obtener un valor inicial de la habitación en la que nos encontremos, para poder establecer ese valor barrera (\textit{threshold})
+	Por defecto, está ubicado de tal forma que lea del ``suelo'' si el sensor está tapado o no, de ahí el nombre de \textit{sigue líneas}. Este sensor puede verse en la imagen \ref{img:siguelineas}
+	
+	\item [Sensor de Luz] En este caso, está integrado en la placa (podemos verlo en la imagen \ref{img:sensorluz}), por lo que no es necesario utilizar un puerto para él. Nos da un valor de cantidad de luz en el ambiente, pudiéndolo utilizar para saber si hay más o menos luminosidad de la deseada. Por supuesto, para este valor de luz ``deseado'' será necesario obtener un valor inicial de la habitación en la que nos encontremos, con el que establecemos ese valor umbral.
 \end{description}
 \begin{figure}[H]
 	\begin{center}
@@ -63,57 +69,32 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 			\label{img:siguelineas}}
 		\end{subfigure}
 		\begin{subfigure}
-			[sensor de luz integrado]{			
+			[Sensor de luz integrado]{			
 			\includegraphics[width=0.45\textwidth]{sensorLuz.png}
 			\label{img:sensorluz}}
 		\end{subfigure}
+	
+	\caption{Sensores del mBot}
 	\label{img:sensores}
-	\caption{Sensores}
 	\end{center}
 \end{figure}
 
 
 \subsubsection{Actuadores}\label{subsec:actuadores}
 	La definición de \textit{actuador} es un periférico de salida al que la placa envía datos con los que éste realiza una acción de una forma u otra. Por ejemplo, teniendo una velocidad $v_0$, este valor es enviado a los motores, que se moverán a esa velocidad y no a otra. \\
-	Los actuadores, los que no están integrados en la placa directamente, se conectan a la placa a través de los mismos puertos que los sensores. Para poder usarlos, habrá que especificarle a la placa en qué puerto están conectados (igual que con los sensores). En nuestro robot básico, tenemos los siguientes actuadores:
+	Los actuadores del mBot que no están integrados en la placa directamente, se conectan a ella a través de los mismos puertos que los sensores. Para poder usarlos, habrá que especificarle a la placa en qué puerto están conectados (igual que con los sensores). En nuestro robot básico, tenemos los siguientes actuadores:
 	\begin{description}
-		\item [Leds]. Están integrados en la placa, en la parte superior, y compuesto por dos led individuales que poder combinar dependiendo de qué valor codificado se envíe a la placa:
-		\begin{itemize}
-			\item Los dos led: 0
-			\item Sólo led derecho: 1
-			\item Sólo led izquierdo: 2
-		\end{itemize}
-		Los led son RGB (\textit{[red, green, blue]}), y el color de los dos led se codifica con un valor entre 0 y 255 para cada uno de los colores rojo, verde y azul. Así, por ejemplo, el rojo completo sería [0,255,0], el morado sería [255,0,255], el negro [0,0,0] o el blanco [255,255,255]. Estos led están codificados con valores decimales, en vez de hexadecimales como sería una codificación RGB tradicional, para facilitar la programación a los alumnos, que no conocerían el sistema hexadecimal.
-		\begin{figure}[H]
-			\includegraphics[width=3cm]{RGBled.png}
-			\centering
-			\label{img:led}
-			\caption{Led RGB integrados}
-		\end{figure}
-		\item [Motores] En el paquete básico tenemos dos motores DC (de corriente continua) conectados a la placa en un conector específico para motores a los que conectar los dos cables, positivo y negativo. Los motores admiten como velocidad de entrada valores enteros entre [-255,255] (valores negativos para retroceder y positivos para avanzar), pudiendo dar valores diferentes a cada uno de ellos (para tener capacidad de hacer girar al robot).
-		\begin{figure}[H]
-			\begin{center}
-				\begin{subfigure}
-					[Puerto de conexión de los motores]{
-						\includegraphics[width=0.45\textwidth]{puertomotor.png}
-						\label{img:puertomotor}}
-				\end{subfigure}
-				\begin{subfigure}
-					[Motor DC]{			
-						\includegraphics[width=0.33\textwidth]{motorDC2.png}
-						\label{img:motor1}}
-				\end{subfigure}
-				\begin{subfigure}
-					[Motor DC: montaje con rueda]{			
-						\includegraphics[width=0.33\textwidth]{motorDC.png}
-						\label{img:motor2}}
-				\end{subfigure}
-				\label{img:motores}
-				\caption{Motores}
-			\end{center}
-		\end{figure}
+	\item [Leds]. Están integrados en la parte superior de la placa, como puede verse en la imagen \ref{img:led}. Son dos led individuales que poder combinar dependiendo de qué valor codificado se envíe a la placa:
+	\begin{itemize}
+		\item Los dos led: 0
+		\item Sólo led derecho: 1
+		\item Sólo led izquierdo: 2
+	\end{itemize}
+	Los led son RGB (\textit{[red, green, blue]}) y el color de cada uno se codifica con un valor numérico entre 0 y 255 para cada uno de los colores (rojo, verde y azul). Así, por ejemplo, el rojo completo sería [0,255,0], el morado sería [255,0,255] o el blanco [255,255,255]. Estos led están codificados con valores decimales en vez de hexadecimales como sería una codificación RGB tradicional, para facilitar la programación a los alumnos (no es probable que conozcan el sistema hexadecimal).		
 	
-	\item [Zumbador] También integrado en la placa, emite notas musicales codificadas en nomenclatura americana. La equivalencia, que los alumnos necesitan conocer, está en la tabla siguiente. Para utilizar diferentes notas más agudas o más graves, se utilizan números a continuación de las letras (\textbf{C0} es más grave que \textbf{C5}). Internamente, el zumbador entiende valores enteros, correspondientes en frecuencia con cada nota (en la tabla, sólo se pone el valor para los valores \textit{1}, a modo de ejemplo):
+	\item [Motores] En el paquete básico tenemos dos motores DC (de corriente continua) conectados a la placa en un conector específico para motores a los que conectar los dos cables, positivo y negativo. Los motores admiten como velocidad de entrada valores enteros entre [-255,255] (valores negativos para retroceder y positivos para avanzar), pudiendo dar valores diferentes a cada uno de ellos (para tener capacidad de hacer girar al robot). En la imagen \ref{img:motores} se puede ver un ejemplo del motor y de la forma de conectarlo al mBot.	
+
+	\item [Zumbador] También está integrado en la placa, como puede verse en la imagen \ref{img:zumbador}. Emite notas musicales, codificadas en Scratch con nomenclatura americana. La equivalencia con la nomenclatura europa, que los alumnos necesitan conocer, está en la tabla \ref{table:notasZumbador}. Para utilizar notas más agudas o más graves, se utilizan números a continuación de las letras (Por ejmplo, \textit{C0} es más grave que \textit{C5}). Internamente (si programáramos el robot con Arduino) el zumbador entiende valores enteros, correspondientes en frecuencia con cada nota (en la tabla sólo se pone un valor para cada nota a modo de ejemplo):
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{ c | c | c}	
@@ -127,45 +108,78 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 			LA & A & 55\\
 			SI & B & 62\\
 		\end{tabular}
-	\label{table:notasZumbador}
-	\caption{Relación entre notas para el Zumbador del mBot}
-	\end{table}
-
 	
-	\begin{figure}[H]
-		\includegraphics[width=3cm]{buzzer.png}
-		\centering
-		\label{img:zumbador}
-		\caption{Zumbador integrado}
-	\end{figure}
+	\caption{Relación entre notas para el Zumbador del mBot}
+	\label{table:notasZumbador}
+	\end{table}	
 \end{description}
 
+\begin{figure}[H]
+	\includegraphics[width=3cm]{RGBled.png}
+	\centering
+	\caption{Led RGB integrados}
+	\label{img:led}
+\end{figure}
 
+\begin{figure}[H]
+	\begin{center}
+		\begin{subfigure}
+			[Puerto de conexión de los motores]{
+				\includegraphics[width=0.45\textwidth]{puertomotor.png}
+				\label{img:puertomotor}}
+		\end{subfigure}
+		\begin{subfigure}
+			[Motor DC]{			
+				\includegraphics[width=0.33\textwidth]{motorDC2.png}
+				\label{img:motor1}}
+		\end{subfigure}
+		\begin{subfigure}
+			[Motor DC: montaje con rueda]{			
+				\includegraphics[width=0.33\textwidth]{motorDC.png}
+				\label{img:motor2}}
+		\end{subfigure}				
+		\caption{Motores}
+		\label{img:motores}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=3cm]{buzzer.png}
+	\centering
+	\caption{Zumbador integrado}
+	\label{img:zumbador}
+\end{figure}
 
 \section{Software}\label{sec:software}
 En esta sección describiremos el diferente software utilizado y el propósito de éste en el marco de este Trabajo Fin de Grado. 
 
 \subsection{Scratch y mBlock}\label{subsec:scratch}
-Como se ha comentado anteriormente, el robot Mbot es programable con Scratch, un lenguaje de \textbf{programación por bloques}. Un \textit{bloque de código} consiste en codificar en un ''paquete'' una sentencia completa de lenguaje (del lenguaje correspondiente, Arduino en este caso). Así, el estudiante que utilice Scratch, será capaz de utilizar una sentencia \textit{if..else} o un bucle \textit{for} de forma muy fácil y entendible, sin necesitar aprenderse todas las reglas de sintaxis del lenguaje real. A continuación, se muestran algunos ejemplos de bloques en Scratch correspondientes a los conceptos de programación más utilizados:
+Como se ha comentado anteriormente, el robot mBot es programable con Scratch, un lenguaje de programación por bloques. Un \textit{bloque de código} consiste en codificar en un ``paquete'' una sentencia completa de lenguaje (del lenguaje correspondiente, Arduino en este caso). Así, el estudiante que utilice Scratch, será capaz de utilizar una sentencia \textit{if..else} o un bucle \textit{for} de forma muy fácil y entendible, sin necesitar aprenderse todas las reglas de sintaxis del lenguaje real. En la imagen \ref{img:scratch}, se muestran algunos ejemplos de bloques en Scratch correspondientes a los conceptos de programación más utilizados.
 \begin{figure}[H]
 	\includegraphics[]{scratch.png}
 	\centering
-	\label{img:scratch}
 	\caption{Algunos ejemplos de bloques en Scratch}
+	\label{img:scratch}
 \end{figure}
-Como puede observarse, las sentencias que se quieran repetir, o las variables de condición, tienen un lugar muy intuitivo donde colocarse. Además, pueden crearse variables, en las que guardar los valores de los sensores y poder utilizar como entrada de actuadores, o como valores de referencia. \\
-Ciertamente, y aunque el lenguaje Scratch puede utilizarse como lenguaje de programación ''tradicional'', utilizando un escenario virtual con un personaje para observar el resultado del programa (sin robot físico), es mucho más completo al añadirle el módulo del robot deseado. Este módulo contiene bloques para recoger valores de los sensores o enviar valores a los actuadores, ya sean \textit{''on board''} (integrados en la placa), o teniendo que especificar el puerto al que están conectados:
+Las sentencias que se quieran repetir, o las variables de condición, tienen un lugar muy intuitivo donde colocarse. Además, pueden crearse variables, en las que guardar los valores de los sensores y poder utilizar como entrada de actuadores, o como valores de referencia. \\
+Scratch puede utilizarse como lenguaje de programación ``tradicional'' (sin robot físico), utilizando un escenario virtual con un personaje para observar el resultado del programa, pero es mucho más completo al añadirle el módulo del robot deseado. Este módulo contiene bloques para recoger valores de los sensores o enviarlos a los actuadores, ya sean \textit{on board} (integrados en la placa) o teniendo que especificar el puerto al que están conectados:
 \begin{figure}[H]
 	\includegraphics[]{scratch2.png}
 	\centering
 	\label{img:scratch2}
-	\caption{Ejemplos de bloques de Mbot en Scratch}
+	\caption{Ejemplos de bloques de mBot en Scratch}
 \end{figure}
 
-Para utilizar Scratch y programar el robot, es necesario instalar un programa, que es el que contiene el compilador y el que permite conectar el robot al PC para enviarle el programa, llamado \textit{mBlock}. El ejecutable se descarga de la página oficial del fabricante, \href{https://www.makeblock.es/blog/descargas/}{Makeblock}, disponible para PC (también existe una versión simplificada para dispositivos móviles).\\
-Una vez instalado el software, el proceso para poder empezar a usar el mBot es muy simple:
+Para utilizar Scratch y programar el robot es necesario instalar un programa llamado \textit{mBlock}, que es el que contiene el compilador y el que permite conectar el robot al PC para enviarle el programa. El ejecutable se descarga de la \href{https://www.makeblock.es/blog/descargas/}{página oficial del fabricante} Makeblock, disponible para PC (también existe una versión simplificada para dispositivos móviles).\\
+\begin{figure}[h]
+	\includegraphics[]{mblockApp.png}
+	\centering
+	\caption{mBlock en Windows}
+	\label{img:mblockApp}
+\end{figure}
+Una vez instalado el software en nuestro pc (en la imagen \ref{img:mblockApp}), el proceso para poder empezar a usar el mBot es muy simple:
 \begin{enumerate}\label{list:conexionMblock}
-	\item Conectar el robot al pc con el cable USB, y conectarlo con el programa (el robot debe estar encendido).
+	\item Conectar el robot al pc con el cable USB, y conectarlo con el programa (el robot debe estar encendido):
 	\begin{figure}[H]
 		\includegraphics[]{mblock.png}
 		\centering
@@ -173,7 +187,7 @@ Una vez instalado el software, el proceso para poder empezar a usar el mBot es m
 		\caption{Conectar el mBot}
 	\end{figure}
 
-	\item  Asegurarse de que la placa corresponde con el robot que tenemos
+	\item  Asegurarse de que la placa corresponde con el robot que tenemos:
 	\begin{figure}[H]
 		\includegraphics[]{mblock2.png}
 		\centering
@@ -181,7 +195,7 @@ Una vez instalado el software, el proceso para poder empezar a usar el mBot es m
 		\caption{Placa mBot}
 	\end{figure}
 
-	\item Actualizar el programa Arduino subido a la placa base, para que funcione con Scratch (en caso de haber utilizado el robot con otro programa)
+	\item Actualizar el programa Arduino subido a la placa base, para que funcione con Scratch (en caso de haber utilizado el robot con otro programa):
 	\begin{figure}[H]
 		\includegraphics[]{mblock3.png}
 		\centering
@@ -189,7 +203,11 @@ Una vez instalado el software, el proceso para poder empezar a usar el mBot es m
 		\caption{Actualizar firmware de la placa}
 	\end{figure}
 
-	\item Una vez programado algo de código, para subirlo al robot: click derecho sobre el código, 'upload to arduino', para compilar el programa, y otra vez a 'upload to arduino' cuando el compilador aparezca en la parte derecha de la pantalla, para subirlo a la placa
+	\item Para subir código al robot:
+		\begin{itemize}
+			\item Click derecho sobre el código (imagen \ref{img:uploadArduino1}) y click en 'upload to Arduino'. Esto transforma el programa de Scratch a lenguaje Arduino.
+			\item Cuando el compilador aparezca en la parte derecha de la pantalla, pulsar en 'upload to arduino' para subirlo a la placa (imagen \ref{img:uploadArduino2})
+		\end{itemize}
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}
@@ -210,8 +228,8 @@ Una vez instalado el software, el proceso para poder empezar a usar el mBot es m
 \end{enumerate}
  
 
-\par Este lenguaje, junto a la interfaz gráfica, es una perfecta primera aproximación a la programación y a la robótica, dando más importancia al aprendizaje conceptual que a la sintaxis y al lenguaje. \\
-Obviamente, los alumnos necesitarán que se les guíe, principalmente al comienzo del curso, en comprender las necesidades de incluir los diferentes bloques y las ventajas que produce en el código. El objetivo no será explicarles para que usar, por ejemplo, un bloque condicional,  sino proponerles un ejercicio en el que, para llegar a la solución, necesitarán de forma intuitiva programar un condicional, y lleguen naturalmente a la necesidad de ello.
+\par Este lenguaje y la interfaz gráfica, funcionan como una perfecta primera aproximación a la programación y a la robótica, dando más importancia al aprendizaje conceptual que a la sintaxis y al lenguaje. \\
+Obviamente, los alumnos necesitarán que se les guíe en comprender las necesidades de incluir los diferentes bloques y las ventajas que éstos producen en el código, sobre todo al comienzo del curso. El objetivo no será explicarles para qué usar, por ejemplo, un bloque condicional, sino proponer un ejercicio cuya solución necesite un condicional, para que lleguen por ellos mismos a la necesidad de usarlo.
 \subsection{Arduino}\label{subsec:arduino}
 Como se explicó cuando hablamos de la placa base en la sección \ref{subsec:placaBase}, ésta se programa en \textbf{Arduino}. Este lenguaje de programación está basado en C++, y pensado para interactuar con objetos electrónicos. \\
 Teniendo en cuenta el objetivo de este Trabajo Fin de Grado, ofrecer una posibilidad de programar el robot Mbot en Python, es necesario utilizar el lenguaje nativo de la placa base, con el fin de que el robot \textit{entienda} las órdenes programadas en Python. Por lo tanto, para crear este ''framework'', es necesario instalar el entorno Arduino. A continuación se explican las instrucciones para instalar el entorno en Windows, y para configurarlo para el robot.

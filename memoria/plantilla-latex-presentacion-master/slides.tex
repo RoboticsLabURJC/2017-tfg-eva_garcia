@@ -1,0 +1,284 @@
+% Completa los datos convenientemente en las zonas marcadas con TODO
+
+\documentclass{beamer}
+%PARA VISUALIZAR PRESENTACIONN CON NOTAS USAR VISUALIZADOR "pdfpc":
+%Para ver las notas, el cronometro y siguente diapo:
+% pdfpc --notes=right slides.pdf
+% "tecla p": para pausar el cronometro
+\mode<presentation> {
+  \usetheme{Boadilla}
+  \usecolortheme{rose}
+}
+
+\setbeamertemplate{navigation symbols}{} % ocultar iconos de navegación
+\setbeamerfont{subsection in toc}{size=\small} % reducir tamaño en TOC
+\setbeamerfont{date}{size=\tiny}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {figs/} }
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{pgfpages}
+\usepackage{listings}
+\usepackage{multimedia}
+\usepackage[export]{adjustbox}
+\usepackage{outlines} % Para poner bullets tabulados (\1 \2 \3 ...) y no items
+
+\usepackage{array,tabularx} % para tabular leyenda de ecuaciones
+\newenvironment{conditions*} % entorno de "leyenda de ecuación"
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{\ : } >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+  
+% USO DE NOTAS
+\setbeameroption{hide notes} % Para mostrar u ocultar (hide/show)
+%\setbeameroption{show only notes} % Mostrar solo las notas
+\setbeameroption{show notes on second screen=right} % Mostrar notas en otra pantalla
+\setbeamertemplate{note page}{ % asi solo muestro el texto de las notas
+  \insertnote%
+}
+
+%========= TODO: datos internos del documento
+\hypersetup{
+	pdftitle={Defensa de Trabajo de Fin de Grado de Eva García Domingo},
+	pdfauthor={Eva García Domingo},
+	pdfsubject={Pon aquí el título completo del trabajo},
+	pdfkeywords={teaching, robotics, sensors, actuators, python, scratch},
+	pdfproducer={TeXStudio},
+  colorlinks=true,
+  linkcolor=blue
+}
+%=========
+
+%========= TODO: diapositiva de portada
+\title[Robótica Educativa]{Robótica Educativa con Python y mBot} % El título reducido aparece en la parte inferior de todas las diapositivas
+                                         % El título completo aparece solo en la diapositiva de portada
+\author[Eva García Domingo]{Eva García Domingo}
+\institute[URJC]
+{
+\textit{\href{mailto:eva.garcia.domingo@gmail.com}{\color{blue}{\underline{eva.garcia.domingo@gmail.com}}}}\\
+\vspace{0.5cm}
+\includegraphics[width=3cm]{logo-urjc}\\
+\vspace{1cm}
+Trabajo Fin de Grado
+}
+\date{xx de Julio de 2022}
+%=========
+
+%========= COMIENZO DEL DOCUMENTO
+\begin{document}
+
+%========= Portada inicial con notas
+\begin{frame}[plain] % plain: quita header y footer
+\large{\titlepage}
+\note[item]{En esta presentación vamos a hablar sobre robótica educativa con el robot mBot}
+\note[item]{En primer lugar}
+\end{frame}
+
+%========= Licencia
+\begin{frame}
+\input{licencia.tex}
+\end{frame}
+
+%========= Índice o tabla de contenidos (TOC)
+\begin{frame}
+\frametitle{Contenidos}
+%\begin{multicols}{2} % si tengo muchas secciones, lo parte en dos columnas
+  \tableofcontents[hideallsubsections] % no muestra subsecciones
+%\end{multicols}
+\note[]{La presentación esta dividida en cuatro partes.}
+\note[]{}
+\end{frame}
+
+%========= Diapositiva "vacía" de comienzo de sección:
+\section{Introducción}
+\begin{frame}{}
+	\centering \Huge
+	\emph{Introducción}
+	\note[]{Comencemos con la introducción, donde hablaremos sobre el contexto de este Trabajo Fin de Grado, los objetivos marcados y los requisitos necesarios para dar esos objetivos como satisfactorios}
+\end{frame}
+\subsection{Contexto general}
+%========= Diapositiva con imágenes:
+\begin{frame}
+\frametitle{Situación de la Robótica}
+
+\begin{itemize}
+ \transglitter<1-5> %means that the effect is within the frame
+
+	\item \onslide<1-> Originalmente es una disciplina alejada del público
+	\item \onslide<2-> Los últimos años la definición de robot ha empezado a cambiar 
+		\begin{itemize}
+			\item \onslide<3-> Proceso electrónico programado para cumplir una o varias funciones interactuando con el medio
+		\end{itemize}
+	\item \onslide<4-> Hay muchos ''robots'' actualmente en la vida diaria:
+		\begin{itemize}
+			\item Bots
+			\item Internet Of Things
+			\item Inteligencia Artificial
+			\item Domótica
+			\item Ocio
+		\end{itemize}
+	\item \onslide<5-> Cuanta más gente pueda acceder a los recursos necesarios, más aplicaciones y soluciones podrá resolverse mediante la robótica
+	
+	
+	\note[item] {Es vista como una asignatura muy compleja, sólo accesible a grandes corporaciones, tanto por poder adquisitivo como por recursos académicos. Además, muy asociada a la ciencia ficción, la idea de robot está muy alejada de la realidad}
+	\note[item]{La ingeniería, y el mundo comercial, han cambiado poco a poco el concepto de la sociedad tiene de la robótica, como disciplina, y de los robot.}
+\end{itemize}
+
+\end{frame}
+
+%========= Diapositiva con ítems resaltados con colores:
+\begin{frame}
+\frametitle{Situación de la Robótica}
+\begin{itemize}
+	\transglitter<1-2>
+\item \onslide<1->La forma de conseguir expandir la robótica es empezar desde jóvenes
+\item \onslide<1->La programación y el pensamiento computacional es algo muy complejo si se empieza en etapas educativas avanzadas
+\item \onslide<1->Todas las disciplinas se empiezan a aprender desde pequeños, \textcolor{blue}{¿por qué esta no?}
+
+
+
+\item \onslide<2->El objetivo general de este Trabajo es ofrecer una respuesta a esta necesidad de educación en la robótica y la programación a alumnos y alumnas de Educación Primaria y Secundaria
+\end{itemize}
+\end{frame}
+
+\subsection{Contexto específico}
+%========= Diapositiva con bloques:
+\begin{frame}
+\frametitle{Antecedentes en la URJC}
+\begin{block}{Primera revolución industrial de 1800}
+Productos fabricados por \textcolor{blue}{máquinas}. La \textcolor{red}{máquina de vapor} fue clave.
+\end{block}
+\end{frame}
+
+%========= Diapositiva con bullets en diferentes niveles (outline):
+\section{Principios de transducción}
+\subsection{Principio de transducción piezoresistivo}
+\begin{frame}
+\frametitle{Conceptos}
+\begin{outline}
+\1 Piezoresistividad: relación entre resistencia eléctrica y deformación.
+\2 Material piezoresistivo: (1) material en reposo (átomos en equilibrio).
+\3 (2) Si sufre deformación, movimiento átomos, modifican su resistividad.
+\2 Resistencia vs. resistividad de un material.
+\3 Resistencia: depende del volumen del material a tratar.
+\3 Resistividad: caract. intrínseca relacionada con colocación de átomos.
+\end{outline}
+\end{frame}
+
+\section*{}
+\begin{frame}{}
+  \centering \Huge
+  \emph{Objetivos}
+\note[item]{Pasemos ahora a comentar los objetivos que nos hemos con este trabajo.}
+\end{frame}
+
+\section{Objetivos}
+\begin{frame}
+\begin{enumerate}
+\item Crear una herramienta multiplataforma.
+\item Sin necesidad de instalación.
+\item Toda ejecución vía web.
+\end{enumerate}
+\end{frame}
+
+\section*{}
+\begin{frame}{}
+  \centering \Huge
+  \emph{Diseño}
+\note[item]{Una vez descritos los objetivos, veamos qué hemos hecho para alcanzarlos.}
+\end{frame}
+
+\section{Diseño}
+%========= Diapositiva con matemáticas:
+\subsection{Matemáticas empleadas}
+\begin{frame}
+\frametitle{Matrices de la cámara}
+\begin{itemize}
+\item Se usa una matriz $RT (4x4)$ en lugar de $R$ y $T$.
+\item La matriz $RT$ rota $\theta$ grados en los ejes $X$, $Y$ y $Z$:
+\end{itemize}
+\begin{equation}
+	\begin{bmatrix}
+	1 & 0 & 0 & X \\
+	0 & cos(\theta) & sin(\theta) &	Y \\
+	0 & -sin(\theta)& cos(\theta) & Z \\
+	0 & 0 & 0 & 1 
+	\end{bmatrix}
+\end{equation}
+\end{frame}
+
+%========= Diapositiva con matemáticas y leyenda (conditions*):
+\begin{frame}
+\frametitle{Resistencia de un material}
+\begin{outline}
+\1 Si material piezoresistivo se deforma, cambia su resistencia eléctrica.
+\begin{equation}
+R=\rho\frac{l}{A}
+\end{equation}
+donde:
+\begin{conditions*}
+R & resistencia del material $[\Omega]$\\
+\rho & resistividad $[\Omega-m]$\\
+l & longitud $[m]$\\
+A & área de sección transversal $[m^2]$
+\end{conditions*}
+\1 El cambio de resistencia se obtiene a partir de:
+\begin{equation}
+\frac{\Delta R}{R}=\frac{\Delta\rho}{\rho}=\frac{\Delta A}{A}=\frac{\Delta l}{l}
+\end{equation}
+\1 Otra forma de medir el efecto piezoresistivo: el factor de deformación.
+\begin{equation}
+GF(\textit{Gauge Factor})=\frac{\frac{\Delta R}{R}}{\varepsilon}=\frac{\frac{\Delta R}{R}}{\frac{\Delta l}{l}}
+\end{equation}
+\end{outline}
+\end{frame}
+
+%========= Diapositiva con códigos:
+\subsection{Algoritmo principal}
+\begin{frame}[fragile]
+\frametitle{Algoritmo de visión}
+\begin{lstlisting}
+cvCvtColor (&image, IplTmp1, CV_RGB2GRAY);//to Gray
+cvNormalize(IplTmp1, IplTmp1, 0, 255, CV_MINMAX);
+cvSmooth(IplTmp1,IplTmp2,CV_BLUR,3,3);//Avrg filter
+cvLaplace(IplTmp2, IplLaplace, 3);//Laplace
+cvConvertScale(IplLaplace,IplTmp1);
+cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
+\end{lstlisting}
+\end{frame}
+
+\section*{}
+\begin{frame}{}
+  \centering \Huge
+  \emph{Conclusiones}
+\note[item]{Para acabar esta presentación, vamos a repasar lo hecho, unas breves conclusiones y las líneas futuras.}
+\end{frame}
+
+\section{Conclusiones}
+\begin{frame}
+\begin{block}{Objetivos cumplidos}
+\begin{itemize}
+\item Herramienta multiplataforma: soporta Linux, Windows, MacOS.
+\item Intuitiva para el usuario final: no se necesita instalar nada.
+\item Solo se necesita un navegador web.
+\end{itemize}
+\end{block}
+
+\begin{block}{Líneas futuras}
+\begin{itemize}
+\item Permitir el uso de otras herramientas.
+\item Ampliar los botones disponibles en el interfaz.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain]
+\large{\titlepage}
+\note[item]{Y hasta aquí mi exposición.}
+\note[item]{Quedo a disposición del tribunal...}
+\end{frame}
+
+\end{document}

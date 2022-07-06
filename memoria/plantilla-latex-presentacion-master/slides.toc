@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Contexto general}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Contexto específico}{12}{0}{1}
+\beamer@sectionintoc {2}{Principios de transducción}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Principio de transducción piezoresistivo}{13}{0}{2}
+\beamer@sectionintoc {4}{Objetivos}{15}{0}{3}
+\beamer@sectionintoc {6}{Diseño}{17}{0}{4}
+\beamer@subsectionintoc {6}{1}{Matemáticas empleadas}{17}{0}{4}
+\beamer@subsectionintoc {6}{2}{Algoritmo principal}{19}{0}{4}
+\beamer@sectionintoc {8}{Conclusiones}{21}{0}{5}

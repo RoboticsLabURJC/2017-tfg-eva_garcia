@@ -4,31 +4,31 @@ En este capítulo explicaremos los objetivos de este Trabajo Fin de Grado, así 
 \section{Objetivos}\label{sec:objetivos}
 Como se ha adelantado en la Introducción, el carácter principal de este Trabajo Fin de Grado es educacional. Abordaremos dos caminos complementarios, explicados a continuación. 
 
-\subsection{Programación en Python de un robot basado en Arduino}\label{subsec:obj1} 
-Desarrollaremos una biblioteca en Python que utilizar para programar el robot mBot, basado en una placa base de Arduino, con el fin de dar una opción de lenguaje más sencilla. Para que esto sea posible también se trabajará en un programa en Arduino que grabar en la placa base del robot, el cual ofrecerá la comunicación necesaria con la biblioteca de Python. Así, se podrán programar los sensores y actuadores del robot con funciones en Python, cuya lógica estará en esta biblioteca y de la cual no tendrán que preocuparse los alumnos. 
+\begin{enumerate}
+	\item \textbf{Diseñar y desarrollar una infraestructura para la programación en Python de un robot basado en Arduino}. Desarrollaremos una biblioteca en Python que utilizar para programar el robot mBot, basado en una placa base de Arduino, con el fin de dar una opción de lenguaje más sencilla. También se trabajará en un programa en Arduino que se grabará en la placa base del robot, el cual ofrecerá la comunicación necesaria con la biblioteca de Python. Así, se podrán programar los sensores y actuadores del robot con funciones en Python, cuya lógica estará en esta biblioteca y de la cual no tendrán que preocuparse los alumnos. La solución funcioná en un robot mBot conectado por cable USB al ordenador del estudiante.
 	
-\subsection{Propuesta educativa completa, basada en Scratch y Python, y escalonada según dificultad} \label{subsec:obj2}
-Ofreceremos una propuesta educativa para un curso escolar, orientada según niveles de dificultad y con objetivos docentes detallados. Para ello crearemos diferentes ejercicios prácticos de robótica utilizando el robot educacional mBot, describiendo los objetivos conceptuales que se persiguen. El orden de estos ejercicios estará fijado para de un aprendizaje gradual de programación. Este curso estará orientado principalmente a Educación Primaria o Secundaria (alumnos y alumnas sin conocimientos previos de programación). \\
-Para esta propuesta utilizaremos tanto el lenguaje de programación por bloques Scratch, proporcionado por el fabricante, como nuestro \textit{midleware} en Python, como segunda parte avanzada.
-	
+	\item \textbf{Crear una propuesta educativa completa, basada en Scratch y Python, y escalonada según dificultad}. Ofreceremos una propuesta educativa para un curso escolar, orientada según niveles de dificultad y con objetivos docentes detallados. Para ello crearemos diferentes ejercicios prácticos de robótica utilizando el robot educacional mBot, describiendo los objetivos conceptuales que se persiguen. El orden de estos ejercicios estará fijado para de un aprendizaje gradual de programación. Este curso estará orientado principalmente a Educación Primaria o Secundaria (alumnos y alumnas sin conocimientos previos de programación). Para esta propuesta utilizaremos tanto el lenguaje de programación por bloques Scratch, proporcionado por el fabricante, como nuestro \textit{midleware} en Python, como segunda parte avanzada.
+\end{enumerate}
+
+
 \section{Requisitos}\label{sec:requisitos}
 Los requisitos que se han marcado para cumplir estos objetivos son los siguientes:
-\begin{itemize}
-	\item La plataforma desarrollada, llamada PyBoKids-2.0, deberá ejecutarse en el lenguaje de programación Python, y el robot educativo mBot podrá programarse en este lenguaje.
+\begin{enumerate}
+	\item La plataforma a desarrollar deberá ejecutarse en el lenguaje de programación Python, y el robot educativo mBot podrá programarse en este lenguaje.
 	\item Esta plataforma contendrá en una biblioteca los métodos necesarios para empaquetar la lógica de los sensores y actuadores del robot, haciendo esta lógica invisible al usuario.
-	\item PyBoKids-2.0 tendrá asociada una biblioteca de Arduino, desarrollada para establecer una comunicación exitosa entre el robot y la biblioteca Python. 
-	\item Esta biblioteca Arduino deberá poder gravarse en el robot y no tener que cambiarse cada vez que se quiera hacer un programa nuevo para el mBot.
-	\item Los ejercicios y prácticas educativas se diseñarán para utilizar el robot mBot y sus periféricos, así como la plataforma del fabricante y la desarrollada en este Trabajo Fin de Grado (PyBoKids-2.0).
-	\item Los contenidos educativos serán una guía de programación y de robótica, y tendrán unos objetivos a corto, medio y largo plazo (por ejercicio, por bloque de lenguaje y por curso). Sin embargo, por edad de los alumnos, podría darse el caso de no poder completar el segundo bloque; en este caso se orientará el curso para avanzar todo lo posible y dejar preparado el segundo curso para el bloque de Python.  
-\end{itemize}
+	\item A bordo del robot habrá asociada una biblioteca de Arduino, desarrollada para establecer una comunicación exitosa entre el robot y la biblioteca Python. Esta biblioteca Arduino deberá poder grabarse en el robot y no tener que cambiarse cada vez que se quiera hacer un programa nuevo para el mBot.
+	\item Los ejercicios y prácticas educativas se diseñarán para utilizar el robot mBot y sus periféricos, así como la plataforma de programación del fabricante y la desarrollada en este Trabajo Fin de Grado.
+	\item Los contenidos educativos serán una guía de programación y de robótica, y tendrán unos objetivos a corto, medio y largo plazo (por ejercicio, por bloque de lenguaje y por curso). Por edad de los alumnos, podría darse el caso de no poder completar la parte de programación textual; en este caso se orientará el curso para avanzar todo lo posible en la parte de programación visual.  
+\end{enumerate}
 
 \section{Metodología}\label{sec:metologia}
-Este Trabajo Fin de Grado tiene como premisa un trabajo ya realizado durante un curso escolar de clases de robótica a alumnos de Educación Primaria. Con esta base y este conocimiento adquirido, se crearon los objetivos de PyBoKids-2.0 y sus requisitos para ampliar la propuesta educativa.\\
-Para cumplir estos objetivos, se ha trabajado manteniendo un ciclo semanal de reuniones telemáticas con el tutor, donde se comentaban: avances realizados con respecto a los hitos marcados la semana anterior, problemas encontrados, ideas de trabajo, y nuevos hitos para trabajar durante la semana. La progresión necesaria para el cumplimiento ha sido la siguiente:
+Este Trabajo Fin de Grado tiene como punto de arranque la enseñanza de Robótica Educativa durante un curso escolar de clases de robótica a alumnos de Educación Primaria. Con esta base y este conocimiento adquirido, se fijaron los objetivos de y sus requisitos para ampliar la propuesta educativa utilizada.\\
+Para cumplir estos objetivos, se ha trabajado manteniendo un ciclo semanal de reuniones telemáticas con el tutor, donde se comentaban: avances realizados con respecto a los hitos marcados la semana anterior, problemas encontrados, ideas de trabajo, y nuevos hitos para trabajar durante la semana. Se ha utilizado \textit{Git} como sistema de control de versiones para el código y \textit{GitHub} como repositorio online de almacenamiento del proyecto. Este repositorio está en el siguiente \href{https://github.com/RoboticsLabURJC/2017-tfg-eva_garcia}{enlace}.\\
+El plan de trabajo para el cumplimiento ha sido el siguiente:
 \begin{enumerate}
 	\item Familiarización con el entorno robótico de Arduino: uso del robot mBot con el lenguaje nativo de la placa base para entender el funcionamiento de los actuadores y sensores (valores de entrada y salida) y su comunicación con la placa base, además de familiarización con el lenguaje en sí. 
-	\item Comunicación ``robótica'' básica entre Python y Arduino, a la que ir añadiendo los periféricos del robot.
+	\item Comunicación ``robótica'' básica entre Python en el PC y Arduino en el robot, a la que ir añadiendo los periféricos del robot.
 	\item Diseño de un sistema de mensajes estandarizados para el desarrollo de ambas bibliotecas Python y Arduino con el que poder establecer una comunicación exitosa entre PC y robot.
-	\item Desarrollo de ambas bibliotecas con el diseño anterior, y diseño de ejercicios utilizando éstas.
-	\item Adaptación de los ejercicios realizados durante el curso escolar a la nueva plataforma PyBo-Kids-2.0.  
+	\item Desarrollo de ambas bibliotecas con el diseño anterior y diseño de ejercicios en Python utilizando éstas.
+	\item Adaptación de los ejercicios realizados durante el curso escolar a la nueva plataforma.
 \end{enumerate}
