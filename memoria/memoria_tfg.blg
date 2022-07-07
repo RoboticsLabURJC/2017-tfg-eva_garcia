@@ -22,10 +22,10 @@ Warning--entry type for "Lego" isn't style-file defined
 Warning--entry type for "Kibotics" isn't style-file defined
 --line 41 of file bibliografia_tfg.bib
 Warning--entry type for "arduinolenguaje" isn't style-file defined
---line 50 of file bibliografia_tfg.bib
+--line 46 of file bibliografia_tfg.bib
 You've used 9 entries,
             2253 wiz_defined-function locations,
-            556 strings with 4310 characters,
+            556 strings with 4676 characters,
 and the built_in function-call counts, 1844 in all, are:
 = -- 147
 > -- 68

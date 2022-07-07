@@ -2,38 +2,42 @@
 
 \bibitem{arduinoURL}
 {\sc Arduino}.
-\newblock Oficial arduino website.
+\newblock \href{https://arduino.cl/}{Oficial Arduino website}.
 
 \bibitem{arduinolenguaje}
 {\sc Arduino}.
-\newblock Referencia lenguaje arduino.
+\newblock \href{https://www.arduino.cc/reference/es/}referencia lenguaje
+  arduino.
 
 \bibitem{Roberta}
 {\sc Google}.
-\newblock Plataforma de robótica educativa roberta.
-
-\bibitem{Lego}
-{\sc Google}.
-\newblock Robots educativos de lego.
+\newblock \href{https://lab.open-roberta.org/#}{Plataforma de robótica
+  educativa Roberta}.
 
 \bibitem{kibotics}
 {\sc JdeRobot}.
-\newblock Kibotics.
+\newblock \href{https://kibotics.org}{Kibotics}.
+
+\bibitem{Lego}
+{\sc Lego}.
+\newblock \href{https://www.lego.com/es-es/themes/boost}{Robots educativos
+  Lego}.
 
 \bibitem{makeblock}
 {\sc Makeblock}.
-\newblock Oficial makeblock website.
+\newblock \href{https://www.makeblock.es/}{Oficial Makeblock Website}.
 
 \bibitem{mblock}
-{\sc of~Technology, M. M.~I.}
-\newblock mblock.
+{\sc {MIT Massachusetts Institute of Technology}}.
+\newblock \href{https://www.mblock.cc/en-us/blog}{mBlock}.
 
 \bibitem{PythonRef}
 {\sc Python}.
-\newblock Oficial python reference.
+\newblock \href{https://docs.python.org/es/3/reference/index.html}{Oficial
+  Python reference}.
 
 \bibitem{JdeRobot}
 {\sc {Vega, Julio}, and {Cañas, Jose María}}.
-\newblock Pybokids.
+\newblock \href{https://www.mdpi.com/2079-9292/8/8/899}{PyBoKids}.
 
 \end{thebibliography}

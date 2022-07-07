@@ -84,13 +84,13 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 	La definición de \textit{actuador} es un periférico de salida al que la placa envía datos con los que éste realiza una acción de una forma u otra. Por ejemplo, teniendo una velocidad $v_0$, este valor es enviado a los motores, que se moverán a esa velocidad y no a otra. \\
 	Los actuadores del mBot que no están integrados en la placa directamente, se conectan a ella a través de los mismos puertos que los sensores. Para poder usarlos, habrá que especificarle a la placa en qué puerto están conectados (igual que con los sensores). En nuestro robot básico, tenemos los siguientes actuadores:
 	\begin{description}
-	\item [Leds]. Están integrados en la parte superior de la placa, como puede verse en la imagen \ref{img:led}. Son dos led individuales que poder combinar dependiendo de qué valor codificado se envíe a la placa:
+	\item [LEDs]. Están integrados en la parte superior de la placa, como puede verse en la imagen \ref{img:led}. Son dos LED individuales que poder combinar dependiendo de qué valor codificado se envíe a la placa:
 	\begin{itemize}
-		\item Los dos led: 0
-		\item Sólo led derecho: 1
-		\item Sólo led izquierdo: 2
+		\item Los dos LED: 0
+		\item Sólo LED derecho: 1
+		\item Sólo LED izquierdo: 2
 	\end{itemize}
-	Los led son RGB (\textit{[red, green, blue]}) y el color de cada uno se codifica con un valor numérico entre 0 y 255 para cada uno de los colores (rojo, verde y azul). Así, por ejemplo, el rojo completo sería [0,255,0], el morado sería [255,0,255] o el blanco [255,255,255]. Estos led están codificados con valores decimales en vez de hexadecimales como sería una codificación RGB tradicional, para facilitar la programación a los alumnos (no es probable que conozcan el sistema hexadecimal).		
+	Los LED son RGB (\textit{[red, green, blue]}) y el color de cada uno se codifica con un valor numérico entre 0 y 255 para cada uno de los colores (rojo, verde y azul). Así, por ejemplo, el rojo completo sería [0,255,0], el morado sería [255,0,255] o el blanco [255,255,255]. Estos LED están codificados con valores decimales en vez de hexadecimales como sería una codificación RGB tradicional, para facilitar la programación a los alumnos (no es probable que conozcan el sistema hexadecimal).		
 	
 	\item [Motores] En el paquete básico tenemos dos motores DC (de corriente continua) conectados a la placa en un conector específico para motores a los que conectar los dos cables, positivo y negativo. Los motores admiten como velocidad de entrada valores enteros entre [-255,255] (valores negativos para retroceder y positivos para avanzar), pudiendo dar valores diferentes a cada uno de ellos (para tener capacidad de hacer girar al robot). En la imagen \ref{img:motores} se puede ver un ejemplo del motor y de la forma de conectarlo al mBot.	
 
@@ -117,8 +117,8 @@ En robótica un \textit{sensor} es un periférico de entrada que, conectado a un
 \begin{figure}[H]
 	\includegraphics[width=3cm]{RGBled.png}
 	\centering
-	\caption{Led RGB integrados}
-	\label{img:led}
+	\caption{LED RGB integrados}
+	\label{img:LED}
 \end{figure}
 
 \begin{figure}[H]
