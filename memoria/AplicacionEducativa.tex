@@ -24,7 +24,7 @@ Durante las clases, la metodología será de trabajo en común para el planteami
 \section{Programación robótica con Scratch}\label{sec:scratch}
 Las prácticas de esta etapa están pensadas con unos objetivos docentes individuales, y otros globales con respecto al curso completo de ejercicios. Además, no podemos perder de vista que, para los estudiantes, las clases de robótica deben ser \textit{entretenidas}; dado que no son curriculares es importante mantener su atención creando ejercicios dinámicos y diferentes cada vez, además de con contenido educativo. 
 \subsection{Makeblock}\label{subsec:makeblock}
-Antes de pasar a describir las prácticas diseñadas, hablaremos de la plataforma nativa para la programación del robot mBot: \textit{mBlock}, del fabricante Makeblock (ver en \cite{makeblock}), y cómo lo utilizaremos en las clases. \\
+Antes de pasar a describir las prácticas diseñadas, hablaremos de la plataforma nativa para la programación del robot mBot: \textit{mBlock}, del fabricante Makeblock\cite{makeblock}, y cómo lo utilizaremos en las clases. \\
 Como hemos adelantado en el Capítulo \ref{cap:infra}, donde explicamos su instalación y uso básico, el fabricante pone a disposición un aplicativo, disponible para PC y dispositivo móvil (o tablet), para programar el robot mBot (y todos sus modelos de robot) con el lenguaje Scratch de una forma muy intuitiva. Este software es muy útil para la programación con jóvenes sin experiencia: requiere solamente de la instalación del software, y tiene integrados la forma de conectar con el robot y de grabar el código de un programa en la placa.\\
 \begin{figure}[h]
 	\centering
@@ -54,7 +54,7 @@ Obviamente, lo más visual del robot mBot son los motores. También es lo más i
 En vez de simplemente \textit{mover} el robot, el ejercicio se pensó como una carrera entre los robot de todos los alumnos, para despertar su interés y hacerlo más entretenido; sin una utilidad práctica, o un juego, los alumnos perdían interés rápidamente o, incluso, no lo tenían desde el principio. \\
 \textbf{Ejercicio Extra} Otro punto que se pudo comprobar con la experiencia empírica es que era mejor hacer varias versiones de un mismo ejercicio, aunque la dificultad fuera la misma, con objetivos distintos. Los alumnos no pierden la atención y aprenden que una misma solución, con pequeñas variaciones, vale para distintas situaciones. Además, así queda cubierta la situación de que los alumnos vayan a distintas velocidades y unos terminen el ejercicio base mientras otros no.\\
 Otra versión de este ejercicio de carreras es hacerla con obstáculos fijos. Los alumnos tendrán que medir en tiempo la distancia entre obstáculos y jugar, con las velocidades y los giros. Quién mejor combinación encuentre, mejor tiempo hará en carrera.\\
-Con este ejercicio, con sus diferentes versiones de obstáculos y de distancias, introducimos el concepto de actuador, explicando en clase la definición, y también el concepto de robot (primer concepto que se comentará y al que volveremos repetidamente durante el curso para revisar la definición que den los estudiantes). También el concepto de ''programación secuencial temporal'', ya que para evitar los obstáculos deberán programar Scratch para avanzar durante \textit{x} tiempo, después girar, volver a avanzar, etc.
+Con este ejercicio, con sus diferentes versiones de obstáculos y de distancias, introducimos el concepto de actuador, explicando en clase la definición, y también el concepto de robot (primer concepto que se comentará y al que volveremos repetidamente durante el curso para revisar la definición que den los estudiantes). También el concepto de ``programación secuencial temporal'', ya que para evitar los obstáculos deberán programar Scratch para avanzar durante \textit{x} tiempo, después girar, volver a avanzar, etc.
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=1]{carreras.png}
@@ -87,7 +87,7 @@ Una vez entendida la diferencia de notas y comprobado cómo funciona el zumbador
 El siguiente actuador del pack del mBot son las luces LED de la placa, el rango de colores RGB permite que cada alumno pueda personalizar los colores como más les guste. El propio lenguaje Scratch permite el rango de cada color entre 0 y 255 (aunque en la práctica, no sean notables los cambios pequeños en esa escala).\\
 La finalidad del ejercicio es que, con luces, el robot pida ayuda en lenguaje morse: tres pulsos cortos, tres pulsos largos, y tres pulsos cortos. \\
 Como se ha comentado anteriormente, los alumnos son más proactivos cuando ven una utilidad mínimamente real a lo que se les pide, y conocen el lenguaje morse -o es muy sencillo de explicar- y la utilidad de pedir ayuda en un lenguaje universal.\\
-En este ejercicio reforzamos las duraciones; el progreso temporal de las órdenes. Los puntos y rayas del morse los traducimos a esperas de menos y más tiempo, respectivamente. También reforzaremos el concepto de bucle, pues el mensaje podremos repetirlo con un bucle en vez de repitiendo todas las órdenes.  En las figura \ref{img:SOS} y \ref{img:SOSrobot} puede verse un ejemplo de solución propuesta y su aplicación. En \href{https://www.youtube.com/watch?v=k6QSnIkRVyo}{este vídeo} podemos ver el resultado real de hacer el ejercicio en clase. \\
+En este ejercicio reforzamos las duraciones; el progreso temporal de las órdenes. Los puntos y rayas del morse los traducimos a esperas de menos y más tiempo, respectivamente. También reforzaremos el concepto de bucle, pues el mensaje podremos repetirlo con un bucle en vez de repitiendo todas las órdenes.  En las figuras \ref{img:SOS} y \ref{img:SOSrobot} puede verse un ejemplo de solución propuesta y su aplicación. Podemos ver el resultado real de hacer el ejercicio en clase en vídeo\footnote{\href{https://www.youtube.com/watch?v=k6QSnIkRVyo}{https://www.youtube.com/watch?v=k6QSnIkRVyo}}. \\
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=1]{SOS.png}	
@@ -130,25 +130,25 @@ Como siempre, en cada ejercicio iremos guiando a los alumnos en la división del
 \begin{description}
 	
 \item [No chocar contra un muro]\label{ej:muro}
-Uno de los actuadores más visibles, y por el que los alumnos siempre preguntan, es el sensor de proximidad (sensor de ultrasonidos). El bloque de Scratch para este sensor devuelve un valor numérico, la distancia a la que se encuentra del obstáculo que esté leyendo. Por tanto, para los alumnos es tan cómodo como trabajar con ''distancia x del sensor''. \\
+Uno de los actuadores más visibles, y por el que los alumnos siempre preguntan, es el sensor de proximidad (sensor de ultrasonidos). El bloque de Scratch para este sensor devuelve un valor numérico, la distancia a la que se encuentra del obstáculo que esté leyendo. Por tanto, para los alumnos es tan cómodo como trabajar con ``distancia x del sensor''. \\
 Este ejercicio se diseñó con el mismo ánimo que el del camión (\ref{ej:camion}), siguiendo la idea de que programen cosas que conocen, que utilizan en su día a día, con el fin de que aprendan la idea que la robótica está incluida en nuestras vidas y cualquiera puede dedicarse a ello.\\
 El objetivo es, por tanto, programar el sensor de proximidad de los coches, que cuando aparcan y se acercan al coche de delante (en este caso, a un muro), primero pita, si te acercas más pita más rápido y, al final, se para. Como es el primer sensor que utilizan, lo orientaremos en etapas. \\
 Primero, necesitan aprender cómo se usan el sensor y el valor de retorno. Es decir, el bloque de Scratch que llama al sensor no sirve de nada sin añadirlo a algún otro bloque que utilice el valor que el sensor lee del entorno (por ejemplo, un bloque condicional). Este primer ejercicio lo haremos utilizando directamente el bloque de lectura del sensor; más adelante introduciremos el concepto de variable.\\
 Después, tendrán que conseguir la parte difícil del ejercicio: que el robot se pare cuando se acerque al muro. Así comprobarán de forma real cómo funciona el sensor, además de ajustar la sensibilidad de ''cuánto de cerca'' debe estar el robot para considerar que está pegado al muro pero para qué dé tiempo a pararlo sin que se choque.\\
 Una vez conseguida esta primera parte, que requiere de bloques condicionales, de concurrencia o de espera (no hay una sola forma correcta de hacerlo), solucionar el ejercicio completo es -relativamente- inmediato. El comportamiento deseado es que, cuando el robot se acerque un poco al muro, pite ligeramente (con el zumbador de la placa, que ya se ha utilizado antes; véase \ref{ej:cumple}); cuando se acerque algo más, pite más intensamente y, cuando esté muy cerca (la distancia que se haya decidido en la primera parte del ejercicio), parará para no chocar.
-En las siguientes imágenes, \ref{img:muro1} y \ref{img:muro2}, podemos ver ejemplos de la realización del ejercicio durante las clases y en los vídeos referenciados en las imágenes, la versión del ejercicio correspondiente. \\
+En las figuras, \ref{img:muro1} y \ref{img:muro2}, podemos ver ejemplos de la realización del ejercicio durante las clases; también pueden en vídeo\footnote{\href{https://www.youtube.com/watch?v=dMYWTzXvXlE}{https://www.youtube.com/watch?v=dMYWTzXvXlE}} \footnote{\href{https://www.youtube.com/shorts/HWSd4kJJ7kY}{https://www.youtube.com/shorts/HWSd4kJJ7kY}}. \\
 
 \begin{figure}[h]
 	\centering
 	
 	\begin{subfigure}
-		[Un ejemplo de solución para el ejercicio de no chocar: \href{https://www.youtube.com/watch?v=dMYWTzXvXlE}{en este vídeo} ]{
+		[Un ejemplo de solución para el ejercicio de no chocar]{
 			\includegraphics[width=0.5\textwidth]{muro1.png}	
 			\label{img:muro1}
 		}
 	\end{subfigure}
 	\begin{subfigure}
-		[Otro ejemplo de solución para el ejercicio de no chocar: \href{https://www.youtube.com/shorts/HWSd4kJJ7kY}{en este vídeo}]{
+		[Otro ejemplo de solución para el ejercicio de no chocar]{
 			\includegraphics[width=0.5\textwidth]{muro2.png}	
 			\label{img:muro2}
 		}
@@ -188,7 +188,7 @@ Este método de establecer el entorno en variables que se vayan a utilizar y, so
 
 \item[Huye-luz]\label{ej:huyeLuz}
 Esta vez, y no como ejercicio extra sino como uno distinto, diseñamos otro problema con el mismo sensor que ya hemos utilizado en el anterior. El motivo de que sea un ejercicio diferente es que no es un añadido al ejercicio, sino que cambia el requerimiento inicial del problema; éste será que el robot huya de la luz, persiguiéndolo con una linterna.\\
-Utilizaremos el mismo método de sacar el valor umbral de referencia pero, esta vez, si estamos por encima de ese valor (en vez de por debajo como antes), el robot tendrá que huir, dando marcha atrás y girando. Una posible solución al ejercicio trabajado en clase se muestra en la imagen \ref{img:huyeluz}\\
+Utilizaremos el mismo método de sacar el valor umbral de referencia pero, esta vez, si estamos por encima de ese valor (en vez de por debajo como antes), el robot tendrá que huir, dando marcha atrás y girando. Una posible solución al ejercicio trabajado en clase se muestra en la imagen \ref{img:huyeluz}.\\
 
 \begin{figure}[h]
 	\centering

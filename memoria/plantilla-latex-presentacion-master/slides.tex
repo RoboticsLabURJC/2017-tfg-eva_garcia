@@ -16,10 +16,14 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \graphicspath{ {figs/} }
 \usepackage{booktabs}
+
 \usepackage{hyperref}
 \usepackage{multicol}
+\usepackage{media9}
 \usepackage{pgfpages}
 \usepackage{listings}
 \usepackage{multimedia}
@@ -35,7 +39,7 @@
 % USO DE NOTAS
 \setbeameroption{hide notes} % Para mostrar u ocultar (hide/show)
 %\setbeameroption{show only notes} % Mostrar solo las notas
-\setbeameroption{show notes on second screen=right} % Mostrar notas en otra pantalla
+%\setbeameroption{show notes on second screen=right} % Mostrar notas en otra pantalla
 \setbeamertemplate{note page}{ % asi solo muestro el texto de las notas
   \insertnote%
 }
@@ -64,7 +68,7 @@
 \vspace{1cm}
 Trabajo Fin de Grado
 }
-\date{xx de Julio de 2022}
+\date{15 de Julio de 2022}
 %=========
 
 %========= COMIENZO DEL DOCUMENTO
@@ -74,7 +78,7 @@ Trabajo Fin de Grado
 \begin{frame}[plain] % plain: quita header y footer
 \large{\titlepage}
 \note[item]{En esta presentación vamos a hablar sobre robótica educativa con el robot mBot}
-\note[item]{En primer lugar}
+\note[item]{}
 \end{frame}
 
 %========= Licencia
@@ -88,191 +92,330 @@ Trabajo Fin de Grado
 %\begin{multicols}{2} % si tengo muchas secciones, lo parte en dos columnas
   \tableofcontents[hideallsubsections] % no muestra subsecciones
 %\end{multicols}
-\note[]{La presentación esta dividida en cuatro partes.}
+\note[]{}
 \note[]{}
 \end{frame}
 
 %========= Diapositiva "vacía" de comienzo de sección:
 \section{Introducción}
-\begin{frame}{}
-	\centering \Huge
-	\emph{Introducción}
-	\note[]{Comencemos con la introducción, donde hablaremos sobre el contexto de este Trabajo Fin de Grado, los objetivos marcados y los requisitos necesarios para dar esos objetivos como satisfactorios}
-\end{frame}
+
 \subsection{Contexto general}
 %========= Diapositiva con imágenes:
 \begin{frame}
-\frametitle{Situación de la Robótica}
+\frametitle{Introducción}
+\framesubtitle{Situación de la Robótica}
 
-\begin{itemize}
- \transglitter<1-5> %means that the effect is within the frame
+	\begin{itemize}	
+		\item Disciplina alejada del público
+		\item Los últimos años ha empezado a cambiar: ``robots'' en la vida diaria (Bots, Internet Of Things, Inteligencia Artificial, Domótica, Ocio)
+	\end{itemize}
+\begin{columns}
+	
+	\begin{column}{0.5\textwidth}
+		\centering
+		\includegraphics[height=3cm]{chatbot.jpg}
+		\includegraphics[height=3cm]{IOT3.jpeg}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\centering
+		\includegraphics[height=3cm]{alexa.jpg}
+		\includegraphics[height=3cm]{domotica1.jpg}
+	\end{column}
 
-	\item \onslide<1-> Originalmente es una disciplina alejada del público
-	\item \onslide<2-> Los últimos años la definición de robot ha empezado a cambiar 
-		\begin{itemize}
-			\item \onslide<3-> Proceso electrónico programado para cumplir una o varias funciones interactuando con el medio
-		\end{itemize}
-	\item \onslide<4-> Hay muchos ''robots'' actualmente en la vida diaria:
-		\begin{itemize}
-			\item Bots
-			\item Internet Of Things
-			\item Inteligencia Artificial
-			\item Domótica
-			\item Ocio
-		\end{itemize}
-	\item \onslide<5-> Cuanta más gente pueda acceder a los recursos necesarios, más aplicaciones y soluciones podrá resolverse mediante la robótica
 	
-	
+\end{columns}
 	\note[item] {Es vista como una asignatura muy compleja, sólo accesible a grandes corporaciones, tanto por poder adquisitivo como por recursos académicos. Además, muy asociada a la ciencia ficción, la idea de robot está muy alejada de la realidad}
-	\note[item]{La ingeniería, y el mundo comercial, han cambiado poco a poco el concepto de la sociedad tiene de la robótica, como disciplina, y de los robot.}
-\end{itemize}
-
+	\note[item]{La ingeniería, y el mundo comercial, han cambiado poco a poco el concepto de la sociedad tiene de la robótica, como disciplina, y de los robot. }
+	\note[item]{Las diferentes facetas de la robótica tienen cada vez más ejemplos en nuestra vida diaria, lo que ha contribuido a que las personas dejen de considerarlo ajeno o de ciencia ficción. Desmitificar una disciplina significa despertar el interés del publico en general en ella a la que dedicarse, tanto educativa como profesionalmente.}
 \end{frame}
 
-%========= Diapositiva con ítems resaltados con colores:
 \begin{frame}
-\frametitle{Situación de la Robótica}
+\frametitle{Introducción}
+\framesubtitle{Situación de la Robótica}
 \begin{itemize}
-	\transglitter<1-2>
-\item \onslide<1->La forma de conseguir expandir la robótica es empezar desde jóvenes
-\item \onslide<1->La programación y el pensamiento computacional es algo muy complejo si se empieza en etapas educativas avanzadas
-\item \onslide<1->Todas las disciplinas se empiezan a aprender desde pequeños, \textcolor{blue}{¿por qué esta no?}
+		\item  Cuanta más gente pueda acceder a los recursos necesarios, mejor
 
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.33\textwidth]{droneski.jpg}
+		\hspace{1cm}
+		\includegraphics[width=0.33\textwidth]{dronerescate.jpg}
+	\end{figure}
 
-
-\item \onslide<2->El objetivo general de este Trabajo es ofrecer una respuesta a esta necesidad de educación en la robótica y la programación a alumnos y alumnas de Educación Primaria y Secundaria
+\item La forma de conseguir expandir la robótica es empezar desde jóvenes
+\item La programación y el pensamiento computacional es algo muy complejo si se empieza en etapas educativas avanzadas
 \end{itemize}
+	\note[item]{ Ha sido muy importante que el acceso a recursos y componentes se haya extendido. Cuánta más gente pueda dedicarse a ello, más posibilidades se abrirán y más aplicaciones prácticas en todos los ábmbitos. Al no ser una disciplina extendida, quizá nadie había reparado en una aplicación concreta.}
+	\note[item]{Por ejemplo, con un drone, podemos pasar de tener un elemento de ocio con el que grabar un espectáculo deportivo, a mandar ayuda humanitaria a sitios a los que de otra forma no podríamos llegar - o no llegaríamos a tiempo.}
 \end{frame}
 
 \subsection{Contexto específico}
-%========= Diapositiva con bloques:
+
 \begin{frame}
-\frametitle{Antecedentes en la URJC}
-\begin{block}{Primera revolución industrial de 1800}
-Productos fabricados por \textcolor{blue}{máquinas}. La \textcolor{red}{máquina de vapor} fue clave.
+	\frametitle{Introducción}
+\framesubtitle{Antecedentes}
+\begin{block}{Robótica Educativa}
+	\begin{itemize}
+		\item Open Roberta
+		\item Lego Boost
+		\item Kibotics
+		\item mBlock
+	\end{itemize}
 \end{block}
-\end{frame}
 
-%========= Diapositiva con bullets en diferentes niveles (outline):
-\section{Principios de transducción}
-\subsection{Principio de transducción piezoresistivo}
-\begin{frame}
-\frametitle{Conceptos}
-\begin{outline}
-\1 Piezoresistividad: relación entre resistencia eléctrica y deformación.
-\2 Material piezoresistivo: (1) material en reposo (átomos en equilibrio).
-\3 (2) Si sufre deformación, movimiento átomos, modifican su resistividad.
-\2 Resistencia vs. resistividad de un material.
-\3 Resistencia: depende del volumen del material a tratar.
-\3 Resistividad: caract. intrínseca relacionada con colocación de átomos.
-\end{outline}
-\end{frame}
-
-\section*{}
-\begin{frame}{}
-  \centering \Huge
-  \emph{Objetivos}
-\note[item]{Pasemos ahora a comentar los objetivos que nos hemos con este trabajo.}
+\begin{block}{Antecedentes en la URJC}
+	Organización JdeRobot y PyBoKids
+\end{block}
+\begin{block}{Experiencia práctica}
+	Curso escolar de clases extracurriculares
+\end{block}
 \end{frame}
 
 \section{Objetivos}
 \begin{frame}
-\begin{enumerate}
-\item Crear una herramienta multiplataforma.
-\item Sin necesidad de instalación.
-\item Toda ejecución vía web.
-\end{enumerate}
+\frametitle{Objetivos}
+\begin{block}{Infraestructura para la programación en Python}
+	\begin{itemize}
+	\item Programación en Python
+	\item Funcionalidad oculta al estudiante
+	\item API de fácil accesibilidad
+	\item Biblioteca en Arduino a bordo del mBot
+	\end{itemize}
+\end{block}
+
+\begin{block}{Propuesta educativa basada en Scratch y Python}
+	\begin{itemize}
+		\item Robot educativo mBot
+		\item Plataformas del fabricante y la nuestra en Python
+		\item Ejercicios escalonados en dificultad y con objetivos docentes a corto, medio y largo plazo
+	\end{itemize}
+\end{block}
 \end{frame}
 
-\section*{}
-\begin{frame}{}
-  \centering \Huge
-  \emph{Diseño}
-\note[item]{Una vez descritos los objetivos, veamos qué hemos hecho para alcanzarlos.}
-\end{frame}
-
-\section{Diseño}
-%========= Diapositiva con matemáticas:
-\subsection{Matemáticas empleadas}
+\section{Herramientas usadas}
 \begin{frame}
-\frametitle{Matrices de la cámara}
-\begin{itemize}
-\item Se usa una matriz $RT (4x4)$ en lugar de $R$ y $T$.
-\item La matriz $RT$ rota $\theta$ grados en los ejes $X$, $Y$ y $Z$:
-\end{itemize}
-\begin{equation}
-	\begin{bmatrix}
-	1 & 0 & 0 & X \\
-	0 & cos(\theta) & sin(\theta) &	Y \\
-	0 & -sin(\theta)& cos(\theta) & Z \\
-	0 & 0 & 0 & 1 
-	\end{bmatrix}
-\end{equation}
+\frametitle{Herramientas usadas}
+
+
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}
+		\centering
+		\includegraphics[height=2cm]{Windows.jpg}
+		\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[height=2cm]{mbot.jpg}
+		\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[height=2cm]{scratch-logo.png}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\centering
+		\begin{figure}
+		\centering
+		\includegraphics[height=3cm]{arduino-logo.png}
+		\end{figure}
+		\begin{figure}
+			\centering
+		\includegraphics[height=3cm]{python-logo.png}
+		\end{figure}
+	\end{column}
+\end{columns}
+
+\note[item]{El objetivo de todas las elecciones de infraestructura ha sido la accesibilidad de ellas}
+\note[item]{el sistema operativo windows es el más extendido y conocido, siendo Linux más visto como académico y complicado. Si queremos interesar a los jóvenes, y facilitar su acceso a los recursos, utilizar los recursos que ya conocen es una ventaja}
+\note[item]{Las placas Arduino son las más extendidas, por estar diseñadas particularmente para la enseñanza y su bajo coste. El proyecto es open source, por lo que hay mucho contenido para ellas.  El robot contiene una gran cantidad de sensores y actuadores muy útiles para la robótica educativa: comentar los sensores y actuadores}
+\note[item]{Scratch es un lenguaje de programación en bloques, muy visual y perfecto como primera aproximación a la programación. Podemos enseñar conceptos de programación como funciones o variables, pensamiento computacional o Algoritmia sin tener que recurrir a un lenguaje textual de programación clásica, mucho más complejo por sus normas (sintaxis, compilación, ejecución, etc) }
+
+
+\end{frame}
+\section{PyBoKids 2.0}
+\subsection{Diseño}
+\begin{frame}
+	\frametitle{Diseño}
+	\framesubtitle{Diseño general del modelo PC - Residente}
+	\includegraphics[width=\textwidth]{flujo1-1.png}
+	
+	
+	\note[item]{era necesaria una forma para que, ya que la placa base funciona en Arduino, la comunicación Serial1 funcionara entre los dos lenguajes.
+	El diseño realizado consta de tres partes: el robot mBot, el PC y las comunicaciones en vivo entre ambos. El software desarrollado ofrece en el PC una biblioteca para que la aplicación
+	principal, que se ejecuta en el ordenador, acceda en vivo a los sensores y actuadores del robot,
+	a través de la aplicación que se ejecuta en su placa base}
+	\note[item]{El programa residente recoge los valores de los sensores, conectados a su puerto correspondiente, y los envía por el canal}
+	\note[item]{El programa PC recoge los valores del sensor que le interese (si así lo programamos)}
+	\note[item]{El programa PC envía por el canal unos valores concretos para un actuador concreto (con respecto a lo leído de los sensores o no)}
+	\note[item]{El programa residente lee del canal si tiene mensajes para un actuador y, en caso afirmativo,	recoge los valores y los envía al actuador correcto}
 \end{frame}
 
-%========= Diapositiva con matemáticas y leyenda (conditions*):
 \begin{frame}
-\frametitle{Resistencia de un material}
-\begin{outline}
-\1 Si material piezoresistivo se deforma, cambia su resistencia eléctrica.
-\begin{equation}
-R=\rho\frac{l}{A}
-\end{equation}
-donde:
-\begin{conditions*}
-R & resistencia del material $[\Omega]$\\
-\rho & resistividad $[\Omega-m]$\\
-l & longitud $[m]$\\
-A & área de sección transversal $[m^2]$
-\end{conditions*}
-\1 El cambio de resistencia se obtiene a partir de:
-\begin{equation}
-\frac{\Delta R}{R}=\frac{\Delta\rho}{\rho}=\frac{\Delta A}{A}=\frac{\Delta l}{l}
-\end{equation}
-\1 Otra forma de medir el efecto piezoresistivo: el factor de deformación.
-\begin{equation}
-GF(\textit{Gauge Factor})=\frac{\frac{\Delta R}{R}}{\varepsilon}=\frac{\frac{\Delta R}{R}}{\frac{\Delta l}{l}}
-\end{equation}
-\end{outline}
+	\frametitle{Diseño}
+	\framesubtitle{Comunicación por mensajes}
+	\large{La información debe ser \textcolor{blue}{inequívoca}}
+	\includegraphics[width=\textwidth]{mensajesensor.png}
+	\includegraphics[width=\textwidth]{mensajeactuador.png}
+	
+	
+	
+	
+	\note[item]{Para que la comunicación entre el programa PC y Residente sea posible es necesario un
+		protocolo de mensajes; es necesario asegurarse que ambas partes recojan la información correcta y sepan qué deben hacer con ella.}
+	\note[item] {Esta lógica de comunicaciones será invisible para el estudiante, ''escondida'' en la API.}
+	\note[item]{El programa residente debe estar preparado para \textcolor{blue}{entender} los datos que recibe para los actuadores}
+	\note[item]{El programa PC debe enviar esa información de forma \textcolor{blue}{inequívoca}}
+	\note[item]{Igualmente para los sensores: el programa residente debe enviar los datos de forma que el PC sepa sin lugar a dudas \textcolor{blue}{a qué sensor} le corresponde ese dato}
+	\note[item]{Esto lo conseguimos asignando identificadores numéricos a cada sensor/actuador}
 \end{frame}
+
+
 
 %========= Diapositiva con códigos:
-\subsection{Algoritmo principal}
-\begin{frame}[fragile]
-\frametitle{Algoritmo de visión}
-\begin{lstlisting}
-cvCvtColor (&image, IplTmp1, CV_RGB2GRAY);//to Gray
-cvNormalize(IplTmp1, IplTmp1, 0, 255, CV_MINMAX);
-cvSmooth(IplTmp1,IplTmp2,CV_BLUR,3,3);//Avrg filter
-cvLaplace(IplTmp2, IplLaplace, 3);//Laplace
-cvConvertScale(IplLaplace,IplTmp1);
-cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
-\end{lstlisting}
+\subsection{Desarrollo}
+\begin{frame}
+	\frametitle{PyBoKids 2.0}
+	\framesubtitle{Programa Residente}
+	Esta biblioteca está grabada en la placa base del robot y se ocupa de funcionar bajo todas las posibilidades
+	\vspace{1cm}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=0.7\columnwidth]{mcore.png}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{enumerate}
+				\item Manejo de sensores y actuadores
+				\item Control de apagado
+				\item Comunicaciones
+			\end{enumerate}
+		\end{column}		
+	\end{columns}
 \end{frame}
 
-\section*{}
-\begin{frame}{}
-  \centering \Huge
-  \emph{Conclusiones}
-\note[item]{Para acabar esta presentación, vamos a repasar lo hecho, unas breves conclusiones y las líneas futuras.}
+
+\begin{frame}
+	\frametitle{PyBoKids 2.0}
+	\framesubtitle{Programa PC}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=1\columnwidth]{abstraccionPC.png}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{enumerate}
+				\item Manejo de sensores y actuadores
+				\item Control de apagado
+				\item Comunicaciones
+			\end{enumerate}
+		\end{column}		
+	\end{columns}
+
+\note[item]{Con esta biblioteca, abstraemos toda la lógica, tanto de comunicaciones con el mBot como las particularidades de la sintaxis más ''farragosa''. El objetivo es ofrecerle al estudiante funciones sencillas y autoexplicativas}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PyBoKids 2.0}
+	\framesubtitle{Ejemplo de uso}
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{ejemplo.png}
+\end{figure}
+		
+		\note [item]{Desde el programa principal, el alumno envía los datos necesarios para encender los motores. Para ello, recoge los datos de teclado, y utiliza la función ``visible'' de la API}
+		
+		\note [item]{La función \textit{turnOn\_Motors} de la biblioteca Python, contiene la lógica de codificación y envío a través del canal Serial}
+		\note [item]{En el programa residente, se lee del canal que hay datos disponibles, y decodifica a qué actuador le corresponde el mensaje}
+		\note [item]{A la función le llega solo los datos que necesita para el actuador, que decodifica y envía a los motores}
+
+\end{frame}
+
+
+
+\section{Contenidos educativos}
+
+\begin{frame}
+\frametitle{Contenidos Educativos}
+\framesubtitle{Scratch y mBlock}
+
+	\begin{block}{}
+		\begin{itemize}
+			\item Scratch: lenguaje de bloques
+			\item Objetivos: conceptos y metodologías de forma gradual
+			\item Prácticas: aplicaciones ``reales'' con objetivos docentes especificados
+		\end{itemize}
+	\end{block}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contenidos Educativos}
+	\framesubtitle{Scratch y mBlock}
+	Programar un sistema de luces automáticas de un coche; \textcolor{blue}{variables}, \textcolor{blue}{condiciones de entorno}, \textcolor{blue}{bucles} y \textcolor{blue}{condicionales}.
+	\newline
+	\begin{columns}
+		\begin{column}{0.7\textwidth}
+			\includegraphics[width=\columnwidth]{lucesautomaticas.png}
+		\end{column}
+		\begin{column}{0.30\textwidth}
+			\includegraphics[width=\columnwidth]{variableLuz.png}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenidos Educativos}
+\framesubtitle{Python}
+	\begin{block}{Objetivos}
+		\begin{itemize}
+			\item Lenguaje textual más cercado a la programación real
+			\item API de PyBoKids-2.0
+			\item Añadir un grado de complejidad de forma natural
+		\end{itemize}
+	\end{block}
+\begin{block}{Prácticas}
+	\begin{itemize}
+		\item Pequeño curso introductorio al lenguaje 
+		\item Ejercicio \emph{esqueleto.py} para ayudar en la transición 
+		\item Soluciones de referencia a los principales ejercicios
+		\item Añade la posibilidad de interactuar en tiempo real con el robot
+		\item Limitadas a tener conectado el robot por USB al PC
+	\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{Contenidos Educativos}
+\framesubtitle{Python}
+	Ejercicio introductorio para el sensor de ultrasonidos, en el que el robot estará ``en verde'' si no tiene un obstáculo delante, y ``rojo'' en caso contrario.
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{ejemplopython.png}
+	\end{figure}
 \end{frame}
 
 \section{Conclusiones}
-\begin{frame}
-\begin{block}{Objetivos cumplidos}
-\begin{itemize}
-\item Herramienta multiplataforma: soporta Linux, Windows, MacOS.
-\item Intuitiva para el usuario final: no se necesita instalar nada.
-\item Solo se necesita un navegador web.
-\end{itemize}
-\end{block}
 
-\begin{block}{Líneas futuras}
-\begin{itemize}
-\item Permitir el uso de otras herramientas.
-\item Ampliar los botones disponibles en el interfaz.
-\end{itemize}
-\end{block}
+
+\begin{frame}
+	\frametitle{Conclusiones}
+	\begin{block}{Objetivos cumplidos}
+		\begin{itemize}
+		\item \textit{Middleware} para programar el mBot en Python que abstrae la dificultad del lenguaje y del Arduino nativo del robot
+		\item No requiere de programación en Arduino, ni de la instalación de nada excepto Python para el uso de la biblioteca
+		\item Esto hace que sea posible utilizarla fácilmente en clases de robótica educativa, teniendo en cuenta los recursos limitados de los centros educativos
+		\item Propuesta educativa completa con objetivos individuales y colectivos, orientado principalmente a Educación Primaria y Secundaria, que responden a una experiencia práctica
+		\end{itemize}
+	\end{block}
+
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusiones}
+	\begin{block}{Líneas futuras}
+		\begin{itemize}
+			\item Ampliar los sensores y actuadores en las bibliotecas
+			\item Añadir funcionalidad Bluethooth a la solución
+			\item Adaptar la infraestructura para hacer posible la elección de periféricos desde el programa principal
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \begin{frame}[plain]

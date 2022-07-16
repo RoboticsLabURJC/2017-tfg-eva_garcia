@@ -1,10 +1,10 @@
 \chapter{Plataforma PyBoKids 2.0}
 \label{cap:PyBoKids}
-En este capítulo explicaremos el proceso seguido para desarrollar las bibliotecas Arduino y Python (ver en \cite{arduinolenguaje}, \cite{PythonRef}), explicando el código y las distintas necesidades que han surgido durante el desarrollo. \\
+En este capítulo explicaremos el proceso seguido para desarrollar las bibliotecas Arduino\cite{arduinolenguaje} y Python\cite{PythonRef}, explicando el código y las distintas necesidades que han surgido durante el desarrollo. \\
 Como se explicó en el Capítulo \ref{cap:infra}, se ha utilizado Arduino  y su IDE nativo para esta programación, y Python 3 y un editor de texto estándar (en este caso, Visual Studio Code, de Microsoft) para la programación en Python. 
 
 \section{Diseño}\label{sec:diseño}
-Lo primero en el diseño de la plataforma ha sido el modelo ''PC - Residente''. Partiendo de la premisa dada de programación del robot en Python era necesaria una forma para que, dado que la placa base funciona en Arduino, la comunicación Serial\footnote{Comunicación secuencial de información a través de un canal, electrónico en este caso} funcionara entre los dos lenguajes. \\
+Lo primero en el diseño de la plataforma ha sido el modelo ``PC - Residente''. Partiendo de la premisa dada de programación del robot en Python era necesaria una forma para que, dado que la placa base funciona en Arduino, la comunicación Serial\footnote{Comunicación secuencial de información a través de un canal, electrónico en este caso} funcionara entre los dos lenguajes. \\
 El diseño realizado consta de tres partes: el robot mBot, el PC y las comunicaciones en vivo entre ambos. El software desarrollado ofrece en el PC una biblioteca para que la aplicación principal, que se ejecuta en el ordenador, acceda en vivo a los sensores y actuadores del robot, a través de la aplicación que se ejecuta en la placa base de éste.\\
 
 La comunicación con el robot debe establecerse entre el entorno y el robot (con la placa base), cada vez que se encienda éste. Es, por tanto, el primer problema a solventar para ambos entornos. \\ 
@@ -97,7 +97,7 @@ Con este protocolo de mensajes la funcionalidad de la plataforma PyBoKids-2.0 es
 \section{Programa residente en robot}\label{sec:residente}
 El programa residente en Arduino se ha realizado de forma progresiva, encontrando diferentes requerimientos y necesidades a lo largo del proceso. \\
 
-Como se ha explicado en el apartado \ref{subsec:arduino} de Arduino, para utilizar los periféricos del robot mBot, es necesario cargar los módulos correspondientes a la placa mCore. Una vez incluido el paquete, podremos utilizar los métodos de inicialización, lectura de sensores, envío de órdenes a los actuadores, etc. Este módulo contiene toda la información que necesitan los diferentes componentes (tipos de valores de entrada o de retorno, diferentes métodos, etc), incluidos ejemplos en los que apoyarnos. A continuación describiremos cómo se utilizan los diferentes actuadores y sensores en Arduino, siendo este paso necesario para crear la biblioteca ''Residente'', y cómo se ha desarrollado el diseño de comunicaciones para esta biblioteca Arduino.
+Como se ha explicado en el apartado \ref{subsec:arduino} de Arduino, para utilizar los periféricos del robot mBot, es necesario cargar los módulos correspondientes a la placa mCore. Una vez incluido el paquete, podremos utilizar los métodos de inicialización, lectura de sensores, envío de órdenes a los actuadores, etc. Este módulo contiene toda la información que necesitan los diferentes componentes (tipos de valores de entrada o de retorno, diferentes métodos, etc), incluidos ejemplos en los que apoyarnos. A continuación describiremos cómo se utilizan los diferentes actuadores y sensores en Arduino, siendo este paso necesario para crear la biblioteca ``Residente'', y cómo se ha desarrollado el diseño de comunicaciones para esta biblioteca Arduino.
 
 \subsection{Manejo de sensores}\label{subsec:sensoresArduino}
 Como cualquier variable, los actuadores requieren de una inicialización. Esta inicialización de variables corresponden al principio del programa, para poder utilizar la variable en las funciones principales. Todos los sensores en Arduino tienen un método de lectura, además del de inicialización, con el que obtendremos el valor correspondiente (dependiendo de qué tipo de sensor sea obtendremos la información de una forma u otra). Si queremos almacenar el valor recogido en una variable, Arduino requiere que ésta sea declarada también. A continuación detallamos las características del lenguaje para cada uno de ellos:
@@ -248,7 +248,7 @@ Dado que primero estamos considerando solamente el entorno Arduino, para ver el 
 \end{figure}
 
 
-\subsubsection{Protocolo de mensajes}\label{subsubsec:mensajesArduino}
+\subsubsection{Codificación y decodificación de mensajes}\label{subsubsec:mensajesArduino}
 
 Por último, explicaremos cómo se ha implementado en el lado Arduino el protocolo de mensajes cuyo diseño está detallado en la sección  \ref{sec:protocolomensajes}. Como se ha comentado, cada sensor y cada actuador tienen un identificador asignado.
 Para utilizar estos mensajes de forma real, necesitaremos en nuestra biblioteca funciones para leer los correspondientes a los sensores, y  componer los de actuadores. \\
@@ -346,7 +346,7 @@ if (Actuator == "0") {
 }
 \end{lstlisting}
 
-Estas funciones crean la estructura del programa residente de forma que funcione independientemente de qué datos se le envíen desde el programa PC. El contenido completo de la biblioteca puede consultarse en el repositorio de PyBoKids  \footnote{\href{https://github.com/JdeRobot/PyBoKids}{Repositorio PyBoKids}}.\\
+Estas funciones crean la estructura del programa residente de forma que funcione independientemente de qué datos se le envíen desde el programa PC. El contenido completo de la biblioteca puede consultarse en el repositorio de PyBoKids  \footnote{\href{https://github.com/JdeRobot/PyBoKids}{https://github.com/JdeRobot/PyBoKids}}.\\
 
 \section{Programa PC}\label{sec:pc}
 La finalidad del Programa PC es tener una biblioteca de funciones de acceso a los sensores y actuadores del robot que contengan la lógica de conexión, lectura, escritura, etc, y que la escondan a los alumnos, teniendo ellos que preocuparse solamente de llamar a una función con un nombre amigable. Este esquema puede verse en la figura \ref{img:abstraccionPC}.
@@ -546,7 +546,7 @@ def create_Message_Buzzer(list):
 \end{lstlisting}
 
 
-Estas funciones crean la estructura del programa PC para que pueda utilizarse desde el programa principal de forma fácil e intuitiva. El contenido completo de la biblioteca puede consultarse en el repositorio de PyBoKids  \footnote{\href{https://github.com/JdeRobot/PyBoKids}{Repositorio PyBoKids}}.\\
+Estas funciones crean la estructura del programa PC para que pueda utilizarse desde el programa principal de forma fácil e intuitiva. El contenido completo de la biblioteca puede consultarse en el repositorio de PyBoKids  \footnote{\href{https://github.com/JdeRobot/PyBoKids}{https://github.com/JdeRobot/PyBoKids}}.\\
 
 
 \section{Validación experimental}\label{sec:resultado}
@@ -621,7 +621,7 @@ El Programa Residente, recibe el mensaje, lo decodifica y extrae el identificado
 	\caption{Programa Residente}
 \end{figure}
 
-El resultado real puede verse en las siguientes imágenes (\ref{img:Resultadoexperimental}), y el proceso completo puede verse en vídeo \footnote{\href{https://www.youtube.com/watch?v=GbFC0OJPLk0}{Vídeo de ejemplo de uso de la plataforma}} .
+El resultado real puede verse en las siguientes imágenes (\ref{img:Resultadoexperimental}), y el proceso completo puede verse en vídeo \footnote{\href{https://www.youtube.com/watch?v=GbFC0OJPLk0}{https://www.youtube.com/watch?v=GbFC0OJPLk0}}.
 
 
 \begin{figure}[H]

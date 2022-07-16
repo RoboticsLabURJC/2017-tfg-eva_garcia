@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {4.3.1}Manejo de sensores}{29}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Manejo de actuadores}{30}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Comunicaciones}{32}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Protocolo de mensajes}{33}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Codificación y decodificación de mensajes}{33}{subsubsection.4.3.3.1}%
 \contentsline {section}{\numberline {4.4}Programa PC}{35}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Manejo de sensores}{36}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Manejo de actuadores}{36}{subsection.4.4.2}%
